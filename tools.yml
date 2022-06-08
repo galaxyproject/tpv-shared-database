@@ -1,0 +1,227 @@
+tools:
+  default:
+    cores: 1
+    mem: cores * 3.8
+    env: {}
+    params: {}
+    scheduling:
+      reject:
+        - offline
+    rules: []
+    rank: |
+      helpers.weighted_random_sampling(candidate_destinations)
+
+  # built in tools
+  Extract genomic DNA 1:
+    cores: 3
+  join1:
+    cores: 2
+    rules:
+    - if: input_size >= 10
+      cores: 5
+  tabular_to_csv:
+    rules:
+    - if: input_size >= 1
+      cores: 3
+  wig_to_bigWig:
+    cores: 3
+    rules:
+    - if: input_size >= 1
+      cores: 5
+
+  # toolshed tools
+  toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore/.*:
+    rules:
+    - if: 0.02 <= input_size < 0.2
+      cores: 3
+    - if: input_size >= 0.2
+      cores: 5
+  toolshed.g2.bx.psu.edu/repos/bgruening/canu/canu/.*:
+    cores: 32 # MAX
+    scheduling:
+      accept:
+      - pulsar
+  toolshed.g2.bx.psu.edu/repos/bgruening/hifiasm/hifiasm/.*:
+    cores: 2
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: input_size >= 0.2
+      cores: 32 # MAX
+  toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/.*:
+    cores: 2
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: 0.001 <= input_size < 0.03
+      cores: 8
+    - if: input_size >= 0.03
+      fail: Too much data, Prokka is designed to annotate bacterial/virus genomes
+        only. Prokka will not annotate eukaryotic genomes nor metagenomes.
+  toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa/.*:
+    cores: 2
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: 0.25 <= input_size < 1
+      cores: 4
+    - if: input_size >= 1
+      cores: 8
+  toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/.*:
+    cores: 2
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: 0.25 <= input_size < 1
+      cores: 4
+    - if: 1 <= input_size < 20
+      cores: 8
+    - if: input_size >= 20
+      cores: 32 # MAX
+  toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/.*:
+    cores: 2
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: 0.01 <= input_size < 2
+      cores: 4
+    - if: input_size >= 2
+      cores: 8
+  toolshed.g2.bx.psu.edu/repos/devteam/ncbi_blast_plus/ncbi_blastn_wrapper/.*:
+    cores: 8
+    rules:
+      - if: |
+          helpers.job_args_match(job, app, {'db_opts': {'db_opts_selector': 'db'}})
+        scheduling:
+          accept:
+            - pulsar
+  toolshed.g2.bx.psu.edu/repos/devteam/ncbi_blast_plus/ncbi_blastp_wrapper/.*:
+    cores: 8
+    rules:
+      - if: |
+          helpers.job_args_match(job, app, {'db_opts': {'db_opts_selector': 'db'}})
+        scheduling:
+          accept:
+            - pulsar
+  toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/peptide_shaker/.*:
+    cores:  7
+    env:
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
+  toolshed.g2.bx.psu.edu/repos/galaxyp/maxquant/maxquant/.*:
+    cores: 16
+  toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/.*:
+    cores: 5
+  toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/.*:
+    cores: 2
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: 0.5 <= input_size < 15
+      cores: 8
+    - if: input_size >= 15
+      cores: 32 # MAX
+  toolshed.g2.bx.psu.edu/repos/iuc/humann/humann/.*:
+    rules:
+    - if: input_size >= 0.01
+      cores: 7
+  toolshed.g2.bx.psu.edu/repos/iuc/hyphy_absrel/hyphy_absrel/.*:
+    cores: 16
+  toolshed.g2.bx.psu.edu/repos/iuc/hyphy_gard/hyphy_gard/.*:
+    cores: 2
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: input_size >= 5e-06
+      cores: 32 # MAX
+  toolshed.g2.bx.psu.edu/repos/iuc/ivar_trim/ivar_trim/.*:
+    cores: 8
+    scheduling:
+      accept:
+      - pulsar
+  toolshed.g2.bx.psu.edu/repos/iuc/kallisto_quant/kallisto_quant/.*:
+    cores: 2
+    rules:
+    - if: input_size >= 0.1
+      cores: 5
+  toolshed.g2.bx.psu.edu/repos/iuc/lofreq_call/lofreq_call/.*:
+    cores: 5
+  toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/.*:
+    rules:
+    - if: input_size >= 0.001
+      cores: 5
+  toolshed.g2.bx.psu.edu/repos/iuc/meryl/meryl/.*:
+    cores: 2
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: 0.001 < input_size <= 5
+      cores: 16
+    - if: input_size > 5
+      cores: 32 # MAX
+  toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/.*:
+    cores: 4
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: 0.5 <= input_size < 5
+      cores: 8
+    - if: 5 <= input_size < 20
+      cores: 16
+    - if: input_size >= 20
+      cores: 32 # MAX
+  toolshed.g2.bx.psu.edu/repos/iuc/pilon/pilon/.*:
+    cores: 9
+    rules:
+    - if: input_size >= 4
+      cores: 16
+    env:
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
+  toolshed.g2.bx.psu.edu/repos/iuc/poretools_.*:  # very general match
+    cores: 3
+  toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fasterq_dump/.*:
+    cores: 3
+  toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/.*:
+    cores: 3
+  toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity/.*:
+    cores: 8
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: 0.1 <= input_size < 30
+      cores: 32 # MAX
+    - if: input_size >= 30
+      fail: Too much data, we cannot support such large Trinity assemblies with our
+        backend. Please use another server for your job.
+  toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/.*:
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: 0.2 <= input_size < 2
+      cores: 8
+    - if: input_size >= 2
+      cores: 16
+  toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/.*:
+    cores: 5
+  toolshed.g2.bx.psu.edu/repos/nml/spades/spades/.*:
+    cores: 2
+    scheduling:
+      accept:
+      - pulsar
+    rules:
+    - if: 0.005 <= input_size < 2
+      cores: 8
+    - if: 2 <= input_size < 20
+      cores: 32 # MAX
+    - if: input_size >= 20
+      fail: Too much data, please don't use Spades for this
