@@ -252,3 +252,174 @@ tools:
     - id: large_job_rule
       if: 2 <= input_size
       cores: 32 # MAX
+
+## Add interactive tools
+  interactive_tool_jupyter_notebook:
+    mem: 4
+    env:
+      ## HOME dir inside the container
+      HOME: /home/jovyan
+    scheduling:
+      require:
+      - docker
+      - docker_shell_access
+  interactive_tool_pangeo_notebook:
+    mem: 4
+    env:
+      HOME: /home/jovyan
+    scheduling:
+      require:
+      - docker_shell_access
+      - docker
+  interactive_tool_climate_notebook:
+    mem: 4
+    env:
+      HOME: /home/jovyan
+    scheduling:
+      require:
+      - docker_shell_access
+      - docker
+  interactive_tool_ml_jupyter_notebook:
+    cores: 1
+    mem: 8
+    gpus: 1
+    scheduling:
+      require:
+      - docker_shell_access
+      - gpu
+      - docker
+    context:
+      ## TODO how to get this populated
+      docker_run_extra_arguments: ' --gpus all'
+  interactive_tool_rstudio:
+    cores: 2
+    mem: 8
+    scheduling:
+      require:
+      - docker_shell_access
+      - docker
+  interactive_tool_pyiron:
+    cores: 1
+    mem: 8
+    scheduling:
+      require:
+      - docker_shell_access
+      - docker
+  interactive_tool_guacamole_desktop:
+    cores: 2
+    mem: 8
+    scheduling:
+      require:
+      - docker_shell_access
+      - docker
+  interactive_tool_panoply:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+  interactive_tool_vrm_editor:
+    cores: 1
+    mem: 4
+    scheduling:
+      require:
+      - docker
+  interactive_tool_openrefine:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+  interactive_tool_audiolabeler:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+  interactive_tool_ethercalc:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+  interactive_tool_geoexplorer:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+  interactive_tool_radiant:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+  interactive_tool_higlass:
+    cores: 5
+    mem: 20
+    scheduling:
+      require:
+      - docker
+  interactive_tool_phinch:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+
+  interactive_tool_neo4j:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+
+  interactive_tool_cellxgene:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+
+  interactive_tool_bam_iobio:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+
+  interactive_tool_vcf_iobio:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+
+  interactive_tool_askomics:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+
+  interactive_tool_wilson:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+  interactive_tool_wallace:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+  interactive_tool_paraview:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+  interactive_tool_simtext_app:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+
+  interactive_tool_isee:
+    mem: 4
+    scheduling:
+      require:
+      - docker
+
+  interactive_tool_metashark:
+    cores: 1
+    mem: 4
+    scheduling:
+      require:
+      - docker
