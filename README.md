@@ -1,8 +1,9 @@
-# tpv_rules_database
-A shared database of rules for Total Perspective Vortex used by the usegalaxy.* federation.
+# Shared community maintained TPV database
+
+A shared database of rules for [Total Perspective Vortex](https://github.com/galaxyproject/total-perspective-vortex) used by the usegalaxy.* federation.
 
 
-# List of recommended tags
+## List of recommended tags
 
 |      tag | description |
 |----------|-------------|
@@ -11,6 +12,6 @@ A shared database of rules for Total Perspective Vortex used by the usegalaxy.* 
 |docker| a Docker configured worker|
 |singularity| a Singularity configured worker|
 
-# Tips
+## Tips
 
 Values are evaluated as Python f-strings, this means if you want to reference the number of `cores` you need to use quoted references like `       OMP_NUM_THREADS: "{cores}"`
