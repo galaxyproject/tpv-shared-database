@@ -435,15 +435,15 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/pilon/pilon/.*:
     mem: 32
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/galaxyp/encyclopedia_prosit_csv_to_library/encyclopedia_prosit_csv_to_library/.*:
     mem: 40
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer/.*:
     mem: 8
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/devteam/cuffmerge/cuffmerge/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_cruxadapter/CruxAdapter/.*:
@@ -1344,7 +1344,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxyp/mz_to_sqlite/mz_to_sqlite/.*:
     mem: 16
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/rnateam/graphclust_nspdk/NSPDK_candidateClust/.*:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/iuc/novoplasty/novoplasty/.*:
@@ -1403,23 +1403,23 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxyp/pepquery/pepquery/.*:
     mem: 8
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/devteam/picard/PicardASMetrics/.*:
     mem: 12
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/devteam/picard/PicardInsertSize/.*:
     mem: 12
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_CleanSam/.*:
     mem: 12
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_assaygeneratormetabo/AssayGeneratorMetabo/.*:
     mem: 12
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_precursorionselector/PrecursorIonSelector/.*:
     cores: 4
     mem: 8
@@ -1685,7 +1685,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxyp/flashlfq/flashlfq/.*:
     mem: 90
     env:
-      MONO_GC_PARAMS: max-heap-size={int(mem)}g
+      MONO_GC_PARAMS: 'max-heap-size={int(mem)}g'
   toolshed.g2.bx.psu.edu/repos/devteam/freebayes/freebayes/.*:
     cores: 10
     mem: 90
@@ -2030,12 +2030,12 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_siriusadapter/SiriusAdapter/.*:
     mem: 16
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/.*:
     cores: 4
     mem: 50
     env:
-      SHOVILL_RAM: {int(mem)}
+      SHOVILL_RAM: '{int(mem)}'
   toolshed.g2.bx.psu.edu/repos/peterjc/tmhmm_and_signalp/signalp3/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/.*:
@@ -2051,7 +2051,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff_build_gb/.*:
     mem: 48
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)]G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)]G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_annotate/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_caseControl/.*:
@@ -2128,14 +2128,14 @@ tools:
     cores: 4
     mem: 32
     env:
-      OMP_NUM_THREADS: {cores}
-      OMP_THREAD_LIMIT: {cores}
+      OMP_NUM_THREADS: '{cores}'
+      OMP_THREAD_LIMIT: '{cores}'
   toolshed.g2.bx.psu.edu/repos/devteam/velvet/velveth/.*:
     cores: 4
     mem: 16
     env:
-      OMP_NUM_THREADS: {cores}
-      OMP_THREAD_LIMIT: {cores}
+      OMP_NUM_THREADS: '{cores}'
+      OMP_THREAD_LIMIT: '{cores}'
   toolshed.g2.bx.psu.edu/repos/iuc/vsearch/vsearch_search/.*:
     mem: 80
   toolshed.g2.bx.psu.edu/repos/iuc/vsearch/vsearch_alignment/.*:
@@ -2178,11 +2178,11 @@ tools:
   .*PicardGCBiasMetrics.*:
     mem: 12
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   .*PicardHsMetrics.*:
     mem: 12
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   .*Resampler.*:
     cores: 4
     mem: 8
@@ -2347,7 +2347,7 @@ tools:
   .*rgPicardMarkDups.*:
     mem: 12
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   .*rm_spurious_events.py.*:
     mem: 4
   .*rnbeads.*:
