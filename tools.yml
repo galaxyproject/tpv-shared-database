@@ -2188,15 +2188,15 @@ tools:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/devteam/picard/PicardGCBiasMetrics/.*:
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
     mem: 12
   toolshed.g2.bx.psu.edu/repos/devteam/picard/PicardHsMetrics/.*:
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
     mem: 12
   toolshed.g2.bx.psu.edu/repos/devteam/picard/rgPicardMarkDups/.*:
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
     mem: 12
   toolshed.g2.bx.psu.edu/repos/galaxyp/mass_spectrometry_imaging_segmentations/mass_spectrometry_imaging_segmentations/.*:
     mem: 92
