@@ -2053,7 +2053,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff_build_gb/.*:
     mem: 48
     env:
-      _JAVA_OPTIONS: '-Xmx{int(mem)]G -Xms1G'
+      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
   toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_annotate/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_caseControl/.*:
