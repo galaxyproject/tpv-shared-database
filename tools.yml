@@ -216,8 +216,8 @@ tools:
     cores: 3
   # toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fasterq_dump/.*:
   #   cores: 3
-  toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/.*:
-    cores: 3
+  # toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/.*:
+  #   cores: 3
   # toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity/.*:
   #   cores: 8
   #   scheduling:
@@ -318,6 +318,8 @@ tools:
   .*rna_star_index_builder_data_manager.*:
     cores: 10
     mem: 300
+  .*gatk_picard_index_builder.*:
+    mem: 12
 
   # shed tools
   toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/.*:
@@ -2144,218 +2146,119 @@ tools:
   toolshed.g2.bx.psu.edu/repos/climate/cesm/cesm/.*:
     cores: 16
     mem: 128
-  .*heatmap.*:
-    mem: 12
-  .*viz_overlay_moving_and_fixed_image.*:
-    mem: 12
-  .*scale_image.*:
-    mem: 12
-  .*IDEvaluator.*:
-    cores: 4
-    mem: 8
-  .*ITRAQAnalyzer.*:
-    cores: 4
-    mem: 8
-  .*ImageCreator.*:
-    cores: 4
-    mem: 8
-  .*gmx_fep.*:
-    cores: 16
-    mem: 8
-  .*mass_spectrometry_imaging_segmentations.*:
-    mem: 92
-  .*mass_spectrometry_imaging_combine.*:
-    mem: 12
-  .*mass_spectrometry_imaging_mzplots.*:
-    mem: 24
-  .*msi_ion_images.*:
-    mem: 92
-  .*msi_spectra_plot.*:
-    mem: 210
-  .*MapAlignmentEvaluation.*:
-    cores: 4
-    mem: 8
-  .*PicardGCBiasMetrics.*:
-    mem: 12
-    env:
-      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
-  .*PicardHsMetrics.*:
-    mem: 12
-    env:
-      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
-  .*Resampler.*:
-    cores: 4
-    mem: 8
-  .*TMTAnalyzer.*:
-    cores: 4
-    mem: 8
-  .*bam-to-wig.*:
-    mem: 20
-  .*bamCompare_deepTools.*:
-    mem: 10
-  .*bamCorrelate_deepTools.*:
-    cores: 10
-    mem: 90
-  .*bamCoverage_deepTools.*:
-    mem: 10
-  .*bamFingerprint.*:
-    mem: 10
-  .*bedtools_intersectbed_bam.*:
-    mem: 40
-  .*mass_spectrometry_imaging_preprocessing.*:
-    mem: 110
-  .*mass_spectrometry_imaging_ion_images.*:
-    mem: 20
-  .*mass_spectrometry_imaging_qc.*:
-    mem: 110
-  .*mass_spectrometry_imaging_filtering.*:
-    mem: 20
-  .*charts.*:
-    mem: 10
-  .*circgraph.*:
-    mem: 10
-  .*computeMatrix.*:
-    mem: 90
-  .*correctGCBias.*:
-    mem: 10
-  .*deeptools_bamCompare.*:
+
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCompare/.*:
     cores: 10
     mem: 12
-  .*deeptools_bamCorrelate.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCorrelate/.*:
     cores: 10
     mem: 90
-  .*deeptools_bamCoverage.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCoverage/.*:
     cores: 10
     mem: 48
-  .*deeptools_bamFingerprint.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamFingerprint/.*:
     cores: 10
     mem: 12
-  .*deeptools_bigwigCompare.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bigwigCompare/.*:
     cores: 10
     mem: 12
-  .*deeptools_bigwigCorrelate.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bigwigCorrelate/.*:
     cores: 10
     mem: 40
-  .*deeptools_computeGCBias.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_computeGCBias/.*:
     cores: 10
     mem: 24
-  .*deeptools_computeMatrix.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_computeMatrix/.*:
     cores: 10
     mem: 40
-  .*deeptools_correctGCBias.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_correctGCBias/.*:
     cores: 10
     mem: 24
-  .*deeptools_heatmapper.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_heatmapper/.*:
     mem: 25
-  .*deeptools_profiler.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_profiler/.*:
     mem: 20
-  .*dt_profiler.*:
-    mem: 10
-  .*eukaryotic_ncbi_submission.*:
-    cores: 24
-    mem: 24
-  .*fastq_dump.*:
-    mem: 20
-  .*feebayes.*:
-    cores: 10
+  toolshed.g2.bx.psu.edu/repos/bgruening/numeric_clustering/numeric_clustering/.*:
     mem: 12
-  .*flexbar.*:
-    cores: 10
-    mem: 12
-  .*flexbar_no_split.*:
-    cores: 10
-    mem: 12
-  .*flexbar_split_RR_bcs.*:
-    cores: 10
-    mem: 12
-  .*flexbar_split_RYYR_bcs.*:
-    cores: 10
-    mem: 12
-  .*gatk2_depth_of_coverage.*:
-    cores: 10
-    mem: 24
-  .*gatk2_haplotype_caller.*:
-    cores: 10
-    mem: 24
-  .*gatk2_indel_realigner.*:
-    mem: 10
-  .*gatk2_print_reads.*:
-    cores: 10
-    mem: 24
-  .*gatk2_realigner_target_creator.*:
-    cores: 10
-    mem: 24
-  .*gatk2_unified_genotyper.*:
-    cores: 10
-    mem: 24
-  .*gatk2_variant_annotator.*:
-    cores: 10
-    mem: 24
-  .*gatk2_variant_apply_recalibration.*:
-    cores: 10
-    mem: 24
-  .*gatk2_variant_combine.*:
-    cores: 10
-    mem: 24
-  .*gatk2_variant_eval.*:
-    cores: 10
-    mem: 24
-  .*gatk2_variant_filtration.*:
-    mem: 10
-  .*gatk2_variant_recalibrator.*:
-    cores: 10
-    mem: 24
-  .*gatk2_variant_select.*:
-    cores: 10
-    mem: 24
-  .*gatk2_variant_validate.*:
-    cores: 10
-    mem: 24
-  .*gatk_picard_index_builder.*:
-    mem: 12
-  .*heatmapper.*:
-    mem: 25
-  .*heatmapper_deepTools.*:
-    mem: 25
-  .*schicexplorer_schicclustercomparments.*:
-    cores: 20
-    mem: 64
-  .*hisat.*:
+  toolshed.g2.bx.psu.edu/repos/chemteam/gmx_fep/gmx_fep/.*:
+    cores: 16
+    mem: 8
+  toolshed.g2.bx.psu.edu/repos/devteam/hisat/hisat/.*:
     cores: 10
     mem: 20
-  .*mass_spectrometry_imaging_classification.*:
-    mem: 90
-  .*merge_pcr_duplicates.py.*:
-    mem: 4
-  .*methtools_calling.*:
-    cores: 10
-    mem: 40
-  .*methtools_filter.*:
-    mem: 10
-  .*methtools_plot.*:
-    cores: 10
-    mem: 20
-  .*numeric_clustering.*:
-    mem: 12
-  .*prokaryotic_ncbi_submission.*:
-    cores: 24
-    mem: 24
-  .*proteomics_search_msgfplus_1.*:
-    mem: 10
-  .*r_correlation_matrix.*:
-    mem: 80
-  .*rgPicardMarkDups.*:
-    mem: 12
+  toolshed.g2.bx.psu.edu/repos/devteam/picard/PicardGCBiasMetrics/.*:
     env:
-      _JAVA_OPTIONS: '-Xmx{int(mem)}G -Xms1G'
-  .*rm_spurious_events.py.*:
-    mem: 4
-  .*rnbeads.*:
-    mem: 20
-  .*secretbt2test.*:
-    cores: 10
-    mem: 20
-  .*smooth_running_window.*:
-    mem: 32
-  .*structurefold.*:
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
     mem: 12
+  toolshed.g2.bx.psu.edu/repos/devteam/picard/PicardHsMetrics/.*:
+    env:
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+    mem: 12
+  toolshed.g2.bx.psu.edu/repos/devteam/picard/rgPicardMarkDups/.*:
+    env:
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+    mem: 12
+  toolshed.g2.bx.psu.edu/repos/galaxyp/mass_spectrometry_imaging_segmentations/mass_spectrometry_imaging_segmentations/.*:
+    mem: 92
+  toolshed.g2.bx.psu.edu/repos/galaxyp/msi_classification/mass_spectrometry_imaging_classification/.*:
+    mem: 90
+  toolshed.g2.bx.psu.edu/repos/galaxyp/msi_combine/mass_spectrometry_imaging_combine/.*:
+    mem: 12
+  toolshed.g2.bx.psu.edu/repos/galaxyp/msi_filtering/mass_spectrometry_imaging_filtering/.*:
+    mem: 20
+  toolshed.g2.bx.psu.edu/repos/galaxyp/msi_ion_images/mass_spectrometry_imaging_ion_images/.*:
+    mem: 20
+  toolshed.g2.bx.psu.edu/repos/galaxyp/msi_preprocessing/mass_spectrometry_imaging_preprocessing/.*:
+    mem: 110
+  toolshed.g2.bx.psu.edu/repos/galaxyp/msi_qualitycontrol/mass_spectrometry_imaging_qc/.*:
+    mem: 110
+  toolshed.g2.bx.psu.edu/repos/galaxyp/msi_spectra_plot/mass_spectrometry_imaging_mzplots/.*:
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/guerler/charts/charts/.*:
+    mem: 10
+  toolshed.g2.bx.psu.edu/repos/iuc/circos/circgraph/.*:
+    mem: 10
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_depth_of_coverage/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_haplotype_caller/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_indel_realigner/.*:
+    mem: 10
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_print_reads/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_realigner_target_creator/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_unified_genotyper/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_variant_annotator/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_variant_apply_recalibration/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_variant_combine/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_variant_eval/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_variant_filtration/.*:
+    mem: 10
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_variant_recalibrator/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_variant_select/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_variant_validate/.*:
+    cores: 10
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/.*:
+    mem: 20
+
+
