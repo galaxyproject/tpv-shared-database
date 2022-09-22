@@ -36,3 +36,5 @@ jobs:
       env:
         SETTING: github
       run: tpv lint tools.yml
+    - name: Make sure that tpv format has been run prior to checkin
+      run: diff tools.yml <(tpv format tools.yml)
