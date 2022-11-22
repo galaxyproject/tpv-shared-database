@@ -10,8 +10,10 @@ A shared database of rules for [Total Perspective Vortex](https://github.com/gal
 |upload   | for scheduling jobs to a upload worker |
 |gpu| needs a GPU installed on the workder|
 |docker| a Docker configured worker|
-|docker_shell_access| the user will get shell access in Docker |
+|docker-shell-access| the user will get shell access in Docker |
 |singularity| a Singularity configured worker|
+
+Dashes are used as separators in tags instead of underscores.
 
 ## Tips
 
