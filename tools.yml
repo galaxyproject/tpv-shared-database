@@ -10,8 +10,6 @@ tools:
     rules: []
     rank: |
       helpers.weighted_random_sampling(candidate_destinations)
-  testtoolshed.g2.bx.psu.edu/repos/fubar/htseq_bams_to_count_matrix/htseqsams2mxlocal/.*:
-    cores: 3
   testtoolshed.g2.bx.psu.edu/repos/jchung/generate_count_matrix/generate_count_matrix/.*:
     cores: 2
   testtoolshed.g2.bx.psu.edu/repos/simon-gladman/phyloseq_filter/biom_filter/.*:
@@ -487,8 +485,6 @@ tools:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/ethevenot/qualitymetrics/quality_metrics/.*:
     mem: 12
-  toolshed.g2.bx.psu.edu/repos/galaxy-australia/alphafold2/alphafold/.*:
-    cores: 8
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/cactus_cactus/cactus_cactus/.*:
     cores: 60
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/hifiadapterfilt/hifiadapterfilt/.*:
@@ -2045,7 +2041,7 @@ tools:
     cores: 8
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity/.*:
-    cores: 8
+    cores: 32
   toolshed.g2.bx.psu.edu/repos/iuc/trinity_align_and_estimate_abundance/trinity_align_and_estimate_abundance/.*:
     cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_cluster/trycycler_cluster/.*:
@@ -2189,8 +2185,6 @@ tools:
   .*bwameth_index_builder_data_manager.*:
     cores: 12
     mem: 92
-  .*data_manager.*:
-    cores: 5
   .*data_manager_build_kraken2_database.*:
     cores: 1
     mem: 64
@@ -2249,8 +2243,6 @@ tools:
     mem: 8
   Extract genomic DNA 1:
     cores: 3
-  alphafold_test:
-    cores: 6
   bfast_wrapper:
     cores: 10
     mem: 20
