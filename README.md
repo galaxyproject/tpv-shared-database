@@ -8,7 +8,6 @@ A shared database of rules for [Total Perspective Vortex](https://github.com/gal
 |      tag | description |
 |----------|-------------|
 |upload   | for scheduling jobs to a upload worker |
-|gpu| needs a GPU installed on the workder|
 |docker| a Docker configured worker|
 |docker-shell-access| the user will get shell access in Docker |
 |singularity| a Singularity configured worker|
@@ -17,4 +16,5 @@ Dashes are used as separators in tags instead of underscores.
 
 ## Tips
 
-Values are evaluated as Python f-strings, this means if you want to reference the number of `cores` you need to use quoted references like `       OMP_NUM_THREADS: "{cores}"`
+Values are evaluated as Python f-strings, this means if you want to reference the number of `cores` you need to use quoted references like
+`OMP_NUM_THREADS: "{cores}"`
