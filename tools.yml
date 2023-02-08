@@ -24,7 +24,7 @@ tools:
     cores: 8
     mem: 92
   toolshed.g2.bx.psu.edu/repos/bgruening/augustus/augustus/.*:
-    mem: 30.4
+    mem: 30
   toolshed.g2.bx.psu.edu/repos/bgruening/bigwig_to_bedgraph/bigwig_to_bedgraph/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/bionano_scaffold/bionano_scaffold/.*:
@@ -315,7 +315,7 @@ tools:
     cores: 8
     mem: 30
   toolshed.g2.bx.psu.edu/repos/devteam/clustalw/clustalw/.*:
-    mem: 34.2
+    mem: 34
   toolshed.g2.bx.psu.edu/repos/devteam/cuffcompare/cuffcompare/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/devteam/cuffdiff/cuffdiff/.*:
@@ -485,7 +485,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/ethevenot/qualitymetrics/quality_metrics/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/cactus_cactus/cactus_cactus/.*:
-    cores: 60
+    cores: 30
+    mem: 250
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/hifiadapterfilt/hifiadapterfilt/.*:
     cores: 12
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_classification/cardinal_classification/.*:
@@ -2250,8 +2251,6 @@ tools:
     mem: 18
   re_he_maldi_image_registration:
     mem: 48
-  tabular_to_csv:
-    cores: 3
   tombo_detect_modifications:
     cores: 10
     mem: 32
