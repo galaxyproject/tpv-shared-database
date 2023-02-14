@@ -2088,4 +2088,5 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/cherri_train/cherri_train/.*:
     cores: 1
     mem: 40
-  
+  toolshed.g2.bx.psu.edu/repos/iuc/bbtools_callvariants/bbtools_callvariants/.*:
+    mem: 15
