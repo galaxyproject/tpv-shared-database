@@ -2082,3 +2082,10 @@ tools:
   toolshed.g2.bx.psu.edu/repos/artbio/gsc_scran_normalize/scran_normalize/.*:
     cores: 1
     mem: 20
+  toolshed.g2.bx.psu.edu/repos/iuc/cherri_eval/cherri_eval/.*:
+    cores: 1
+    mem: 20
+  toolshed.g2.bx.psu.edu/repos/iuc/cherri_train/cherri_train/.*:
+    cores: 1
+    mem: 40
+  
