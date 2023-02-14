@@ -2081,4 +2081,4 @@ tools:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/artbio/gsc_scran_normalize/scran_normalize/.*:
     cores: 1
-    mem: 900
+    mem: 20
