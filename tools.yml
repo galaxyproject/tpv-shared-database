@@ -1750,7 +1750,7 @@ tools:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/rgrnastar/rna_star/.*:
     cores: 10
-    mem: 90
+    mem: 50
   toolshed.g2.bx.psu.edu/repos/iuc/rna_starsolo/rna_starsolo/.*:
     cores: 4
     mem: 40
