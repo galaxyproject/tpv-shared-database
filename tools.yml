@@ -460,7 +460,7 @@ tools:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/galaxyp/eggnog_mapper/eggnog_mapper/.*:
     cores: 8
-    mem: 4
+    mem: 12
   toolshed.g2.bx.psu.edu/repos/galaxyp/encyclopedia_prosit_csv_to_library/encyclopedia_prosit_csv_to_library/.*:
     mem: 40
     env:
