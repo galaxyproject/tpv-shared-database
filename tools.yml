@@ -2059,3 +2059,5 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/chira_merge/chira_merge/.*:
     cores: 1
     mem: 60
+  toolshed.g2.bx.psu.edu/repos/iuc/yahs/yahs/.*:
+    mem: 100
