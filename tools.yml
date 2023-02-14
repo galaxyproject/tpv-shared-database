@@ -913,6 +913,8 @@ tools:
       - singularity
   toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/.*:
     mem: 8
+  toolshed.g2.bx.psu.edu/repos/iuc/dexseq/dexseq/.*:
+    cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/dexseq/dexseq_count/.*:
     mem: 25
   toolshed.g2.bx.psu.edu/repos/iuc/drep_dereplicate/drep_dereplicate/.*:
