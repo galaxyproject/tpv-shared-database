@@ -1026,6 +1026,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/instagraal/instagraal/.*:
     cores: 1
     gpus: 1
+    mem: 30
     scheduling:
       accept:
       - gpu
