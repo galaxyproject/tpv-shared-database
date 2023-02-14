@@ -2065,3 +2065,5 @@ tools:
     mem: 100
   toolshed.g2.bx.psu.edu/repos/iuc/filtlong/filtlong/.*:
     mem: 50
+  toolshed.g2.bx.psu.edu/repos/iuc/gubbins/gubbins/.*:
+    cores: 6
