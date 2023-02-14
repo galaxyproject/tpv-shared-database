@@ -899,6 +899,8 @@ tools:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/iuc/circos/circgraph/.*:
     mem: 10
+  toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/.*:
+    mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/concoct/concoct/.*:
     cores: 10
     mem: 48
