@@ -1023,6 +1023,12 @@ tools:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/hypo/hypo/.*:
     cores: 8
+  toolshed.g2.bx.psu.edu/repos/bgruening/instagraal/instagraal/.*:
+    cores: 1
+    gpus: 1
+    scheduling:
+      accept:
+      - gpu
   toolshed.g2.bx.psu.edu/repos/iuc/iqtree/iqtree/.*:
     cores: 10
   toolshed.g2.bx.psu.edu/repos/iuc/ivar_trim/ivar_trim/.*:
