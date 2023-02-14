@@ -2090,3 +2090,5 @@ tools:
     mem: 40
   toolshed.g2.bx.psu.edu/repos/iuc/bbtools_callvariants/bbtools_callvariants/.*:
     mem: 15
+  toolshed.g2.bx.psu.edu/repos/ecology/srs_preprocess_s2/srs_preprocess_s2/.*:
+    mem: 16
