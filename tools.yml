@@ -2061,3 +2061,5 @@ tools:
     mem: 60
   toolshed.g2.bx.psu.edu/repos/iuc/yahs/yahs/.*:
     mem: 100
+  toolshed.g2.bx.psu.edu/repos/iuc/filtlong/filtlong/.*:
+    mem: 50
