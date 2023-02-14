@@ -2047,3 +2047,15 @@ tools:
     mem: 32
   wig_to_bigWig:
     mem: 10
+  toolshed.g2.bx.psu.edu/repos/iuc/chira_quantify/chira_quantify/.*:
+    cores: 1
+    mem: 60
+  toolshed.g2.bx.psu.edu/repos/iuc/chira_extract/chira_extract/.*:
+    cores: 24
+    mem: 100
+  toolshed.g2.bx.psu.edu/repos/iuc/chira_map/chira_map/.*:
+    cores: 10
+    mem: 80
+  toolshed.g2.bx.psu.edu/repos/iuc/chira_merge/chira_merge/.*:
+    cores: 1
+    mem: 60
