@@ -2092,3 +2092,5 @@ tools:
     mem: 15
   toolshed.g2.bx.psu.edu/repos/ecology/srs_preprocess_s2/srs_preprocess_s2/.*:
     mem: 16
+  toolshed.g2.bx.psu.edu/repos/iuc/miniasm/miniasm/.*:
+    mem: 32
