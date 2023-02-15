@@ -2082,6 +2082,10 @@ tools:
     mem: 40
   bwtool-lift:
     mem: 80
+  disco:
+    cores: 8
+    env:
+      DISCO_MAX_MEMORY: 24
   join1:
     mem: 18
   re_he_maldi_image_registration:
