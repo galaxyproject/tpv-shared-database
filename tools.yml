@@ -953,7 +953,7 @@ tools:
     cores: 8
     mem: 24
     env:
-      DISCO_MAX_MEMORY: {mem}
+      DISCO_MAX_MEMORY: "{mem}"
   toolshed.g2.bx.psu.edu/repos/iuc/drep_dereplicate/drep_dereplicate/.*:
     cores: 6
     mem: 12
