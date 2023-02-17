@@ -10,15 +10,15 @@ tools:
     rules: []
     rank: |
       helpers.weighted_random_sampling(candidate_destinations)
-  toolshed.g2.bx.psu.edu/repos/artbio/gsc_scran_normalize/scran_normalize/.*:
-    cores: 1
-    mem: 20
   testtoolshed.g2.bx.psu.edu/repos/jchung/generate_count_matrix/generate_count_matrix/.*:
     mem: 7.6
   testtoolshed.g2.bx.psu.edu/repos/simon-gladman/phyloseq_filter/biom_filter/.*:
     mem: 60.8
   testtoolshed.g2.bx.psu.edu/repos/simon-gladman/phyloseq_ordination_plot/phyloseq_ordinate/.*:
     mem: 60.8
+  toolshed.g2.bx.psu.edu/repos/artbio/gsc_scran_normalize/scran_normalize/.*:
+    cores: 1
+    mem: 20
   toolshed.g2.bx.psu.edu/repos/artbio/repenrich/repenrich/.*:
     cores: 8
   toolshed.g2.bx.psu.edu/repos/bebatut/cdhit/cd_hit_est/.*:
@@ -943,10 +943,10 @@ tools:
     mem: 15.2
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/.*:
     cores: 4
-  toolshed.g2.bx.psu.edu/repos/iuc/bbtools_callvariants/bbtools_callvariants/.*:
-    mem: 15
   toolshed.g2.bx.psu.edu/repos/iuc/barrnap/barrnap/.*:
     cores: 3
+  toolshed.g2.bx.psu.edu/repos/iuc/bbtools_callvariants/bbtools_callvariants/.*:
+    mem: 15
   toolshed.g2.bx.psu.edu/repos/iuc/bcftools_mpileup/bcftools_mpileup/.*:
     cores: 7
   toolshed.g2.bx.psu.edu/repos/iuc/bcftools_norm/bcftools_norm/.*:
@@ -1200,10 +1200,10 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/metabat2/metabat2/.*:
     cores: 10
     mem: 48
-  toolshed.g2.bx.psu.edu/repos/iuc/miniasm/miniasm/.*:
-    mem: 32
   toolshed.g2.bx.psu.edu/repos/iuc/metaphlan/metaphlan/.*:
     cores: 16
+  toolshed.g2.bx.psu.edu/repos/iuc/miniasm/miniasm/.*:
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/.*:
     cores: 8
     mem: 32
