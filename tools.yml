@@ -186,8 +186,8 @@ tools:
     cores: 20
     mem: 120
     rules:
-    - if: input_size <= 0.2
-      id: hifiasm_small_input_rule
+    - id: hifiasm_small_input_rule
+      if: input_size <= 0.2
       cores: 6
       mem: 40
   toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmbuild/.*:
