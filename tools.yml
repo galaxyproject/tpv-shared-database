@@ -2288,6 +2288,7 @@ tools:
     mem: 92
   .*twobit_builder_data_manager.*:
     cores: 16
+    mem: 36
   CONVERTER_bedgraph_to_bigwig:
     mem: 8
   Extract genomic DNA 1:
