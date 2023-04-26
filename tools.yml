@@ -508,6 +508,8 @@ tools:
     cores: 12
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_classification/cardinal_classification/.*:
     mem: 90
+  toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_colocalization/cardinal_colocalization/.*:
+    mem: 90
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_combine/cardinal_combine/.*:
     mem: 92
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_data_exporter/cardinal_data_exporter/.*:
