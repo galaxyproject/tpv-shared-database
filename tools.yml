@@ -935,6 +935,8 @@ tools:
     cores: 8
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_markdupes/je_markdupes/.*:
     cores: 8
+  toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/.*:
+    inherits: __docker_tool
   toolshed.g2.bx.psu.edu/repos/guerler/charts/charts/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/imgteam/projective_transformation/ip_projective_transformation/.*:
@@ -2165,6 +2167,16 @@ tools:
   toolshed.g2.bx.psu.edu/repos/nml/spades/spades/.*:
     cores: 20
     mem: 330
+  toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/.*:
+    inherits: __docker_tool
+  toolshed.g2.bx.psu.edu/repos/perssond/coreograph/unet_coreograph/.*:
+    inherits: __docker_tool
+  toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/.*:
+    inherits: __docker_tool
+  toolshed.g2.bx.psu.edu/repos/perssond/s3segmenter/s3segmenter/.*:
+    inherits: __docker_tool
+  toolshed.g2.bx.psu.edu/repos/perssond/unmicst/unmicst/.*:
+    inherits: __docker_tool
   toolshed.g2.bx.psu.edu/repos/peterjc/blast2go/blast2go/.*:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/peterjc/mira_assembler/mira_assembler/.*:
@@ -2177,6 +2189,8 @@ tools:
     mem: 34.2
   toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/.*:
     cores: 3
+  toolshed.g2.bx.psu.edu/repos/q2d2/qiime2.*:
+    inherits: __docker_tool
   toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/.*:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/.*:
@@ -2293,6 +2307,13 @@ tools:
     mem: 8
   Extract genomic DNA 1:
     cores: 3
+  __docker_tool:
+    params:
+      docker_enabled: true
+    scheduling:
+      require:
+      - docker
+    abstract: true
   bfast_wrapper:
     cores: 10
     mem: 20
