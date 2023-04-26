@@ -525,10 +525,10 @@ tools:
     mem: 180
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_segmentations/cardinal_segmentations/.*:
     mem: 92
-  toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_spectra_plots/cardinal_spectra_plots/.*:
-    mem: 32
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_single_ion_segmentation/cardinal_single_ion_segmentation/.*:
     mem: 90
+  toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_spectra_plots/cardinal_spectra_plots/.*:
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/galaxyp/eggnog_mapper/eggnog_mapper/.*:
     cores: 8
     mem: 12
