@@ -2046,7 +2046,7 @@ tools:
     mem: 250
   toolshed.g2.bx.psu.edu/repos/iuc/spades_rnaviralspades/spades_rnaviralspades/.*:
     cores: 10
-    mem: 250
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/spyboat/spyboat/.*:
     cores: 8
     mem: 4
