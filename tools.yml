@@ -1853,7 +1853,8 @@ tools:
     cores: 9
     mem: 48
   toolshed.g2.bx.psu.edu/repos/iuc/nanoplot/nanoplot/.*:
-    cores: 32
+    cores: 12
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/iuc/nanopolishcomp_eventaligncollapse/nanopolishcomp_eventaligncollapse/.*:
     cores: 10
     mem: 12
