@@ -2034,7 +2034,7 @@ tools:
     mem: 450
   toolshed.g2.bx.psu.edu/repos/iuc/spades_coronaspades/spades_coronaspades/.*:
     cores: 10
-    mem: 250
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/spades_metaplasmidspades/spades_metaplasmidspades/.*:
     cores: 10
     mem: 330
