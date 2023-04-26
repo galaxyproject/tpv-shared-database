@@ -508,6 +508,8 @@ tools:
     cores: 12
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_classification/cardinal_classification/.*:
     mem: 90
+  toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_colocalization/cardinal_colocalization/.*:
+    mem: 90
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_combine/cardinal_combine/.*:
     mem: 92
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_data_exporter/cardinal_data_exporter/.*:
@@ -523,6 +525,8 @@ tools:
     mem: 180
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_segmentations/cardinal_segmentations/.*:
     mem: 92
+  toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_single_ion_segmentation/cardinal_single_ion_segmentation/.*:
+    mem: 90
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_spectra_plots/cardinal_spectra_plots/.*:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/galaxyp/eggnog_mapper/eggnog_mapper/.*:
@@ -1853,7 +1857,8 @@ tools:
     cores: 9
     mem: 48
   toolshed.g2.bx.psu.edu/repos/iuc/nanoplot/nanoplot/.*:
-    cores: 32
+    cores: 2
+    mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/nanopolishcomp_eventaligncollapse/nanopolishcomp_eventaligncollapse/.*:
     cores: 10
     mem: 12
@@ -2029,7 +2034,7 @@ tools:
     mem: 450
   toolshed.g2.bx.psu.edu/repos/iuc/spades_coronaspades/spades_coronaspades/.*:
     cores: 10
-    mem: 250
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/spades_metaplasmidspades/spades_metaplasmidspades/.*:
     cores: 10
     mem: 330
@@ -2041,7 +2046,7 @@ tools:
     mem: 250
   toolshed.g2.bx.psu.edu/repos/iuc/spades_rnaviralspades/spades_rnaviralspades/.*:
     cores: 10
-    mem: 250
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/spyboat/spyboat/.*:
     cores: 8
     mem: 4
@@ -2283,6 +2288,7 @@ tools:
     mem: 92
   .*twobit_builder_data_manager.*:
     cores: 16
+    mem: 36
   CONVERTER_bedgraph_to_bigwig:
     mem: 8
   Extract genomic DNA 1:
