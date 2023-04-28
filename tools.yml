@@ -70,7 +70,7 @@ tools:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_computeMatrix/.*:
     cores: 10
-    mem: 40
+    mem: 90
   toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_correctGCBias/.*:
     cores: 10
     mem: 24
@@ -202,6 +202,7 @@ tools:
     mem: 30
   toolshed.g2.bx.psu.edu/repos/bgruening/interproscan/interproscan/.*:
     cores: 8
+    mem: 40
   toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/.*:
     cores: 4
     env:
@@ -309,6 +310,9 @@ tools:
       - docker
   toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/.*:
     cores: 8
+    mem: 20
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G    
     scheduling:
       accept:
       - pulsar
@@ -473,6 +477,7 @@ tools:
     cores: 10
     mem: 90
   toolshed.g2.bx.psu.edu/repos/devteam/velvet/velvetg/.*:
+    cores: 4
     mem: 32
     env:
       OMP_NUM_THREADS: '{cores}'
@@ -919,6 +924,7 @@ tools:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/peptide_shaker/.*:
     cores: 7
+    mem: 90
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/galaxyp/proteomics_moff/proteomics_moff/.*:
@@ -949,6 +955,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_import/anndata_import/.*:
     mem: 200
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/.*:
+    cores: 4
     mem: 15.2
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/.*:
     cores: 4
@@ -956,6 +963,8 @@ tools:
     cores: 3
   toolshed.g2.bx.psu.edu/repos/iuc/bbtools_callvariants/bbtools_callvariants/.*:
     mem: 15
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G    
   toolshed.g2.bx.psu.edu/repos/iuc/bcftools_mpileup/bcftools_mpileup/.*:
     cores: 7
   toolshed.g2.bx.psu.edu/repos/iuc/bcftools_norm/bcftools_norm/.*:
@@ -2091,6 +2100,9 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity/.*:
     cores: 32
+    mem: 512
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G    
   toolshed.g2.bx.psu.edu/repos/iuc/trinity_align_and_estimate_abundance/trinity_align_and_estimate_abundance/.*:
     cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_cluster/trycycler_cluster/.*:
@@ -2111,6 +2123,10 @@ tools:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/.*:
     cores: 16
+    mem: 90
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      TERM: vt100 
     scheduling:
       accept:
       - pulsar
@@ -2152,7 +2168,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_RPKM_saturation/.*:
     mem: 30.4
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/.*:
-    mem: 16
+    mem: 20
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage/.*:
     mem: 7.6
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage2/.*:
@@ -2176,7 +2192,10 @@ tools:
   toolshed.g2.bx.psu.edu/repos/pjbriggs/macs21/macs2_1_peakcalling/.*:
     mem: 34.2
   toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/.*:
-    cores: 3
+    cores: 6
+    mem: 12
+    env:
+       _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/.*:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/.*:
@@ -2195,6 +2214,7 @@ tools:
     cores: 10
     mem: 20
   toolshed.g2.bx.psu.edu/repos/rnateam/mirdeep2_mapper/rbc_mirdeep2_mapper/.*:
+    cores: 10
     mem: 20
   toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer/.*:
     mem: 8
@@ -2225,6 +2245,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/wolma/mimodd_aln/mimodd_align/.*:
     mem: 19.0
   toolshed.g2.bx.psu.edu/repos/wolma/mimodd_main/mimodd_varcall/.*:
+    cores: 6  
     mem: 22.8
   .*bowtie2_index_builder_data_manager.*:
     cores: 16
@@ -2368,16 +2389,6 @@ toolshed.g2.bx.psu.edu/repos/iracooke/msgfplus/msgfplus/.*:
 toolshed.g2.bx.psu.edu/repos/galaxyp/openms_mapalignmentevaluation/openms_mapalignmentevaluation/.*:
   cores: 4
   mem: 8
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# toolshed.g2.bx.psu.edu/repos/bgruening/interproscan/interproscan/.*:
-#   cores: 6
-#   mem: 40
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# toolshed.g2.bx.psu.edu/repos/wolma/mimodd_main/mimodd_varcall/.*:
-#     cores: 6
-#     mem: 22.8
 toolshed.g2.bx.psu.edu/repos/iuc/migmap/migmap/.*:
   cores: 10
   mem: 16
@@ -2386,13 +2397,6 @@ toolshed.g2.bx.psu.edu/repos/iuc/migmap/migmap/.*:
 toolshed.g2.bx.psu.edu/repos/galaxyp/proteomics_moff/proteomics_moff/.*:
   cores: 6
   mem: 20
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/peptide_shaker/.*:
-#     cores: 10
-#     mem: 90
-#     env:
-#       _JAVA_OPTIONS: -XX:MaxPermSize=4G -Xmx{int(mem)}G -Xms4G
 toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_FilterSamReads/.*:
   mem: 12
   env:
@@ -2405,30 +2409,9 @@ toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_SortSam/.*:
   mem: 10
   env:
     _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
-# Issues ↓:
-# - Could not find the long id.
 .*prokaryotic_ncbi_submission.*:
   cores: 24
   mem: 24
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# - Exists in the database but environment variables are not defined.
-# - Exists in the database where it is scheduled to run on pulsar, unlike here.
-# toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/.*:
-#   cores: 8
-#   mem: 20
-#   env:
-#     _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-# This tool ↓ exists in the shared db but the env is not set
-# toolshed.g2.bx.psu.edu/repos/iuc/bbtools_callvariants/bbtools_callvariants/.*:
-#   mem: 15
-#   env:
-#     _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# toolshed.g2.bx.psu.edu/repos/rnateam/mirdeep2_mapper/rbc_mirdeep2_mapper/.*:
-#  cores: 10
-#  mem: 20
 toolshed.g2.bx.psu.edu/repos/galaxyp/reactome_pathwaymatcher/reactome_pathwaymatcher/.*:
   mem: 20
   env:
@@ -2467,109 +2450,14 @@ toolshed.g2.bx.psu.edu/repos/earlhaminst/t_coffee/t_coffee/.*:
     DIR_4_TCOFFEE: $TMP
     TMP_4_TCOFFEE: $TMP
     CACHE_4_TCOFFEE: $TMP
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# - Exists in the database but environment variables are not defined.
-# toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/.*:
-#  cores: 6
-#   mem: 12
-#   env:
-#      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# - Exists in the database but environment variables are not defined.
-# toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity/.*:
-#  cores: 32
-#  mem: 512
-#  env:
-#    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# - Exists in the database but environment variables are not defined.
-# toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/.*:
-#  cores: 16
-#  mem: 90
-#  env:
-#    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-#    TERM: vt100
-#  scheduling:
-#    accept:
-#    - pulsar
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# toolshed.g2.bx.psu.edu/repos/devteam/velvet/velvetg/.*:
-#  cores: 4
-#  mem: 32
-#  env:
-#    OMP_NUM_THREADS: '{cores}'
-#    OMP_THREAD_LIMIT: '{cores}'
 toolshed.g2.bx.psu.edu/repos/galaxyp/openms_tmtanalyzer/TMTAnalyzer/.*:
   cores: 4
   mem: 8
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/.*:
-#   cores: 4  # (tool_destinations.yml)
-#   mem: 15.2  # (TPV database)
 toolshed.g2.bx.psu.edu/repos/bgruening/antismash/.*:
   cores: 10
   mem: 90
   env:
     _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# - Exists in the database under a different id. There original id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-#   - Does NOT appear in usegalaxy.eu's PostgreSQL.
-# bam-to-wig: { mem: 20 }  (tool_destinations.yaml)
-# toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/.*:  # (tpv database)
-#   mem: 16
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# - Exists in the database under a different id. There original id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-#   - Does appear in usegalaxy.eu's PostgreSQL.
-# bamCompare_deepTools: { mem: 10 } (tool_destinations.yaml)
-# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCompare/.*:  # (tpv database)
-#   cores: 10
-#   mem: 12
-# Issues ↓:
-# - Exists in the database under a different id. There original id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-#   - Does appear in usegalaxy.eu's PostgreSQL.
-# bamCorrelate_deepTools: { cores: 10, mem: 90 } (tool_destinations.yaml)
-# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCorrelate/.*:  # (tpv database)
-#   cores: 10
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# - Exists in the database under a different id. There original id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-#   - Does appear in usegalaxy.eu's PostgreSQL.
-# bamCoverage_deepTools: { mem: 10 } (tool_destinations.yaml)
-# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCoverage/.*:  # (tpv database)
-#   cores: 10
-#   mem: 48
-# Issues ↓:
-# - Exists in the database under a different id. There original id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-#   - Does appear in usegalaxy.eu's PostgreSQL.
-# bamFingerprint: { mem: 10 } (tool_destinations.yaml)
-# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamFingerprint/.*:  # (tpv database)
-#   cores: 10
-#   mem: 12
-# Issues ↓:
-# - Exists in the database under a different id. There original id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-#   - Does appear in usegalaxy.eu's PostgreSQL.
-# heatmapper_deepTools: { mem: 25 } (tool_destinations.yaml)
-# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_heatmapper/.*:  # (tpv database)
-#   mem: 25
 toolshed.g2.bx.psu.edu/repos/aaronquinlan/bedtools/bedtools_intersectbed_bam/.*:
   mem: 40
 toolshed.g2.bx.psu.edu/repos/bgruening/bismark/bismark_bowtie/.*:
@@ -2590,20 +2478,6 @@ toolshed.g2.bx.psu.edu/repos/iuc/megan_sam2rma/megan_sam2rma/.*:
   mem: 40
   env:
     _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# - Exists in the database under a different id.
-# computeMatrix: { mem: 90 } (tool_destinations.yaml)
-# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_computeMatrix/.*:  # (TPV shared database)
-#    cores: 10
-#    mem: 40
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# - Exists in the database under a different id.
-# correctGCBias: { mem: 10 } (tool_destinations.yaml)
-# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_computeMatrix/.*:  # (TPV shared database)
-#    cores: 10
-#    mem: 24
 toolshed.g2.bx.psu.edu/repos/bgruening/openmg/ctb_openmg/.*:
   mem: 20
   env:
@@ -2611,53 +2485,6 @@ toolshed.g2.bx.psu.edu/repos/bgruening/openmg/ctb_openmg/.*:
 toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCorrelate/.*:
   cores: 10
   mem: 90
-# Issues ↓:
-# - Does NOT exist in the database. In addition, its id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-# dt_profiler: { mem: 10 } (tool_destinations.yaml)
-# .*dt_profiler.*:
-#   mem: 10
-# Issues ↓:
-# - Does NOT exist in the database. In addition, its id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-# eukaryotic_ncbi_submission: { cores: 24, mem: 24 } (tool_destinations.yaml)
-# .*eukaryotic_ncbi_submission.*:
-#   cores: 24
-#   mem: 24
-# Issues ↓:
-# - Does NOT exist in the database. In addition, its id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-# flexbar: { cores: 10, mem: 12 } (tool_destinations.yaml)
-# .*flexbar.*:
-#   cores: 10
-#   mem: 12
-# Issues ↓:
-# - Does NOT exist in the database. In addition, its id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-# flexbar_no_split: { cores: 10, mem: 12 } (tool_destinations.yaml)
-# .*flexbar_no_split.*:
-#   cores: 10
-#   mem: 12
-# Issues ↓:
-# - Does NOT exist in the database. In addition, its id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-# flexbar_split_RR_bcs: { cores: 10, mem: 12 } (tool_destinations.yaml)
-# .*flexbar_split_RR_bcs.*:
-#   cores: 10
-#   mem: 12
-# Issues ↓:
-# - Does NOT exist in the database. In addition, its id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-# flexbar_split_RYYR_bcs: { cores: 10, mem: 12 } (tool_destinations.yaml)
-# .*flexbar_split_RYYR_bcs.*:
-#   cores: 10
-#   mem: 12
 toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_base_recalibrator/.*:
   cores: 10
   env:
@@ -2685,24 +2512,3 @@ toolshed.g2.bx.psu.edu/repos/iuc/gubbins/gubbins/.*:
 toolshed.g2.bx.psu.edu/repos/iuc/data_manager_metaphlan_database_downloader/data_manager_metaphlan_download/.*:
   cores: 12
   mem: 92
-# Issues ↓:
-# - Exists in the database but resources are set differently.
-# interproscan: {mem: 40, cores: 6} (tool_destinations.yml)
-# toolshed.g2.bx.psu.edu/repos/bgruening/interproscan/interproscan/.*:  # (shared TPV database)
-#   cores: 8
-# Issues ↓:
-# - Does NOT exist in the database. In addition, its id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-#   - Does NOT appear in usegalaxy.eu's PostgreSQL.
-# Does not exist in the shared DB, nor tool shed, nor Galaxy EU tool search nor PostgreSQL.
-# Resampler: { cores: 4, mem: 8 }
-# Issues ↓:
-# - A tool called freebayes exists on the database, this is clearly a typo.
-# feebayes: { cores: 10, mem: 12 }
-# Issues ↓:
-# - Does NOT exist in the database. In addition, its id:
-#   - Does NOT appear in the Tool Shed.
-#   - Does NOT appear in the Galaxy EU tool search.
-#   - Does NOT appear in usegalaxy.eu's PostgreSQL.
-# schicexplorer_schicclustercomparments: { cores: 20, mem: 64 }
