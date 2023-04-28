@@ -2368,3 +2368,138 @@ toolshed.g2.bx.psu.edu/repos/iracooke/msgfplus/msgfplus/.*:
 toolshed.g2.bx.psu.edu/repos/galaxyp/openms_mapalignmentevaluation/openms_mapalignmentevaluation/.*:
   cores: 4
   mem: 8
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# toolshed.g2.bx.psu.edu/repos/bgruening/interproscan/interproscan/.*:
+#   cores: 6
+#   mem: 40
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# toolshed.g2.bx.psu.edu/repos/wolma/mimodd_main/mimodd_varcall/.*:
+#     cores: 6
+#     mem: 22.8
+toolshed.g2.bx.psu.edu/repos/iuc/migmap/migmap/.*:
+  cores: 10
+  mem: 16
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=6G -Xmx{int(mem)}G -Xms1G
+toolshed.g2.bx.psu.edu/repos/galaxyp/proteomics_moff/proteomics_moff/.*:
+  cores: 6
+  mem: 20
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/peptide_shaker/.*:
+#     cores: 10
+#     mem: 90
+#     env:
+#       _JAVA_OPTIONS: -XX:MaxPermSize=4G -Xmx{int(mem)}G -Xms4G
+toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_FilterSamReads/.*:
+  mem: 12
+  env:
+    TMP_DIR: $TMPDIR
+toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/.*:
+  mem: 12
+  env:
+    _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_SortSam/.*:
+  mem: 10
+  env:
+    _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+# Issues ↓:
+# - Could not find the long id.
+.*prokaryotic_ncbi_submission.*:
+  cores: 24
+  mem: 24
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# - Exists in the database but environment variables are not defined.
+# - Exists in the database where it is scheduled to run on pulsar, unlike here.
+# toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/.*:
+#   cores: 8
+#   mem: 20
+#   env:
+#     _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+# This tool ↓ exists in the shared db but the env is not set
+# toolshed.g2.bx.psu.edu/repos/iuc/bbtools_callvariants/bbtools_callvariants/.*:
+#   mem: 15
+#   env:
+#     _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# toolshed.g2.bx.psu.edu/repos/rnateam/mirdeep2_mapper/rbc_mirdeep2_mapper/.*:
+#  cores: 10
+#  mem: 20
+toolshed.g2.bx.psu.edu/repos/galaxyp/reactome_pathwaymatcher/reactome_pathwaymatcher/.*:
+  mem: 20
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+toolshed.g2.bx.psu.edu/repos/pavlo-lutsik/rnbeads/rnbeads/.*:
+  mem: 20
+toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/.*:
+  cores: 8
+  mem: 16
+toolshed.g2.bx.psu.edu/repos/iuc/scanpy_cluster_reduce_dimension/scanpy_cluster_reduce_dimension/.*:
+  cores: 4
+  mem: 19.0
+toolshed.g2.bx.psu.edu/repos/iuc/scanpy_filter/scanpy_filter/.*:
+  cores: 4
+  mem: 11.4
+toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/.*:
+  cores: 4
+  mem: 19.0
+toolshed.g2.bx.psu.edu/repos/iuc/scanpy_normalize/scanpy_normalize/.*:
+  cores: 4
+  mem: 7.6
+toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/.*:
+  cores: 4
+toolshed.g2.bx.psu.edu/repos/devteam/sam_merge/sam_merge2/.*:
+  mem: 32
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/search_gui/.*:
+  cores: 10
+  mem: 12
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+toolshed.g2.bx.psu.edu/repos/earlhaminst/t_coffee/t_coffee/.*:
+  mem: 90
+  env:
+    DIR_4_TCOFFEE: $TMP
+    TMP_4_TCOFFEE: $TMP
+    CACHE_4_TCOFFEE: $TMP
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# - Exists in the database but environment variables are not defined.
+# toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/.*:
+#  cores: 6
+#   mem: 12
+#   env:
+#      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# - Exists in the database but environment variables are not defined.
+# toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity/.*:
+#  cores: 32
+#  mem: 512
+#  env:
+#    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# - Exists in the database but environment variables are not defined.
+# toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/.*:
+#  cores: 16
+#  mem: 90
+#  env:
+#    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+#    TERM: vt100
+#  scheduling:
+#    accept:
+#    - pulsar
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# toolshed.g2.bx.psu.edu/repos/devteam/velvet/velvetg/.*:
+#  cores: 4
+#  mem: 32
+#  env:
+#    OMP_NUM_THREADS: '{cores}'
+#    OMP_THREAD_LIMIT: '{cores}'
