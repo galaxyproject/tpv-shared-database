@@ -2503,3 +2503,206 @@ toolshed.g2.bx.psu.edu/repos/earlhaminst/t_coffee/t_coffee/.*:
 #  env:
 #    OMP_NUM_THREADS: '{cores}'
 #    OMP_THREAD_LIMIT: '{cores}'
+toolshed.g2.bx.psu.edu/repos/galaxyp/openms_tmtanalyzer/TMTAnalyzer/.*:
+  cores: 4
+  mem: 8
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/.*:
+#   cores: 4  # (tool_destinations.yml)
+#   mem: 15.2  # (TPV database)
+toolshed.g2.bx.psu.edu/repos/bgruening/antismash/.*:
+  cores: 10
+  mem: 90
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# - Exists in the database under a different id. There original id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+#   - Does NOT appear in usegalaxy.eu's PostgreSQL.
+# bam-to-wig: { mem: 20 }  (tool_destinations.yaml)
+# toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/.*:  # (tpv database)
+#   mem: 16
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# - Exists in the database under a different id. There original id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+#   - Does appear in usegalaxy.eu's PostgreSQL.
+# bamCompare_deepTools: { mem: 10 } (tool_destinations.yaml)
+# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCompare/.*:  # (tpv database)
+#   cores: 10
+#   mem: 12
+# Issues ↓:
+# - Exists in the database under a different id. There original id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+#   - Does appear in usegalaxy.eu's PostgreSQL.
+# bamCorrelate_deepTools: { cores: 10, mem: 90 } (tool_destinations.yaml)
+# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCorrelate/.*:  # (tpv database)
+#   cores: 10
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# - Exists in the database under a different id. There original id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+#   - Does appear in usegalaxy.eu's PostgreSQL.
+# bamCoverage_deepTools: { mem: 10 } (tool_destinations.yaml)
+# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCoverage/.*:  # (tpv database)
+#   cores: 10
+#   mem: 48
+# Issues ↓:
+# - Exists in the database under a different id. There original id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+#   - Does appear in usegalaxy.eu's PostgreSQL.
+# bamFingerprint: { mem: 10 } (tool_destinations.yaml)
+# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamFingerprint/.*:  # (tpv database)
+#   cores: 10
+#   mem: 12
+# Issues ↓:
+# - Exists in the database under a different id. There original id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+#   - Does appear in usegalaxy.eu's PostgreSQL.
+# heatmapper_deepTools: { mem: 25 } (tool_destinations.yaml)
+# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_heatmapper/.*:  # (tpv database)
+#   mem: 25
+toolshed.g2.bx.psu.edu/repos/aaronquinlan/bedtools/bedtools_intersectbed_bam/.*:
+  mem: 40
+toolshed.g2.bx.psu.edu/repos/bgruening/bismark/bismark_bowtie/.*:
+  cores: 6
+  mem: 30
+toolshed.g2.bx.psu.edu/repos/bgruening/bismark/bismark_bowtie2/.*:
+  cores: 6
+  mem: 30
+toolshed.g2.bx.psu.edu/repos/iuc/megan_daa_meganizer/megan_daa_meganizer/.*:
+  mem: 40
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+toolshed.g2.bx.psu.edu/repos/iuc/megan_daa2rma/megan_daa2rma/.*:
+  mem: 40
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+toolshed.g2.bx.psu.edu/repos/iuc/megan_sam2rma/megan_sam2rma/.*:
+  mem: 40
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# - Exists in the database under a different id.
+# computeMatrix: { mem: 90 } (tool_destinations.yaml)
+# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_computeMatrix/.*:  # (TPV shared database)
+#    cores: 10
+#    mem: 40
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# - Exists in the database under a different id.
+# correctGCBias: { mem: 10 } (tool_destinations.yaml)
+# toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_computeMatrix/.*:  # (TPV shared database)
+#    cores: 10
+#    mem: 24
+toolshed.g2.bx.psu.edu/repos/bgruening/openmg/ctb_openmg/.*:
+  mem: 20
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCorrelate/.*:
+  cores: 10
+  mem: 90
+# Issues ↓:
+# - Does NOT exist in the database. In addition, its id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+# dt_profiler: { mem: 10 } (tool_destinations.yaml)
+# .*dt_profiler.*:
+#   mem: 10
+# Issues ↓:
+# - Does NOT exist in the database. In addition, its id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+# eukaryotic_ncbi_submission: { cores: 24, mem: 24 } (tool_destinations.yaml)
+# .*eukaryotic_ncbi_submission.*:
+#   cores: 24
+#   mem: 24
+# Issues ↓:
+# - Does NOT exist in the database. In addition, its id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+# flexbar: { cores: 10, mem: 12 } (tool_destinations.yaml)
+# .*flexbar.*:
+#   cores: 10
+#   mem: 12
+# Issues ↓:
+# - Does NOT exist in the database. In addition, its id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+# flexbar_no_split: { cores: 10, mem: 12 } (tool_destinations.yaml)
+# .*flexbar_no_split.*:
+#   cores: 10
+#   mem: 12
+# Issues ↓:
+# - Does NOT exist in the database. In addition, its id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+# flexbar_split_RR_bcs: { cores: 10, mem: 12 } (tool_destinations.yaml)
+# .*flexbar_split_RR_bcs.*:
+#   cores: 10
+#   mem: 12
+# Issues ↓:
+# - Does NOT exist in the database. In addition, its id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+# flexbar_split_RYYR_bcs: { cores: 10, mem: 12 } (tool_destinations.yaml)
+# .*flexbar_split_RYYR_bcs.*:
+#   cores: 10
+#   mem: 12
+toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_base_recalibrator/.*:
+  cores: 10
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  mem: 24
+toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_reduce_reads/.*:
+  cores: 10
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  mem: 24
+toolshed.g2.bx.psu.edu/repos/iuc/gemini_inheritance/gemini_inheritance/.*:
+  env:
+    OMP_NUM_THREADS: 4
+    OPENBLAS_NUM_THREADS: 4
+    MKL_NUM_THREADS: 4
+    VECLIB_MAXIMUM_THREADS: 4
+    NUMEXPR_NUM_THREADS: 4
+    NUMBA_NUM_THREADS: 4
+toolshed.g2.bx.psu.edu/repos/hammock/hammock/hammock_1.0/.*:
+  mem: 20
+  env:
+    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+toolshed.g2.bx.psu.edu/repos/iuc/gubbins/gubbins/.*:
+  cores: 6
+toolshed.g2.bx.psu.edu/repos/iuc/data_manager_metaphlan_database_downloader/data_manager_metaphlan_download/.*:
+  cores: 12
+  mem: 92
+# Issues ↓:
+# - Exists in the database but resources are set differently.
+# interproscan: {mem: 40, cores: 6} (tool_destinations.yml)
+# toolshed.g2.bx.psu.edu/repos/bgruening/interproscan/interproscan/.*:  # (shared TPV database)
+#   cores: 8
+# Issues ↓:
+# - Does NOT exist in the database. In addition, its id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+#   - Does NOT appear in usegalaxy.eu's PostgreSQL.
+# Does not exist in the shared DB, nor tool shed, nor Galaxy EU tool search nor PostgreSQL.
+# Resampler: { cores: 4, mem: 8 }
+# Issues ↓:
+# - A tool called freebayes exists on the database, this is clearly a typo.
+# feebayes: { cores: 10, mem: 12 }
+# Issues ↓:
+# - Does NOT exist in the database. In addition, its id:
+#   - Does NOT appear in the Tool Shed.
+#   - Does NOT appear in the Galaxy EU tool search.
+#   - Does NOT appear in usegalaxy.eu's PostgreSQL.
+# schicexplorer_schicclustercomparments: { cores: 20, mem: 64 }
