@@ -927,8 +927,6 @@ tools:
     mem: 90
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
-  toolshed.g2.bx.psu.edu/repos/galaxyp/proteomics_moff/proteomics_moff/.*:
-    mem: 20
   toolshed.g2.bx.psu.edu/repos/galaxyp/pyprophet_score/pyprophet_score/.*:
     cores: 1
     mem: 400
