@@ -1942,8 +1942,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/salsa/salsa/.*:
     cores: 1
     mem: 12
-  toolshed.g2.bx.psu.edu/repos/iuc/scanpy_filter/scanpy_filter/.*:
-    mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/.*:
     mem: 19.0
   toolshed.g2.bx.psu.edu/repos/iuc/scanpy_normalize/scanpy_normalize/.*:
