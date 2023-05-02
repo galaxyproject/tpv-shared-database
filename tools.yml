@@ -1144,6 +1144,7 @@ tools:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/hypo/hypo/.*:
     cores: 8
+    mem: 50
   toolshed.g2.bx.psu.edu/repos/iuc/iqtree/iqtree/.*:
     cores: 10
   toolshed.g2.bx.psu.edu/repos/iuc/ivar_consensus/ivar_consensus/.*:
