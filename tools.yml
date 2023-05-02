@@ -2446,8 +2446,6 @@ tools:
       VECLIB_MAXIMUM_THREADS: 4
       NUMEXPR_NUM_THREADS: 4
       NUMBA_NUM_THREADS: 4
-  toolshed.g2.bx.psu.edu/repos/iuc/gubbins/gubbins/.*:
-    cores: 6
   toolshed.g2.bx.psu.edu/repos/iuc/idr_download_by_ids/idr_download_by_ids/.*:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/iuc/lumpy_prep/lumpy_prep/.*:
