@@ -1213,13 +1213,14 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/gecko/gecko/.*:
     mem: 30.4
   toolshed.g2.bx.psu.edu/repos/iuc/gemini_inheritance/gemini_inheritance/.*:
+    cores: 4
     env:
-      MKL_NUM_THREADS: 4
-      NUMBA_NUM_THREADS: 4
-      NUMEXPR_NUM_THREADS: 4
-      OMP_NUM_THREADS: 4
-      OPENBLAS_NUM_THREADS: 4
-      VECLIB_MAXIMUM_THREADS: 4
+      MKL_NUM_THREADS: '{cores}'
+      NUMBA_NUM_THREADS: '{cores}'
+      NUMEXPR_NUM_THREADS: '{cores}'
+      OMP_NUM_THREADS: '{cores}'
+      OPENBLAS_NUM_THREADS: '{cores}'
+      VECLIB_MAXIMUM_THREADS: '{cores}'
   toolshed.g2.bx.psu.edu/repos/iuc/gemini_load/gemini_load/.*:
     cores: 10
     mem: 40
