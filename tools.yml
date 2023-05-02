@@ -2157,8 +2157,6 @@ tools:
     mem: 48
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_RPKM_saturation/.*:
     mem: 30.4
-  toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/.*:
-    mem: 20
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage/.*:
     mem: 7.6
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage2/.*:
@@ -2493,7 +2491,7 @@ tools:
       VARDICT_CHUNKSIZE: 1000000
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/.*:
     cores: 8
-    mem: 16
+    mem: 20
   toolshed.g2.bx.psu.edu/repos/pavlo-lutsik/rnbeads/rnbeads/.*:
     mem: 20
   .*prokaryotic_ncbi_submission.*:
