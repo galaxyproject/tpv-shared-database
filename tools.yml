@@ -2334,181 +2334,181 @@ tools:
     mem: 32
   wig_to_bigWig:
     mem: 10
-toolshed.g2.bx.psu.edu/repos/aaronquinlan/bedtools/bedtools_intersectbed_bam/.*:
-  mem: 40
-toolshed.g2.bx.psu.edu/repos/bgruening/antismash/.*:
-  cores: 10
-  mem: 90
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/bgruening/bismark/bismark_bowtie/.*:
-  cores: 6
-  mem: 30
-toolshed.g2.bx.psu.edu/repos/bgruening/bismark/bismark_bowtie2/.*:
-  cores: 6
-  mem: 30
-toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCorrelate/.*:
-  cores: 10
-  mem: 90
-toolshed.g2.bx.psu.edu/repos/bgruening/openduck_run_smd/openduck_run_smd/.*:
-  gpus: 1
-  cores: 1
-  env:
-    CUDA_VISIBLE_DEVICES: 0
-    OPENDUCK_GPU_PARAM: --gpu-id 1
-toolshed.g2.bx.psu.edu/repos/bgruening/openmg/ctb_openmg/.*:
-  mem: 20
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/bgruening/pharmcat/pharmcat/.*:
-  mem: 4
-  env:
-    _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
-  scheduling:
-    require:
-    - docker
-toolshed.g2.bx.psu.edu/repos/bgruening/xchem_pose_scoring/xchem_pose_scoring/.*:
-  gpus: 1
-  cores: 1
-  env:
-    CUDA_VISIBLE_DEVICES: 0
-toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_align_samples/dimspy_align_samples/.*:
-  cores: 4
-  mem: 12
-toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_process_scans/dimspy_process_scans/.*:
-  cores: 4
-  mem: 12
-toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_replicate_filter/dimspy_replicate_filter/.*:
-  cores: 4
-  mem: 12
-toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_FilterSamReads/.*:
-  mem: 12
-  env:
-    TMP_DIR: $TMPDIR
-toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/.*:
-  mem: 12
-  env:
-    _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_SortSam/.*:
-  mem: 10
-  env:
-    _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/devteam/sam_merge/sam_merge2/.*:
-  mem: 32
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/earlhaminst/t_coffee/t_coffee/.*:
-  mem: 90
-  env:
-    DIR_4_TCOFFEE: $TMP
-    TMP_4_TCOFFEE: $TMP
-    CACHE_4_TCOFFEE: $TMP
-toolshed.g2.bx.psu.edu/repos/galaxyp/openms_itraqanalyzer/openms_itraqanalyzer/.*:
-  cores: 4
-  mem: 8
-toolshed.g2.bx.psu.edu/repos/galaxyp/openms_mapalignmentevaluation/openms_mapalignmentevaluation/.*:
-  cores: 4
-  mem: 8
-toolshed.g2.bx.psu.edu/repos/galaxyp/openms_msgfplusadapter/MSGFPlusAdapter/.*:
-  cores: 10
-  mem: 12
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/galaxyp/openms_tmtanalyzer/TMTAnalyzer/.*:
-  cores: 4
-  mem: 8
-toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/search_gui/.*:
-  cores: 10
-  mem: 12
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/galaxyp/proteomics_moff/proteomics_moff/.*:
-  cores: 6
-  mem: 20
-toolshed.g2.bx.psu.edu/repos/galaxyp/reactome_pathwaymatcher/reactome_pathwaymatcher/.*:
-  mem: 20
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/hammock/hammock/hammock_1.0/.*:
-  mem: 20
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/imgteam/scale_image/scale_image/.*:
-  mem: 12
-toolshed.g2.bx.psu.edu/repos/iracooke/msgfplus/msgfplus/.*:
-  cores: 10
-  mem: 12
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/iuc/data_manager_metaphlan_database_downloader/data_manager_metaphlan_download/.*:
-  cores: 12
-  mem: 92
-toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_base_recalibrator/.*:
-  cores: 10
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-  mem: 24
-toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_reduce_reads/.*:
-  cores: 10
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-  mem: 24
-toolshed.g2.bx.psu.edu/repos/iuc/gemini_inheritance/gemini_inheritance/.*:
-  env:
-    OMP_NUM_THREADS: 4
-    OPENBLAS_NUM_THREADS: 4
-    MKL_NUM_THREADS: 4
-    VECLIB_MAXIMUM_THREADS: 4
-    NUMEXPR_NUM_THREADS: 4
-    NUMBA_NUM_THREADS: 4
-toolshed.g2.bx.psu.edu/repos/iuc/gubbins/gubbins/.*:
-  cores: 6
-toolshed.g2.bx.psu.edu/repos/iuc/idr_download_by_ids/idr_download_by_ids/.*:
-  mem: 24
-toolshed.g2.bx.psu.edu/repos/iuc/lumpy_prep/lumpy_prep/.*:
-  mem: 8
-toolshed.g2.bx.psu.edu/repos/iuc/megan_daa2rma/megan_daa2rma/.*:
-  mem: 40
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/iuc/megan_daa_meganizer/megan_daa_meganizer/.*:
-  mem: 40
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/iuc/megan_sam2rma/megan_sam2rma/.*:
-  mem: 40
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/iuc/migmap/migmap/.*:
-  cores: 10
-  mem: 16
-  env:
-    _JAVA_OPTIONS: -XX:MaxPermSize=6G -Xmx{int(mem)}G -Xms1G
-toolshed.g2.bx.psu.edu/repos/iuc/scanpy_cluster_reduce_dimension/scanpy_cluster_reduce_dimension/.*:
-  cores: 4
-  mem: 19.0
-toolshed.g2.bx.psu.edu/repos/iuc/scanpy_filter/scanpy_filter/.*:
-  cores: 4
-  mem: 11.4
-toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/.*:
-  cores: 4
-  mem: 19.0
-toolshed.g2.bx.psu.edu/repos/iuc/scanpy_normalize/scanpy_normalize/.*:
-  cores: 4
-  mem: 7.6
-toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/.*:
-  cores: 4
-toolshed.g2.bx.psu.edu/repos/iuc/vardict_java/vardict_java/.*:
-  mem: 128
-  cores: 2
-  env:
-    _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
-    VARDICT_CHUNKSIZE: 1000000
-toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/.*:
-  cores: 8
-  mem: 16
-toolshed.g2.bx.psu.edu/repos/pavlo-lutsik/rnbeads/rnbeads/.*:
-  mem: 20
-.*prokaryotic_ncbi_submission.*:
-  cores: 24
-  mem: 24
+  toolshed.g2.bx.psu.edu/repos/aaronquinlan/bedtools/bedtools_intersectbed_bam/.*:
+    mem: 40
+  toolshed.g2.bx.psu.edu/repos/bgruening/antismash/.*:
+    cores: 10
+    mem: 90
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/bgruening/bismark/bismark_bowtie/.*:
+    cores: 6
+    mem: 30
+  toolshed.g2.bx.psu.edu/repos/bgruening/bismark/bismark_bowtie2/.*:
+    cores: 6
+    mem: 30
+  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCorrelate/.*:
+    cores: 10
+    mem: 90
+  toolshed.g2.bx.psu.edu/repos/bgruening/openduck_run_smd/openduck_run_smd/.*:
+    gpus: 1
+    cores: 1
+    env:
+      CUDA_VISIBLE_DEVICES: 0
+      OPENDUCK_GPU_PARAM: --gpu-id 1
+  toolshed.g2.bx.psu.edu/repos/bgruening/openmg/ctb_openmg/.*:
+    mem: 20
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/bgruening/pharmcat/pharmcat/.*:
+    mem: 4
+    env:
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+    scheduling:
+      require:
+      - docker
+  toolshed.g2.bx.psu.edu/repos/bgruening/xchem_pose_scoring/xchem_pose_scoring/.*:
+    gpus: 1
+    cores: 1
+    env:
+      CUDA_VISIBLE_DEVICES: 0
+  toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_align_samples/dimspy_align_samples/.*:
+    cores: 4
+    mem: 12
+  toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_process_scans/dimspy_process_scans/.*:
+    cores: 4
+    mem: 12
+  toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_replicate_filter/dimspy_replicate_filter/.*:
+    cores: 4
+    mem: 12
+  toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_FilterSamReads/.*:
+    mem: 12
+    env:
+      TMP_DIR: $TMPDIR
+  toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/.*:
+    mem: 12
+    env:
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_SortSam/.*:
+    mem: 10
+    env:
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/devteam/sam_merge/sam_merge2/.*:
+    mem: 32
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/earlhaminst/t_coffee/t_coffee/.*:
+    mem: 90
+    env:
+      DIR_4_TCOFFEE: $TMP
+      TMP_4_TCOFFEE: $TMP
+      CACHE_4_TCOFFEE: $TMP
+  toolshed.g2.bx.psu.edu/repos/galaxyp/openms_itraqanalyzer/openms_itraqanalyzer/.*:
+    cores: 4
+    mem: 8
+  toolshed.g2.bx.psu.edu/repos/galaxyp/openms_mapalignmentevaluation/openms_mapalignmentevaluation/.*:
+    cores: 4
+    mem: 8
+  toolshed.g2.bx.psu.edu/repos/galaxyp/openms_msgfplusadapter/MSGFPlusAdapter/.*:
+    cores: 10
+    mem: 12
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/galaxyp/openms_tmtanalyzer/TMTAnalyzer/.*:
+    cores: 4
+    mem: 8
+  toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/search_gui/.*:
+    cores: 10
+    mem: 12
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/galaxyp/proteomics_moff/proteomics_moff/.*:
+    cores: 6
+    mem: 20
+  toolshed.g2.bx.psu.edu/repos/galaxyp/reactome_pathwaymatcher/reactome_pathwaymatcher/.*:
+    mem: 20
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/hammock/hammock/hammock_1.0/.*:
+    mem: 20
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/imgteam/scale_image/scale_image/.*:
+    mem: 12
+  toolshed.g2.bx.psu.edu/repos/iracooke/msgfplus/msgfplus/.*:
+    cores: 10
+    mem: 12
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/iuc/data_manager_metaphlan_database_downloader/data_manager_metaphlan_download/.*:
+    cores: 12
+    mem: 92
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_base_recalibrator/.*:
+    cores: 10
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_reduce_reads/.*:
+    cores: 10
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gemini_inheritance/gemini_inheritance/.*:
+    env:
+      OMP_NUM_THREADS: 4
+      OPENBLAS_NUM_THREADS: 4
+      MKL_NUM_THREADS: 4
+      VECLIB_MAXIMUM_THREADS: 4
+      NUMEXPR_NUM_THREADS: 4
+      NUMBA_NUM_THREADS: 4
+  toolshed.g2.bx.psu.edu/repos/iuc/gubbins/gubbins/.*:
+    cores: 6
+  toolshed.g2.bx.psu.edu/repos/iuc/idr_download_by_ids/idr_download_by_ids/.*:
+    mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/lumpy_prep/lumpy_prep/.*:
+    mem: 8
+  toolshed.g2.bx.psu.edu/repos/iuc/megan_daa2rma/megan_daa2rma/.*:
+    mem: 40
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/iuc/megan_daa_meganizer/megan_daa_meganizer/.*:
+    mem: 40
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/iuc/megan_sam2rma/megan_sam2rma/.*:
+    mem: 40
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/iuc/migmap/migmap/.*:
+    cores: 10
+    mem: 16
+    env:
+      _JAVA_OPTIONS: -XX:MaxPermSize=6G -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/iuc/scanpy_cluster_reduce_dimension/scanpy_cluster_reduce_dimension/.*:
+    cores: 4
+    mem: 19.0
+  toolshed.g2.bx.psu.edu/repos/iuc/scanpy_filter/scanpy_filter/.*:
+    cores: 4
+    mem: 11.4
+  toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/.*:
+    cores: 4
+    mem: 19.0
+  toolshed.g2.bx.psu.edu/repos/iuc/scanpy_normalize/scanpy_normalize/.*:
+    cores: 4
+    mem: 7.6
+  toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/.*:
+    cores: 4
+  toolshed.g2.bx.psu.edu/repos/iuc/vardict_java/vardict_java/.*:
+    mem: 128
+    cores: 2
+    env:
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+      VARDICT_CHUNKSIZE: 1000000
+  toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/.*:
+    cores: 8
+    mem: 16
+  toolshed.g2.bx.psu.edu/repos/pavlo-lutsik/rnbeads/rnbeads/.*:
+    mem: 20
+  .*prokaryotic_ncbi_submission.*:
+    cores: 24
+    mem: 24
