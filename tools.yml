@@ -2347,9 +2347,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/bismark/bismark_bowtie2/.*:
     cores: 6
     mem: 30
-  toolshed.g2.bx.psu.edu/repos/bgruening/deeptools/deeptools_bamCorrelate/.*:
-    cores: 10
-    mem: 90
   toolshed.g2.bx.psu.edu/repos/bgruening/openduck_run_smd/openduck_run_smd/.*:
     gpus: 1
     cores: 1
