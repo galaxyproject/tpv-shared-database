@@ -32,7 +32,7 @@ tools:
     cores: 10
     mem: 90
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/bgruening/augustus/augustus/.*:
     mem: 30
   toolshed.g2.bx.psu.edu/repos/bgruening/bigwig_to_bedgraph/bigwig_to_bedgraph/.*:
@@ -252,7 +252,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/openmg/ctb_openmg/.*:
     mem: 20
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/bgruening/pharmcat/pharmcat/.*:
     mem: 4
     env:
@@ -356,7 +356,7 @@ tools:
     cores: 8
     mem: 20
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
     scheduling:
       accept:
       - pulsar
@@ -523,7 +523,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/devteam/sam_merge/sam_merge2/.*:
     mem: 32
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/devteam/samtool_filter2/samtool_filter2/.*:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/devteam/samtools_mpileup/samtools_mpileup/.*:
@@ -838,7 +838,7 @@ tools:
     cores: 10
     mem: 12
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_mssimulator/MSSimulator/.*:
     cores: 4
     mem: 8
@@ -1010,7 +1010,7 @@ tools:
     cores: 10
     mem: 12
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/galaxyp/proteomics_moff/proteomics_moff/.*:
     cores: 6
     mem: 20
@@ -1020,7 +1020,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxyp/reactome_pathwaymatcher/reactome_pathwaymatcher/.*:
     mem: 20
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_clip/je_clip/.*:
     cores: 8
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_demultiplex/je_demultiplex/.*:
@@ -1035,7 +1035,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/hammock/hammock/hammock_1.0/.*:
     mem: 20
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/imgteam/projective_transformation/ip_projective_transformation/.*:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/imgteam/scale_image/scale_image/.*:
@@ -1044,7 +1044,7 @@ tools:
     cores: 10
     mem: 12
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/.*:
     mem: 30.4
   toolshed.g2.bx.psu.edu/repos/iuc/abyss/abyss-pe/.*:
@@ -1063,7 +1063,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/bbtools_callvariants/bbtools_callvariants/.*:
     mem: 15
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/iuc/bcftools_mpileup/bcftools_mpileup/.*:
     cores: 7
   toolshed.g2.bx.psu.edu/repos/iuc/bcftools_norm/bcftools_norm/.*:
@@ -1162,7 +1162,7 @@ tools:
     cores: 10
     mem: 24
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_depth_of_coverage/.*:
     cores: 10
     mem: 24
@@ -1180,7 +1180,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_reduce_reads/.*:
     mem: 24
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_unified_genotyper/.*:
     cores: 10
     mem: 24
@@ -1333,15 +1333,15 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/megan_daa2rma/megan_daa2rma/.*:
     mem: 40
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/iuc/megan_daa_meganizer/megan_daa_meganizer/.*:
     mem: 40
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/iuc/megan_sam2rma/megan_sam2rma/.*:
     mem: 40
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/iuc/meme_dreme/meme_dreme/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/iuc/meme_fimo/meme_fimo/.*:
@@ -1360,7 +1360,7 @@ tools:
     cores: 10
     mem: 16
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=6G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/iuc/miniasm/miniasm/.*:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/.*:
@@ -2247,7 +2247,7 @@ tools:
     cores: 32
     mem: 512
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/iuc/trinity_align_and_estimate_abundance/trinity_align_and_estimate_abundance/.*:
     cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_cluster/trycycler_cluster/.*:
@@ -2271,7 +2271,7 @@ tools:
     mem: 90
     env:
       TERM: vt100
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
     scheduling:
       accept:
       - pulsar
@@ -2349,7 +2349,7 @@ tools:
     cores: 6
     mem: 12
     env:
-      _JAVA_OPTIONS: -XX:MaxPermSize=2G -Xmx{int(mem)}G -Xms1G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/.*:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/.*:
