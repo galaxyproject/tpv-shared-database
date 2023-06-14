@@ -184,7 +184,13 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicplotmatrix/hicexplorer_hicplotmatrix/.*:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicplottads/hicexplorer_hicplottads/.*:
-    mem: 64
+    mem: 64#
+#
+#
+#
+#
+#
+#
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicplotviewpoint/hicexplorer_hicplotviewpoint/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicsummatrices/hicexplorer_hicsummatrices/.*:
@@ -259,7 +265,7 @@ tools:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
     scheduling:
       require:
-      - docker
+        - docker
   toolshed.g2.bx.psu.edu/repos/bgruening/pileometh/pileometh/.*:
     cores: 1
     mem: 24
