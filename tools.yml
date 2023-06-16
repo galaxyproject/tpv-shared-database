@@ -1053,19 +1053,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_export/anndata_export/.*:
     cores: 4
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_import/anndata_import/.*:
-    rules:
-      - if: input_size < 0.05
-        mem: 1
-      - if: 0.05 <= input_size < 0.2
-        mem: 4
-      - if: 0.2 <= input_size < 0.5
-        mem: 16
-      - if: 0.5 <= input_size < 1
-        mem: 32
-      - if: 1 <= input_size < 5
-        mem: 100
-      - if: input_size >= 5
-        fail: Too much data, please check if the input is correct.
+    mem: input_size * 10
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/.*:
     mem: 15.2
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/.*:
