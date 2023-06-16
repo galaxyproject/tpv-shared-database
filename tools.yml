@@ -28,7 +28,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/alevin/alevin/.*:
     cores: 8
     mem: 92
-  toolshed.g2.bx.psu.edu/repos/bgruening/antismash/.*:
+  toolshed.g2.bx.psu.edu/repos/bgruening/antismash/antismash/.*:
     cores: 10
     mem: 90
     env:
