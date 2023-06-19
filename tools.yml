@@ -1053,9 +1053,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_export/anndata_export/.*:
     cores: 4
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_import/anndata_import/.*:
-    rules:
-    - id: anndata_import_mem_rule
-      mem: input_size * 10
+    mem: input_size * 10
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/.*:
     mem: 15.2
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/.*:
