@@ -917,6 +917,8 @@ tools:
     mem: 8
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/galaxyp/pepquery2/pepquery2/.*:
+    mem: 16
   toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/peptide_shaker/.*:
     cores: 7
     env:
