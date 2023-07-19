@@ -2352,6 +2352,8 @@ tools:
     mem: 12
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/.*:
+    cores: 4
   toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/.*:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/.*:
