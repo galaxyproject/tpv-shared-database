@@ -918,8 +918,6 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_qccalculator/QCCalculator/.*:
     mem: 8
-  toolshed.g2.bx.psu.edu/view/recetox/recetox_aplcms_align_features/.*:
-    cores: 4
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_rnpxl/RNPxl/.*:
     cores: 4
     mem: 8
@@ -2354,6 +2352,8 @@ tools:
     mem: 12
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/.*:
+    cores: 4
   toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/.*:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/.*:
