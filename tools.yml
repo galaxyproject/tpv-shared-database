@@ -1078,6 +1078,9 @@ tools:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_subtractbed/.*:
     mem: 8
+  toolshed.g2.bx.psu.edu/repos/iuc/bellerophon/bellerophon/.*:
+    cores: 8
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/.*:
     cores: 16
     mem: 80
