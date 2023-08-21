@@ -1166,7 +1166,11 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/.*:
     cores: 4
   toolshed.g2.bx.psu.edu/repos/iuc/fasttree/fasttree/.*:
-    mem: 8
+    mem: 30
+    rules:
+    - id: fasttree_small_input_rule
+      if: input_size < 0.005
+      mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/featurecounts/featurecounts/.*:
     cores: 2
     mem: 8
@@ -1175,8 +1179,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/filtlong/filtlong/.*:
     mem: 50
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_annotate/funannotate_annotate/.*:
-    cores: 4
-    mem: 15
+    cores: 8
+    mem: 40
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_predict/funannotate_predict/.*:
     cores: 12
     mem: 12
