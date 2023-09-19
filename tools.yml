@@ -1183,7 +1183,7 @@ tools:
     mem: 40
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_clean/funannotate_clean/.*:
     cores: 8
-    mem: 24
+    mem: 40
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_predict/funannotate_predict/.*:
     cores: 12
     mem: 12
