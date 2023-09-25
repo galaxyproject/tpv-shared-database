@@ -1265,6 +1265,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/humann2/humann2/.*:
     cores: 6
     mem: 90
+  toolshed.g2.bx.psu.edu/repos/iuc/hybpiper/hybpiper/.*:
+    cores: 8
+    mem: 24
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_absrel/hyphy_absrel/.*:
     cores: 20
     mem: 10
