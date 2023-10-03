@@ -2417,6 +2417,8 @@ tools:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/.*:
     cores: 8
+  toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft_add/.*:
+    mem: 12
   toolshed.g2.bx.psu.edu/repos/rnateam/metilene/metilene/.*:
     cores: 10
     mem: 20
@@ -2431,8 +2433,6 @@ tools:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/rnateam/piranha/piranha/.*:
     mem: 15
-  toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft_add/.*:
-    mem: 12
   toolshed.g2.bx.psu.edu/repos/rnateam/rcas/rcas/.*:
     cores: 4
     mem: 16
