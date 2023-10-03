@@ -35,6 +35,8 @@ tools:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/bgruening/augustus/augustus/.*:
     mem: 30
+  toolshed.g2.bx.psu.edu/repos/bgruening/autodock_vina/docking/.*:
+    mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/bigwig_to_bedgraph/bigwig_to_bedgraph/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/bionano_scaffold/bionano_scaffold/.*:
@@ -364,6 +366,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/crs4/sopra/sopra_wpc/.*:
     cores: 4
     mem: 16
+  toolshed.g2.bx.psu.edu/repos/crs4/taxonomy_krona_chart/taxonomy_krona_chart/.*:
+    mem: 12
   toolshed.g2.bx.psu.edu/repos/csbl/repeatmodeler/repeatmodeler/.*:
     cores: 8
   toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/.*:
@@ -1405,6 +1409,8 @@ tools:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/iuc/mitos2/mitos2/.*:
     mem: 12
+  toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/.*:
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/mothur_align_check/mothur_align_check/.*:
     cores: 1
     mem: 20
@@ -2382,6 +2388,8 @@ tools:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/peterjc/seq_filter_by_mapping/seq_filter_by_mapping/.*:
     mem: 8
+  toolshed.g2.bx.psu.edu/repos/peterjc/seq_select_by_id/seq_select_by_id/.*:
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/peterjc/tmhmm_and_signalp/signalp3/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/pjbriggs/macs21/macs2_1_peakcalling/.*:
@@ -2423,6 +2431,8 @@ tools:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/rnateam/piranha/piranha/.*:
     mem: 15
+  toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft_add/.*:
+    mem: 12
   toolshed.g2.bx.psu.edu/repos/rnateam/rcas/rcas/.*:
     cores: 4
     mem: 16
