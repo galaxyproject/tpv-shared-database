@@ -1158,9 +1158,12 @@ tools:
     mem: 24
     env:
       DISCO_MAX_MEMORY: '{mem}'
+  toolshed.g2.bx.psu.edu/repos/iuc/drep_compare/drep_compare/.*:
+    cores: 8
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/drep_dereplicate/drep_dereplicate/.*:
-    cores: 6
-    mem: 12
+    cores: 16
+    mem: 16
   toolshed.g2.bx.psu.edu/repos/iuc/edger/edger/.*:
     mem: 19.0
   toolshed.g2.bx.psu.edu/repos/iuc/exonerate/exonerate/.*:
