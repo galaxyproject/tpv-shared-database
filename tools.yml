@@ -560,6 +560,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/earlhaminst/lotus2/lotus2/.*:
     cores: 4
     mem: 8
+    env:
+      TERM: vt100
   toolshed.g2.bx.psu.edu/repos/earlhaminst/t_coffee/t_coffee/.*:
     mem: 90
     env:
