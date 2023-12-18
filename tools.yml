@@ -1188,9 +1188,13 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_annotate/funannotate_annotate/.*:
     cores: 8
     mem: 40
+    rules:
+    - id: funannotate_annotate_large_input
+      if: input_size > 3250
+      mem: 64
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_clean/funannotate_clean/.*:
     cores: 8
-    mem: 64
+    mem: 40
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_predict/funannotate_predict/.*:
     cores: 12
     mem: 12
