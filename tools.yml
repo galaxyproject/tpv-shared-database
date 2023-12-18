@@ -1191,7 +1191,7 @@ tools:
     rules:
     - id: funannotate_annotate_large_input
       if: input_size > 3250
-      mem: 64
+      mem: 62
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_clean/funannotate_clean/.*:
     cores: 8
     mem: 40
