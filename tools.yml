@@ -2295,6 +2295,8 @@ tools:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/.*:
     mem: 25
+  toolshed.g2.bx.psu.edu/repos/iuc/tetoolkit_tetranscripts/tetoolkit_tetranscripts/.*:
+    mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/transdecoder/transdecoder/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity/.*:
