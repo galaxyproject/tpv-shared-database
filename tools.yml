@@ -218,6 +218,11 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/interproscan/interproscan/.*:
     cores: 8
     mem: 40
+    rules:
+    - id: interproscan_metagenome_input_rule
+      if: input_size > 0.9
+      cores: 10
+      mem: 80
   toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/.*:
     cores: 4
     env:
