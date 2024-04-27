@@ -556,7 +556,7 @@ tools:
       OMP_THREAD_LIMIT: '{cores}'
   toolshed.g2.bx.psu.edu/repos/dnbenso/masurca_simple/masurca_simple/.*:
     cores: 8
-    mem: 31
+    mem: 42
   toolshed.g2.bx.psu.edu/repos/earlhaminst/blast_parser/blast_parser/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/earlhaminst/lotus2/lotus2/.*:
