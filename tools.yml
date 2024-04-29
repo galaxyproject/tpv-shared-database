@@ -11,7 +11,7 @@ tools:
     rank: |
       helpers.weighted_random_sampling(candidate_destinations)
   testtoolshed.g2.bx.psu.edu/repos/jchung/generate_count_matrix/generate_count_matrix/.*:
-    mem: 7.6
+    mem: 7.5
   testtoolshed.g2.bx.psu.edu/repos/simon-gladman/phyloseq_filter/biom_filter/.*:
     mem: 60.8
   testtoolshed.g2.bx.psu.edu/repos/simon-gladman/phyloseq_ordination_plot/phyloseq_ordinate/.*:
