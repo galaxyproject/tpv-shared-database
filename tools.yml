@@ -2570,10 +2570,10 @@ destinations:
     abstract: true
   tpvdb_slurm:
     context:
-      time: ''
-      partition: ''
-      account: ''
+      slurm_walltime: ''
+      slurm_partition: ''
+      slurm_account: ''
     params:
       native_specification: |
-        --nodes=1 --ntasks={cores} --mem={round(mem*1024)} {'--time='+ time if time else ''} {'--gres=gres:gpu:' + str(gpus) if gpus else ''} {'--partition=' + partition if partition else ''} {'--account=' + account if account else ''}
+        --nodes=1 --ntasks={cores} --mem={round(mem*1024)} {'--time='+ slurm_walltime if slurm_walltime else ''} {'--gres=gres:gpu:' + str(gpus) if gpus else ''} {'--partition=' + slurm_partition if slurm_partition else ''} {'--account=' + slurm_account if slurm_account else ''}
     abstract: true
