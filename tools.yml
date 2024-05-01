@@ -2574,8 +2574,6 @@ destinations:
       partition: ''
       account: ''
     params:
-      native_specification: --nodes=1 --ntasks={cores} --mem={round(mem*1024)} {'--time='
-        + time if time else ''} {'--gres=gres:gpu:' + str(gpus) if gpus else ''} {'--partition='
-        + partition if partition else ''} {'--account=' + account if account else
-        ''}
+      native_specification: |
+        --nodes=1 --ntasks={cores} --mem={round(mem*1024)} {'--time='+ time if time else ''} {'--gres=gres:gpu:' + str(gpus) if gpus else ''} {'--partition=' + partition if partition else ''} {'--account=' + account if account else ''}
     abstract: true
