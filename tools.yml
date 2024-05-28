@@ -1,8 +1,5 @@
-global:
-  default_inherits: default
 tools:
   default:
-    gpus: 0
     cores: 1
     mem: cores * 3.8
     env: {}
@@ -2561,19 +2558,3 @@ tools:
     mem: 32
   wig_to_bigWig:
     mem: 10
-destinations:
-  default:
-    params:
-      tpv_cores: '{cores}'
-      tpv_gpus: '{gpus}'
-      tpv_mem: '{mem}'
-    abstract: true
-  tpvdb_slurm:
-    context:
-      slurm_walltime: ''
-      slurm_partition: ''
-      slurm_account: ''
-    params:
-      native_specification: |
-        --nodes=1 --ntasks={cores} --mem={round(mem*1024)} {'--time='+ slurm_walltime if slurm_walltime else ''} {'--gres=gres:gpu:' + str(gpus) if gpus else ''} {'--partition=' + slurm_partition if slurm_partition else ''} {'--account=' + slurm_account if slurm_account else ''}
-    abstract: true
