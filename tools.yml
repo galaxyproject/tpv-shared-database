@@ -1407,6 +1407,8 @@ tools:
     mem: 48
   toolshed.g2.bx.psu.edu/repos/iuc/metaphlan/metaphlan/.*:
     cores: 16
+  toolshed.g2.bx.psu.edu/repos/iuc/microsatbed/microsatbed/.*:
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/migmap/migmap/.*:
     cores: 10
     mem: 16
