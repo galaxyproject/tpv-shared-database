@@ -2416,8 +2416,32 @@ tools:
     mem: 12
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/recetox/matchms_formatter/matchms_formatter/.*:
+    mem: 32
+  toolshed.g2.bx.psu.edu/repos/recetox/qcxms_neutral_run/qcxms_neutral_run/.*:
+    mem: 32
+    scheduling:
+      require:
+      - docker
+  toolshed.g2.bx.psu.edu/repos/recetox/qcxms_production_run/qcxms_production_run/.*:
+    mem: 8
+    scheduling:
+      require:
+      - docker
+  toolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/.*:
+    cores: 4
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/.*:
     cores: 4
+  toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_generate_feature_table/recetox_aplcms_generate_feature_table/.*:
+    mem: 16
+  toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_recover_weaker_signals/recetox_aplcms_recover_weaker_signals/.*:
+    mem: 16
+  toolshed.g2.bx.psu.edu/repos/recetox/recetox_msfinder/recetox_msfinder/.*:
+    mem: 64
+    scheduling:
+      require:
+      - docker
   toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/.*:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/.*:
