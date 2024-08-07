@@ -2438,7 +2438,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_recover_weaker_signals/recetox_aplcms_recover_weaker_signals/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_msfinder/recetox_msfinder/.*:
-    mem: 64
+    mem: 16
     scheduling:
       require:
       - docker
