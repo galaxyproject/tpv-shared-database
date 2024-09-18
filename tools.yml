@@ -306,7 +306,10 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_multijoin_tool/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/.*:
-    mem: 10
+    rules:
+    - id: tp_sort_header_tool_large_input_rule
+      if: input_size > 0.8
+      mem: 10
   toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_uniq_tool/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/tgsgapcloser/tgsgapcloser/.*:
@@ -422,8 +425,13 @@ tools:
     cores: 6
     mem: 20
   toolshed.g2.bx.psu.edu/repos/devteam/emboss_5/EMBOSS.*:
-    mem: 10
+    rules:
+    - id: EMBOSS_large_input_rule
+      if: input_size > 0.6
+      mem: 10
   'toolshed.g2.bx.psu.edu/repos/devteam/emboss_5/EMBOSS: fuzztran39/.*':
+    mem: 10
+  'toolshed.g2.bx.psu.edu/repos/devteam/emboss_5/EMBOSS: needle56/.*:':
     mem: 10
   toolshed.g2.bx.psu.edu/repos/devteam/fastq_groomer/fastq_groomer/.*:
     mem: 7.6
@@ -1154,8 +1162,6 @@ tools:
     cores: 7
   toolshed.g2.bx.psu.edu/repos/iuc/bcftools_norm/bcftools_norm/.*:
     cores: 2
-  toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools.*:
-    mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/.*:
     mem: 40
   toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_mergebed/.*:
@@ -1353,8 +1359,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/gemini_load/gemini_load/.*:
     cores: 10
     mem: 40
-  toolshed.g2.bx.psu.edu/repos/iuc/getorganelle/get_organelle_from_reads/.*:
-    mem: 70
   toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_heatmap2/ggplot2_heatmap2/.*:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/iuc/gtdbtk_classify_wf/gtdbtk_classify_wf/.*:
