@@ -2640,9 +2640,10 @@ tools:
   toolshed.g2.bx.psu.edu/repos/rnateam/metilene/metilene/.*:
     cores: 10
     mem: 20
+  toolshed.g2.bx.psu.edu/repos/rnateam/mirdeep2/rbc_mirdeep2/.*:
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/rnateam/mirdeep2_mapper/rbc_mirdeep2_mapper/.*:
-    cores: 10
-    mem: 20
+    mem: 28
   toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer/.*:
     mem: 8
     env:
