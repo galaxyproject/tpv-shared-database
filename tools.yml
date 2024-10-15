@@ -409,8 +409,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/.*:
     cores: 8
     mem: 30
-  toolshed.g2.bx.psu.edu/repos/devteam/clustalw/clustalw/.*:
-    mem: 34
   toolshed.g2.bx.psu.edu/repos/devteam/cuffcompare/cuffcompare/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/devteam/cuffdiff/cuffdiff/.*:
