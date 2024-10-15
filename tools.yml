@@ -409,8 +409,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/.*:
     cores: 8
     mem: 30
-  toolshed.g2.bx.psu.edu/repos/devteam/clustalw/clustalw/.*:
-    mem: 34
   toolshed.g2.bx.psu.edu/repos/devteam/cuffcompare/cuffcompare/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/devteam/cuffdiff/cuffdiff/.*:
@@ -2276,6 +2274,7 @@ tools:
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/.*:
     cores: 16
+    mem: 3.7
   toolshed.g2.bx.psu.edu/repos/iuc/red/red/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/rgrnastar/rna_star/.*:
