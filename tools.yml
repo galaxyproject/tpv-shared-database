@@ -31,10 +31,10 @@ tools:
     cores: 1
     mem: 20
   toolshed.g2.bx.psu.edu/repos/artbio/repenrich/repenrich/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/bebatut/cdhit/cd_hit_est/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 4
   toolshed.g2.bx.psu.edu/repos/bgruening/alevin/alevin/.*:
     cores: 8
@@ -261,7 +261,7 @@ tools:
     cores: 5
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/nanopolish_polya/nanopolish_polya/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 3
   toolshed.g2.bx.psu.edu/repos/bgruening/nanopolish_variants/nanopolish_variants/.*:
     cores: 5
@@ -586,12 +586,12 @@ tools:
     cores: 24
     mem: 200
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/dorado_pod5_convert/dorado_pod5_convert/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/hapcut2/hapcut2/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/hifiadapterfilt/hifiadapterfilt/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 12
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/hifiasm_meta/hifiasm_meta/.*:
     cores: 16
@@ -1059,16 +1059,16 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_clip/je_clip/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_demultiplex/je_demultiplex/.*:
     cores: 8
     mem: 20
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_demultiplex_illu/je_demultiplex_illu/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_markdupes/je_markdupes/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/genouest/braker3/braker3/.*:
     cores: 16
@@ -1088,6 +1088,9 @@ tools:
     mem: 12
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/iuc/extract_genomic_dna/Extract genomic DNA 1:
+    cores: 3
+    mem: 3.7
   toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/.*:
     mem: 30.4
   toolshed.g2.bx.psu.edu/repos/iuc/abyss/abyss-pe/.*:
@@ -1116,7 +1119,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_info/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/iuc/barrnap/barrnap/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 3
   toolshed.g2.bx.psu.edu/repos/iuc/bbtools_callvariants/bbtools_callvariants/.*:
     mem: 15
@@ -1235,6 +1238,7 @@ tools:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/.*:
     cores: 4
+    mem: 
   toolshed.g2.bx.psu.edu/repos/iuc/fasttree/fasttree/.*:
     mem: 30
     rules:
@@ -2176,7 +2180,7 @@ tools:
       if: input_size < 0.2
       mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/ont_fast5_api_compress_fast5/ont_fast5_api_compress_fast5/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/orfipy/orfipy/.*:
     cores: 8
@@ -2252,7 +2256,7 @@ tools:
     cores: 10
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/raven/raven/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/.*:
     cores: 16
@@ -2411,32 +2415,32 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_clonefilter/stacks2_clonefilter/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_cstacks/stacks2_cstacks/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_denovomap/stacks2_denovomap/.*:
     cores: 4
     mem: 16
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_gstacks/stacks2_gstacks/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_kmerfilter/stacks2_kmerfilter/.*:
     mem: 7.6
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_populations/stacks2_populations/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_refmap/stacks2_refmap/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_shortreads/stacks2_shortreads/.*:
     mem: 7.6
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_sstacks/stacks2_sstacks/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_tsv2bam/stacks2_tsv2bam/.*:
     cores: 8
     mem: 42
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_ustacks/stacks2_ustacks/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/stacks_clonefilter/stacks_clonefilter/.*:
     mem: 8
@@ -2471,19 +2475,19 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/trinity_run_de_analysis/trinity_run_de_analysis/.*:
     mem: 15
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_cluster/trycycler_cluster/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 9
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_consensus/trycycler_consensus/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_partition/trycycler_partition/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 9
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_reconcile_msa/trycycler_reconcile_msa/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 9
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_subsample/trycycler_subsample/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 9
   toolshed.g2.bx.psu.edu/repos/iuc/ucsc_wigtobigwig/ucsc_wigtobigwig/.*:
     mem: 20
@@ -2542,7 +2546,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_retcor/abims_xcms_retcor/.*:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/.*:
-    cores: 5
+    cores: 8
+    mem: 28
   toolshed.g2.bx.psu.edu/repos/lparsons/htseq_count/htseq_count/.*:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/mbernt/maxbin2/maxbin2/.*:
@@ -2608,7 +2613,7 @@ tools:
     cores: 4
     mem: 32
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 4
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_generate_feature_table/recetox_aplcms_generate_feature_table/.*:
     mem: 16
@@ -2660,7 +2665,7 @@ tools:
     cores: 12
     mem: 16
   toolshed.g2.bx.psu.edu/repos/rnateam/rnalien/RNAlien/.*:
-    # noqa: T102
+    # FIXME: needs mem
     cores: 10
   toolshed.g2.bx.psu.edu/repos/rnateam/segemehl/segemehl/.*:
     mem: 80
@@ -2756,8 +2761,6 @@ tools:
     mem: 36
   CONVERTER_bedgraph_to_bigwig:
     mem: 8
-  Extract genomic DNA 1:
-    cores: 3
   bfast_wrapper:
     cores: 10
     mem: 20
