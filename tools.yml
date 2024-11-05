@@ -464,8 +464,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/devteam/fastx_collapser/cshl_fastx_collapser/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/devteam/freebayes/freebayes/.*:
+    # see https://github.com/usegalaxy-eu/infrastructure-playbook/pull/881 for some numbers
     cores: 10
-    mem: 48
+    mem: 9 + input_size * 1
   toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/.*:
     mem: 34.2
   toolshed.g2.bx.psu.edu/repos/devteam/hisat/hisat/.*:
@@ -1172,9 +1173,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/chira_map/chira_map/.*:
     cores: 10
     mem: 24
-  toolshed.g2.bx.psu.edu/repos/iuc/chira_merge/chira_merge/.*:
-    cores: 1
-    mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/chira_quantify/chira_quantify/.*:
     cores: 1
     mem: 60
@@ -1238,7 +1236,7 @@ tools:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/.*:
     cores: 4
-    mem: 
+    mem: min(max(int(input_size * 6), 3.7), 58)
   toolshed.g2.bx.psu.edu/repos/iuc/fasttree/fasttree/.*:
     mem: 30
     rules:
@@ -1404,6 +1402,7 @@ tools:
     mem: 30.4
   toolshed.g2.bx.psu.edu/repos/iuc/ivar_trim/ivar_trim/.*:
     cores: 8
+    mem: 12
     scheduling:
       accept:
       - pulsar
@@ -2193,7 +2192,7 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/pear/iuc_pear/.*:
     cores: 7
-    mem: 58
+    mem: min(max(int(input_size * 8), 3.7), 28)
   toolshed.g2.bx.psu.edu/repos/iuc/pharokka/pharokka/.*:
     cores: 8
     mem: 31
@@ -2350,8 +2349,9 @@ tools:
     cores: 10
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/.*:
-    cores: 8
-    mem: 32
+    # this should mirror spades
+    cores: 20
+    mem: min(max(int(input_size * 32), 14), 240)
     env:
       SHOVILL_RAM: '{int(mem)}'
   toolshed.g2.bx.psu.edu/repos/iuc/slamdunk/slamdunk/.*:
@@ -2575,7 +2575,7 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/nml/spades/spades/.*:
     cores: 20
-    mem: 330
+    mem: min(max(int(input_size * 32), 14), 240)
   toolshed.g2.bx.psu.edu/repos/pavlo-lutsik/rnbeads/rnbeads/.*:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/peterjc/blast2go/blast2go/.*:
