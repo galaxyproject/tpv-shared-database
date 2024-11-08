@@ -1395,7 +1395,7 @@ tools:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/iuc/iqtree/iqtree/.*:
     cores: 10
-    mem: 7
+    mem: 19
   toolshed.g2.bx.psu.edu/repos/iuc/isoformswitchanalyzer/isoformswitchanalyzer/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/ivar_consensus/ivar_consensus/.*:
