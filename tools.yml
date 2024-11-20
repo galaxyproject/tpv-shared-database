@@ -536,8 +536,8 @@ tools:
     cores: 2
     mem: 7.6
   toolshed.g2.bx.psu.edu/repos/devteam/tophat2/tophat2/.*:
-    cores: 16
-    mem: 64
+    cores: 8
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/devteam/velvet/velvetg/.*:
     mem: 32
     env:
