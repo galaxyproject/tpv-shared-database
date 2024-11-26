@@ -2681,6 +2681,36 @@ tools:
     mem: 19.0
   toolshed.g2.bx.psu.edu/repos/wolma/mimodd_main/mimodd_varcall/.*:
     mem: 22.8
+  toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/.*:
+    cores: 8
+    mem: 64
+  toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/.*:
+    cores: 12
+    mem: 128
+  toolshed.g2.bx.psu.edu/repos/perssond/coreograph/unet_coreograph/.*:
+    cores: 8
+    mem: 64
+  toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/.*:
+    cores: 24
+    mem: 478
+  toolshed.g2.bx.psu.edu/repos/imgteam/bfconvert/ip_convertimage/.*:
+    cores: 12
+    mem: 128
+  toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/.*:
+    cores: 8
+    mem: 64
+  toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/.*:
+    cores: 1
+    mem: 2
+  toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/.*:
+    cores: 4
+    mem: 16
+  toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/.*:
+    cores: 4
+    mem: 16
+  toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/.*:
+    cores: 8
+    mem: 64
   .*bowtie2_index_builder_data_manager.*:
     cores: 16
   .*bwa_mem_index_builder_data_manager.*:
