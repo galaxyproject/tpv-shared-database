@@ -1141,7 +1141,7 @@ tools:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/imgteam/bfconvert/ip_convertimage/.*:
     cores: 12
-    mem: 128
+    mem: 30
   toolshed.g2.bx.psu.edu/repos/imgteam/projective_transformation/ip_projective_transformation/.*:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/imgteam/scale_image/scale_image/.*:
