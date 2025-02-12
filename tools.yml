@@ -1078,12 +1078,30 @@ tools:
   toolshed.g2.bx.psu.edu/repos/genouest/braker3/braker3/.*:
     cores: 16
     mem: 61.4
+  toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/.*:
+    cores: 24
+    mem: 478
+  toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/.*:
+    cores: 1
+    mem: 2
+  toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/.*:
+    cores: 4
+    mem: 16
+  toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/.*:
+    cores: 4
+    mem: 16
+  toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/.*:
+    cores: 8
+    mem: 64
   toolshed.g2.bx.psu.edu/repos/guerler/charts/charts/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/hammock/hammock/hammock_1.0/.*:
     mem: 20
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
+  toolshed.g2.bx.psu.edu/repos/imgteam/bfconvert/ip_convertimage/.*:
+    cores: 12
+    mem: 30
   toolshed.g2.bx.psu.edu/repos/imgteam/projective_transformation/ip_projective_transformation/.*:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/imgteam/scale_image/scale_image/.*:
@@ -2582,6 +2600,18 @@ tools:
     mem: min(max(int(input_size * 32), 14), 240)
   toolshed.g2.bx.psu.edu/repos/pavlo-lutsik/rnbeads/rnbeads/.*:
     mem: 20
+  toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/.*:
+    cores: 12
+    mem: 128
+  toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/.*:
+    cores: 8
+    mem: 64
+  toolshed.g2.bx.psu.edu/repos/perssond/coreograph/unet_coreograph/.*:
+    cores: 8
+    mem: 64
+  toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/.*:
+    cores: 8
+    mem: 64
   toolshed.g2.bx.psu.edu/repos/peterjc/blast2go/blast2go/.*:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/peterjc/mira_assembler/mira_assembler/.*:
