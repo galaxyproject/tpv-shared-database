@@ -2,7 +2,6 @@ global:
   default_inherits: default
 tools:
   default:
-    abstract: true
     gpus: 0
     cores: 1
     mem: cores * 3.8
@@ -12,6 +11,7 @@ tools:
       reject:
       - offline
     rules: []
+    abstract: true
     rank: |
       helpers.weighted_random_sampling(candidate_destinations)
   testtoolshed.g2.bx.psu.edu/repos/fubar/htseq_bams_to_count_matrix/htseqsams2mxlocal/.*:
@@ -511,8 +511,8 @@ tools:
     cores: 3
     mem: 12
     env:
-      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
       TMP_DIR: $TMPDIR
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_SortSam/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/devteam/sam_merge/sam_merge2/.*:
@@ -1089,9 +1089,6 @@ tools:
     mem: 12
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
-  toolshed.g2.bx.psu.edu/repos/iuc/extract_genomic_dna/Extract genomic DNA 1:
-    cores: 3
-    mem: 3.7
   toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/.*:
     mem: 30.4
   toolshed.g2.bx.psu.edu/repos/iuc/abyss/abyss-pe/.*:
@@ -1232,6 +1229,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/exonerate/exonerate/.*:
     cores: 30
     mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/extract_genomic_dna/Extract genomic DNA 1:
+    cores: 3
+    mem: 3.7
   toolshed.g2.bx.psu.edu/repos/iuc/fasta_stats/fasta-stats/.*:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/.*:
