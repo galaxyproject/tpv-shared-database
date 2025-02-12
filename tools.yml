@@ -556,9 +556,13 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/earlhaminst/lotus2/lotus2/.*:
     cores: 4
-    mem: 8
+    mem: 16
     env:
       TERM: vt100
+    rules:
+    - id: lotus2_small_input_rule
+      if: input_size < 0.1
+      mem: 8
   toolshed.g2.bx.psu.edu/repos/earlhaminst/t_coffee/t_coffee/.*:
     mem: 90
     env:
