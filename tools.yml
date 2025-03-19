@@ -2822,6 +2822,11 @@ destinations:
       tpv_gpus: '{gpus}'
       tpv_mem: '{mem}'
     abstract: true
+  tpvdb_local:
+    params:
+      local_slots: '{cores}'
+    abstract: true
+    runner: local
   tpvdb_slurm:
     context:
       slurm_walltime: ''
