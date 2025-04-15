@@ -1,3 +1,16 @@
 total-perspective-vortex
 pyyaml
-galaxy-app<=22.1.1
+galaxy-app==23.1.4
+galaxy-auth==23.1.4
+galaxy-config==23.1.4
+galaxy-data==23.1.4
+galaxy-files==23.1.4
+galaxy-job-execution==23.1.4
+galaxy-job-metrics==23.1.4
+galaxy-navigation==23.1.4
+galaxy-objectstore==23.1.4
+galaxy-tool-util==23.1.4
+galaxy-tours==23.1.4
+galaxy-util==23.1.4
+galaxy-web-framework==23.1.4
+galaxy-web-stack==23.1.4
