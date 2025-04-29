@@ -2591,8 +2591,32 @@ tools:
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_duplication/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/nml/metaspades/metaspades/.*:
-    cores: 10
-    mem: 250
+    cores: 2
+    scheduling:
+      accept:
+        - pulsar
+        - condor-tpv
+    rules:
+      - if: 0.05 <= input_size < 1
+        cores: 8
+        mem: 100
+      - if: 1 <= input_size < 60
+        cores: 16
+        mem: 350
+      - if: input_size >= 60
+        fail: Too much data, please don't use Spades for this
+  toolshed.g2.bx.psu.edu/repos/iuc/semibin/semibin/.*:
+    mem: 16
+    cores: 16
+  toolshed.g2.bx.psu.edu/repos/iuc/checkm_lineage_wf/checkm_lineage_wf/.*:
+    mem: 48
+    cores: 16
+  toolshed.g2.bx.psu.edu/repos/iuc/checkm2/checkm2/.*:
+    mem: 48
+    cores: 16
+  toolshed.g2.bx.psu.edu/repos/iuc/binette/binette/.*:
+    cores: 6
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/nml/quasitools/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/nml/spades/spades/.*:
