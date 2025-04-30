@@ -2592,10 +2592,6 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/nml/metaspades/metaspades/.*:
     cores: 2
-    scheduling:
-      accept:
-        - pulsar
-        - condor-tpv
     rules:
       - if: 0.05 <= input_size < 1
         cores: 8
@@ -2617,6 +2613,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/binette/binette/.*:
     cores: 6
     mem: 32
+  toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastq/.*:
+    cores: 2
+    mem: 4
   toolshed.g2.bx.psu.edu/repos/nml/quasitools/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/nml/spades/spades/.*:
