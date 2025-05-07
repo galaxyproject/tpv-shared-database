@@ -12,8 +12,6 @@ tools:
       - offline
     rules: []
     abstract: true
-    rank: |
-      helpers.weighted_random_sampling(candidate_destinations)
   testtoolshed.g2.bx.psu.edu/repos/fubar/htseq_bams_to_count_matrix/htseqsams2mxlocal/.*:
     cores: 3
     mem: 11.5
