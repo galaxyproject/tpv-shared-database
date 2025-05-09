@@ -2618,7 +2618,7 @@ tools:
     mem: 4
   toolshed.g2.bx.psu.edu/repos/iuc/clair3/clair3/.*:
     cores: 1
-    mem: 4
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/nml/quasitools/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/nml/spades/spades/.*:
