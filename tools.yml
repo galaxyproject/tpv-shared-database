@@ -2593,13 +2593,16 @@ tools:
   toolshed.g2.bx.psu.edu/repos/nml/metaspades/metaspades/.*:
     cores: 2
     rules:
-      - if: 0.05 <= input_size < 1
+      - id: tpvdb_metaspades_small_input_rule
+        if: 0.05 <= input_size < 1
         cores: 8
         mem: 100
-      - if: 1 <= input_size < 60
+      - id: tpvdb_metaspades_medium_input_rule
+        if: 1 <= input_size < 60
         cores: 16
         mem: 350
-      - if: input_size >= 60
+      - id: tpvdb_metaspades_big_input_rule
+        if: input_size >= 60
         fail: Too much data, please don't use Spades for this
   toolshed.g2.bx.psu.edu/repos/iuc/semibin/semibin/.*:
     mem: 16
