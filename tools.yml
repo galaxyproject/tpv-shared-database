@@ -252,6 +252,9 @@ tools:
     scheduling:
       require:
       - docker
+  toolshed.g2.bx.psu.edu/repos/bgruening/music_construct_eset/music_construct_eset/.*:
+    cores: 1
+    mem: 6
   toolshed.g2.bx.psu.edu/repos/bgruening/nanopolish_eventalign/nanopolish_eventalign/.*:
     cores: 5
     mem: 12
