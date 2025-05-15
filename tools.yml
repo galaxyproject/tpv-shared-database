@@ -1163,6 +1163,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/bellerophon/bellerophon/.*:
     cores: 8
     mem: 8
+  toolshed.g2.bx.psu.edu/repos/iuc/binette/binette/.*:
+    cores: 6
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/iuc/biom_convert/biom_convert/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/breseq/breseq/.*:
@@ -1181,6 +1184,12 @@ tools:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/iuc/cat_contigs/cat_contigs/.*:
     mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/checkm2/checkm2/.*:
+    cores: 16
+    mem: 48
+  toolshed.g2.bx.psu.edu/repos/iuc/checkm_lineage_wf/checkm_lineage_wf/.*:
+    cores: 16
+    mem: 48
   toolshed.g2.bx.psu.edu/repos/iuc/cherri_eval/cherri_eval/.*:
     cores: 1
     mem: 20
@@ -1202,6 +1211,9 @@ tools:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/circos/circos_bundlelinks/.*:
     mem: 19.0
+  toolshed.g2.bx.psu.edu/repos/iuc/clair3/clair3/.*:
+    cores: 1
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/concoct/concoct/.*:
     cores: 10
     mem: 48
@@ -1259,7 +1271,7 @@ tools:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/.*:
     cores: 4
-    mem: min(max(int(input_size * 6), 3.7), 58)
+    mem: min(max(int(input_size * 6), 8), 58)
   toolshed.g2.bx.psu.edu/repos/iuc/fasttree/fasttree/.*:
     mem: 30
     rules:
@@ -2363,6 +2375,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/scpipe/scpipe/.*:
     cores: 8
     mem: 64
+  toolshed.g2.bx.psu.edu/repos/iuc/semibin/semibin/.*:
+    cores: 16
+    mem: 16
   toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_seq/.*:
     cores: 4
     mem: 12
@@ -2592,8 +2607,19 @@ tools:
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_duplication/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/nml/metaspades/metaspades/.*:
-    cores: 10
-    mem: 250
+    cores: 2
+    rules:
+    - id: tpvdb_metaspades_small_input_rule
+      if: 0.05 <= input_size < 1
+      cores: 8
+      mem: 100
+    - id: tpvdb_metaspades_medium_input_rule
+      if: 1 <= input_size < 60
+      cores: 16
+      mem: 350
+    - id: tpvdb_metaspades_big_input_rule
+      if: input_size >= 60
+      fail: Too much data, please don't use Spades for this
   toolshed.g2.bx.psu.edu/repos/nml/quasitools/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/nml/spades/spades/.*:
