@@ -2583,6 +2583,10 @@ tools:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_retcor/abims_xcms_retcor/.*:
     mem: 32
+  toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_group/abims_xcms_group/.*:
+    mem: 32
+  toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_merge/abims_xcms_merge/.*:
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/.*:
     cores: 8
     mem: 28
@@ -2674,11 +2678,16 @@ tools:
     cores: 4
     mem: 32
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/.*:
-    # FIXME: needs mem
+    mem: 64
     cores: 4
+  toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/.*:
+    mem: 16
+
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_generate_feature_table/recetox_aplcms_generate_feature_table/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_recover_weaker_signals/recetox_aplcms_recover_weaker_signals/.*:
+    mem: 16
+  toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_remove_noise/recetox_aplcms_remove_noise/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_msfinder/recetox_msfinder/.*:
     mem: 16
