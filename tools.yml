@@ -2666,14 +2666,8 @@ tools:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/recetox/qcxms_neutral_run/qcxms_neutral_run/.*:
     mem: 32
-    scheduling:
-      require:
-      - docker
   toolshed.g2.bx.psu.edu/repos/recetox/qcxms_production_run/qcxms_production_run/.*:
     mem: 8
-    scheduling:
-      require:
-      - docker
   toolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/.*:
     cores: 4
     mem: 32
@@ -2691,9 +2685,6 @@ tools:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_msfinder/recetox_msfinder/.*:
     mem: 16
-    scheduling:
-      require:
-      - docker
   toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/.*:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/.*:
