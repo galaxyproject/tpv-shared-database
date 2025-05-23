@@ -2581,11 +2581,11 @@ tools:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_fillpeaks/abims_xcms_fillPeaks/.*:
     mem: 32
-  toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_retcor/abims_xcms_retcor/.*:
-    mem: 32
   toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_group/abims_xcms_group/.*:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_merge/abims_xcms_merge/.*:
+    mem: 32
+  toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_retcor/abims_xcms_retcor/.*:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/.*:
     cores: 8
@@ -2678,8 +2678,8 @@ tools:
     cores: 4
     mem: 32
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/.*:
-    mem: 64
     cores: 4
+    mem: 64
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/.*:
     mem: 16
 
