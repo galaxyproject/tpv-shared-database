@@ -52,7 +52,7 @@ tools:
     cores: 24
     mem: 250
     scheduling:
-      require:
+      prefer:
       - docker
   toolshed.g2.bx.psu.edu/repos/bgruening/bismark/bismark_bowtie/.*:
     cores: 6
@@ -250,7 +250,7 @@ tools:
     cores: 8
     mem: 16
     scheduling:
-      require:
+      prefer:
       - docker
   toolshed.g2.bx.psu.edu/repos/bgruening/music_construct_eset/music_construct_eset/.*:
     cores: 1
@@ -287,7 +287,7 @@ tools:
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
     scheduling:
-      require:
+      prefer:
       - docker
   toolshed.g2.bx.psu.edu/repos/bgruening/pileometh/pileometh/.*:
     cores: 1
@@ -346,7 +346,7 @@ tools:
     env:
       CUDA_VISIBLE_DEVICES: 0
     scheduling:
-      require:
+      prefer:
       - docker
   toolshed.g2.bx.psu.edu/repos/blankenberg/naive_variant_caller/naive_variant_caller/.*:
     mem: 20
@@ -397,7 +397,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/computationaltranscriptomics/glassgo/glassgo/.*:
     mem: 4
     scheduling:
-      require:
+      prefer:
       - docker
   toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/.*:
     cores: 8
@@ -669,7 +669,7 @@ tools:
       MONO_GC_PARAMS: max-heap-size=2g
   toolshed.g2.bx.psu.edu/repos/galaxyp/msconvert/msconvert/.*:
     scheduling:
-      require:
+      prefer:
       - docker
   toolshed.g2.bx.psu.edu/repos/galaxyp/msi_classification/mass_spectrometry_imaging_classification/.*:
     mem: 90
@@ -1237,7 +1237,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/deepvariant/deepvariant/.*:
     mem: 10
     scheduling:
-      require:
+      prefer:
       - singularity
   toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/.*:
     mem: 8
