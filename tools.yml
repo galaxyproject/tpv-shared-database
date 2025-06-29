@@ -217,7 +217,7 @@ tools:
     cores: 20
     mem: 120
     rules:
-    - id: hifiasm_small_input_rule
+    - id: tpvdb_hifiasm_small_input_rule
       if: input_size <= 0.2
       cores: 6
       mem: 40
@@ -235,7 +235,7 @@ tools:
     cores: 8
     mem: 40
     rules:
-    - id: interproscan_metagenome_input_rule
+    - id: tpvdb_interproscan_metagenome_input_rule
       if: input_size > 0.9
       cores: 10
       mem: 80
@@ -322,7 +322,7 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/.*:
     rules:
-    - id: tp_sort_header_tool_large_input_rule
+    - id: tpvdb_tp_sort_header_tool_large_input_rule
       if: input_size > 0.8
       mem: 10
   toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_uniq_tool/.*:
@@ -444,7 +444,7 @@ tools:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/devteam/emboss_5/EMBOSS.*:
     rules:
-    - id: EMBOSS_large_input_rule
+    - id: tpvdb_EMBOSS_large_input_rule
       if: input_size > 0.6
       mem: 10
   'toolshed.g2.bx.psu.edu/repos/devteam/emboss_5/EMBOSS: fuzztran39/.*':
@@ -488,7 +488,7 @@ tools:
     cores: 8
     mem: 40
     rules:
-    - id: pulsar_rule
+    - id: tpvdb_ncbi_blastp_wrapper_pulsar_rule
       if: |
         helpers.job_args_match(job, app, {'db_opts': {'db_opts_selector': 'db'}})
       scheduling:
@@ -561,7 +561,7 @@ tools:
     env:
       TERM: vt100
     rules:
-    - id: lotus2_small_input_rule
+    - id: tpvdb_lotus2_small_input_rule
       if: input_size < 0.1
       mem: 8
   toolshed.g2.bx.psu.edu/repos/earlhaminst/t_coffee/t_coffee/.*:
@@ -1275,7 +1275,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/fasttree/fasttree/.*:
     mem: 30
     rules:
-    - id: fasttree_small_input_rule
+    - id: tpvdb_fasttree_small_input_rule
       if: input_size < 0.005
       mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/featurecounts/featurecounts/.*:
@@ -1289,7 +1289,7 @@ tools:
     cores: 8
     mem: 40
     rules:
-    - id: funannotate_annotate_large_input
+    - id: tpvdb_funannotate_annotate_large_input_rule
       if: input_size > 3.2
       mem: 62
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_clean/funannotate_clean/.*:
@@ -2210,7 +2210,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/novoplasty/novoplasty/.*:
     mem: 40
     rules:
-    - id: novoplasty_small_input_rule
+    - id: tpvdb_novoplasty_small_input_rule
       if: input_size < 0.2
       mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/ont_fast5_api_compress_fast5/ont_fast5_api_compress_fast5/.*:
