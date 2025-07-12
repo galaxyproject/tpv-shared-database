@@ -18,7 +18,7 @@ A shared database of rules for [Total Perspective Vortex](https://github.com/gal
 The TPV-Shared-DB v2 has some minor breaking changes.
 
 * Ids for shared rules defined in the db have been prepended with 'tpvdb_' for better insight into provenance. If you're overriding any rules, you will need to adjust any rule ids accordingly. (https://github.com/galaxyproject/tpv-shared-database/pull/86)
-* The shared db no longer defines mandatory tags like require docker. All require tags have been replaced with prefer (https://github.com/galaxyproject/tpv-shared-database/pull/87/files)
+* The shared db no longer defines mandatory tags like require docker. All require tags have been replaced with prefer (https://github.com/galaxyproject/tpv-shared-database/pull/87)
 * Required docker tags have been dropped for three recetox tools (https://github.com/galaxyproject/tpv-shared-database/pull/85)
 
 
