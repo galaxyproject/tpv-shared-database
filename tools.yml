@@ -2743,8 +2743,10 @@ tools:
   toolshed.g2.bx.psu.edu/repos/tyty/structurefold/iterative_map_pipeline/.*:
     mem: 60
   toolshed.g2.bx.psu.edu/repos/wolma/mimodd_aln/mimodd_align/.*:
+    cores: 6
     mem: 19.0
   toolshed.g2.bx.psu.edu/repos/wolma/mimodd_main/mimodd_varcall/.*:
+    cores: 6
     mem: 22.8
   .*bowtie2_index_builder_data_manager.*:
     # noqa: T102
