@@ -1079,6 +1079,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/genouest/braker3/braker3/.*:
     cores: 16
     mem: 61.4
+  toolshed.g2.bx.psu.edu/repos/goeckslab/image_learner/image_learner/.*:
+    cores: 8
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/.*:
     cores: 24
     mem: 478
@@ -1091,6 +1094,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/.*:
     cores: 4
     mem: 16
+  toolshed.g2.bx.psu.edu/repos/goeckslab/tabular_learner/tabular_learner/.*:
+    cores: 8
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/.*:
     cores: 8
     mem: 64
