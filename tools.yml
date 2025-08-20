@@ -2754,6 +2754,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/wolma/mimodd_main/mimodd_varcall/.*:
     cores: 6
     mem: 22.8
+  toolshed.g2.bx.psu.edu/repos/ufz/iphop_predict/iphop_predict/.*:
+    cores: 6
+    mem: 128
   .*bowtie2_index_builder_data_manager.*:
     # noqa: T102
     cores: 16
