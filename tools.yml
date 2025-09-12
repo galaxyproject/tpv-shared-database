@@ -29,8 +29,10 @@ tools:
     cores: 1
     mem: 20
   toolshed.g2.bx.psu.edu/repos/artbio/repenrich/repenrich/.*:
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/bebatut/cdhit/cd_hit_est/.*:
+    # FIXME: needs mem
     cores: 4
   toolshed.g2.bx.psu.edu/repos/bgruening/alevin/alevin/.*:
     cores: 8
@@ -331,11 +333,13 @@ tools:
     cores: 5
     mem: 20
   toolshed.g2.bx.psu.edu/repos/bgruening/xchem_pose_scoring/xchem_pose_scoring/.*:
+    # noqa: T102
     gpus: 1
     cores: 1
     env:
       CUDA_VISIBLE_DEVICES: 0
   toolshed.g2.bx.psu.edu/repos/bgruening/xchem_transfs_scoring/xchem_transfs_scoring/.*:
+    # noqa: T102
     gpus: 1
     cores: 1
     env:
@@ -460,6 +464,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/devteam/fastx_collapser/cshl_fastx_collapser/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/devteam/freebayes/freebayes/.*:
+    # see https://github.com/usegalaxy-eu/infrastructure-playbook/pull/881 for some numbers
     cores: 10
     mem: 9 + input_size * 1
   toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/.*:
@@ -586,10 +591,12 @@ tools:
     cores: 24
     mem: 200
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/dorado_pod5_convert/dorado_pod5_convert/.*:
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/hapcut2/hapcut2/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/hifiadapterfilt/hifiadapterfilt/.*:
+    # FIXME: needs mem
     cores: 12
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/hifiasm_meta/hifiasm_meta/.*:
     cores: 16
@@ -1057,13 +1064,16 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_clip/je_clip/.*:
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_demultiplex/je_demultiplex/.*:
     cores: 8
     mem: 20
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_demultiplex_illu/je_demultiplex_illu/.*:
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_markdupes/je_markdupes/.*:
+    # FIXME: needs mem
     cores: 8
     mem: 23
   toolshed.g2.bx.psu.edu/repos/genouest/braker3/braker3/.*:
@@ -1136,6 +1146,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_info/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/iuc/barrnap/barrnap/.*:
+    # FIXME: needs mem
     cores: 3
   toolshed.g2.bx.psu.edu/repos/iuc/bbtools_callvariants/bbtools_callvariants/.*:
     mem: 15
@@ -2208,6 +2219,7 @@ tools:
       if: input_size < 0.2
       mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/ont_fast5_api_compress_fast5/ont_fast5_api_compress_fast5/.*:
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/orfipy/orfipy/.*:
     cores: 8
@@ -2283,6 +2295,7 @@ tools:
     cores: 10
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/raven/raven/.*:
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/.*:
     cores: 16
@@ -2379,6 +2392,7 @@ tools:
     cores: 10
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/.*:
+    # this should mirror spades
     cores: 20
     mem: min(max(int(input_size * 32), 14), 240)
     env:
@@ -2444,21 +2458,26 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_clonefilter/stacks2_clonefilter/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_cstacks/stacks2_cstacks/.*:
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_denovomap/stacks2_denovomap/.*:
     cores: 4
     mem: 16
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_gstacks/stacks2_gstacks/.*:
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_kmerfilter/stacks2_kmerfilter/.*:
     mem: 7.6
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_populations/stacks2_populations/.*:
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_refmap/stacks2_refmap/.*:
+    # FIXME: needs mem
     cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_shortreads/stacks2_shortreads/.*:
     mem: 7.6
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_sstacks/stacks2_sstacks/.*:
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_tsv2bam/stacks2_tsv2bam/.*:
     cores: 8
@@ -2498,14 +2517,19 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/trinity_run_de_analysis/trinity_run_de_analysis/.*:
     mem: 15
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_cluster/trycycler_cluster/.*:
+    # FIXME: needs mem
     cores: 9
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_consensus/trycycler_consensus/.*:
+    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_partition/trycycler_partition/.*:
+    # FIXME: needs mem
     cores: 9
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_reconcile_msa/trycycler_reconcile_msa/.*:
+    # FIXME: needs mem
     cores: 9
   toolshed.g2.bx.psu.edu/repos/iuc/trycycler_subsample/trycycler_subsample/.*:
+    # FIXME: needs mem
     cores: 9
   toolshed.g2.bx.psu.edu/repos/iuc/ucsc_wigtobigwig/ucsc_wigtobigwig/.*:
     mem: 20
@@ -2705,6 +2729,7 @@ tools:
     cores: 12
     mem: 16
   toolshed.g2.bx.psu.edu/repos/rnateam/rnalien/RNAlien/.*:
+    # FIXME: needs mem
     cores: 10
   toolshed.g2.bx.psu.edu/repos/rnateam/segemehl/segemehl/.*:
     mem: 22
@@ -2730,6 +2755,7 @@ tools:
     cores: 6
     mem: 22.8
   .*bowtie2_index_builder_data_manager.*:
+    # noqa: T102
     cores: 16
   .*bwa_mem_index_builder_data_manager.*:
     cores: 12
@@ -2741,10 +2767,13 @@ tools:
     cores: 1
     mem: 64
   .*data_manager_cat.*:
+    # noqa: T102
     cores: 5
   .*data_manager_diamond_database_builder.*:
+    # noqa: T102
     cores: 5
   .*data_manager_eggnog_mapper_abspath.*:
+    # noqa: T102
     cores: 5
   .*data_manager_funannotate.*:
     cores: 1
@@ -2752,12 +2781,15 @@ tools:
   .*data_manager_gemini_download.*:
     mem: 20
   .*data_manager_humann2_database_downloader.*:
+    # noqa: T102
     cores: 5
   .*data_manager_humann2_download.*:
     mem: 25
   .*data_manager_humann_database_downloader.*:
+    # noqa: T102
     cores: 5
   .*data_manager_interproscan.*:
+    # noqa: T102
     cores: 5
   .*data_manager_metaphlan_download.*:
     cores: 12
@@ -2778,6 +2810,7 @@ tools:
     cores: 12
     mem: 92
   .*kraken2_build_database.*:
+    # noqa: T102
     cores: 16
   .*kraken_database_builder.*:
     mem: 200
