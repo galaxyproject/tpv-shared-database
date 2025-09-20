@@ -155,7 +155,7 @@ tools:
     cores: 20
     mem: 60
   toolshed.g2.bx.psu.edu/repos/bgruening/get_online_data/ctb_online_data_fetch/.*:
-    mem: 10
+    mem: 7
   toolshed.g2.bx.psu.edu/repos/bgruening/get_pubchem/ctb_pubchem_download_as_smiles/.*:
     cores: 10
     mem: 20
@@ -202,7 +202,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicplotmatrix/hicexplorer_hicplotmatrix/.*:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicplottads/hicexplorer_hicplottads/.*:
-    mem: 64
+    mem: 20
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicplotviewpoint/hicexplorer_hicplotviewpoint/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicsummatrices/hicexplorer_hicsummatrices/.*:
@@ -230,7 +230,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/instagraal/instagraal/.*:
     gpus: 1
     cores: 1
-    mem: 30
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/bgruening/interproscan/interproscan/.*:
     cores: 8
     mem: 40
@@ -245,7 +245,7 @@ tools:
     env:
       CUDA_VISIBLE_DEVICES: 0
   toolshed.g2.bx.psu.edu/repos/bgruening/minced/minced/.*:
-    mem: 10
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/bgruening/mitohifi/mitohifi/.*:
     cores: 8
     mem: 16
@@ -262,7 +262,6 @@ tools:
     cores: 5
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/nanopolish_polya/nanopolish_polya/.*:
-    # FIXME: needs mem
     cores: 3
   toolshed.g2.bx.psu.edu/repos/bgruening/nanopolish_variants/nanopolish_variants/.*:
     cores: 5
@@ -272,14 +271,14 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/numeric_clustering/numeric_clustering/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/openduck_run_smd/openduck_run_smd/.*:
-    # noqa: T102
     gpus: 1
     cores: 1
+    mem: 1
     env:
       CUDA_VISIBLE_DEVICES: 0
       OPENDUCK_GPU_PARAM: --gpu-id 1
   toolshed.g2.bx.psu.edu/repos/bgruening/openmg/ctb_openmg/.*:
-    mem: 20
+    mem: 2
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/bgruening/pharmcat/pharmcat/.*:
@@ -298,12 +297,12 @@ tools:
     cores: 16
     mem: 36
   toolshed.g2.bx.psu.edu/repos/bgruening/rdock_sort_filter/rdock_sort_filter/.*:
-    mem: 90
+    mem: 5
   toolshed.g2.bx.psu.edu/repos/bgruening/repeat_masker/repeatmasker_wrapper/.*:
     cores: 8
     mem: 40
   toolshed.g2.bx.psu.edu/repos/bgruening/rxdock_sort_filter/rxdock_sort_filter/.*:
-    mem: 90
+    mem: 6
   toolshed.g2.bx.psu.edu/repos/bgruening/sailfish/sailfish/.*:
     cores: 8
     mem: 48
@@ -311,8 +310,8 @@ tools:
     cores: 8
     mem: 70
   toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_model_validation/sklearn_model_validation/.*:
-    cores: 10
-    mem: 12
+    cores: 6
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_searchcv/sklearn_searchcv/.*:
     cores: 10
     mem: 12
@@ -380,22 +379,22 @@ tools:
     cores: 16
     mem: 128
   toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_align_samples/dimspy_align_samples/.*:
-    cores: 4
-    mem: 12
+    cores: 3
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_blank_filter/dimspy_blank_filter/.*:
-    mem: 12
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_missing_values_sample_filter/dimspy_missing_values_sample_filter/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_process_scans/dimspy_process_scans/.*:
     cores: 4
-    mem: 12
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_replicate_filter/dimspy_replicate_filter/.*:
-    cores: 4
-    mem: 12
+    cores: 2
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/computational-metabolomics/dimspy_sample_filter/dimspy_sample_filter/.*:
-    mem: 12
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/computationaltranscriptomics/glassgo/glassgo/.*:
-    mem: 4
+    mem: 1
     scheduling:
       prefer:
       - docker
@@ -573,7 +572,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/ecology/srs_preprocess_s2/srs_preprocess_s2/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/ecology/xarray_select/xarray_select/.*:
-    mem: 12
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/ethevenot/biosigner/biosigner/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/ethevenot/heatmap/Heatmap/.*:
@@ -610,7 +609,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_classification/cardinal_classification/.*:
     mem: 90
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_colocalization/cardinal_colocalization/.*:
-    mem: 90
+    mem: 6
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_combine/cardinal_combine/.*:
     mem: 92
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_data_exporter/cardinal_data_exporter/.*:
@@ -637,7 +636,7 @@ tools:
     cores: 4
     mem: 20
   toolshed.g2.bx.psu.edu/repos/galaxyp/encyclopedia_prosit_csv_to_library/encyclopedia_prosit_csv_to_library/.*:
-    mem: 40
+    mem: 7
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/galaxyp/encyclopedia_searchtolib/encyclopedia_searchtolib/.*:
@@ -694,8 +693,8 @@ tools:
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_accuratemasssearch/AccurateMassSearch/.*:
-    cores: 4
-    mem: 8
+    cores: 2
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_additiveseries/AdditiveSeries/.*:
     cores: 20
     mem: 12
@@ -708,16 +707,16 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_compnovo/CompNovo/.*:
     cores: 4
-    mem: 8
+    mem: 4
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_compnovocid/CompNovoCID/.*:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_consensusid/ConsensusID/.*:
     cores: 1
-    mem: 58
+    mem: 4
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_consensusmapnormalizer/ConsensusMapNormalizer/.*:
-    cores: 4
-    mem: 8
+    cores: 2
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_cruxadapter/CruxAdapter/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_cvinspector/CVInspector/.*:
@@ -734,7 +733,7 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_digestor/Digestor/.*:
     cores: 4
-    mem: 8
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_digestormotif/DigestorMotif/.*:
     cores: 4
     mem: 8
@@ -746,7 +745,7 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_falsediscoveryrate/FalseDiscoveryRate/.*:
     cores: 4
-    mem: 8
+    mem: 3
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_featurefindercentroided/FeatureFinderCentroided/.*:
     cores: 4
     mem: 8
@@ -754,20 +753,20 @@ tools:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_featurefindermetabo/FeatureFinderMetabo/.*:
-    cores: 4
-    mem: 8
+    cores: 3
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_featurefindermrm/FeatureFinderMRM/.*:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_featurefindermultiplex/FeatureFinderMultiplex/.*:
-    cores: 8
+    cores: 7
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_featurefindersuperhirn/FeatureFinderSuperHirn/.*:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_featurelinkerlabeled/FeatureLinkerLabeled/.*:
-    cores: 4
-    mem: 8
+    cores: 2
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_featurelinkerunlabeled/FeatureLinkerUnlabeled/.*:
     cores: 4
     mem: 8
@@ -778,47 +777,47 @@ tools:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_fidoadapter/FidoAdapter/.*:
-    cores: 8
-    mem: 8
+    cores: 7
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_fileconverter/FileConverter/.*:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_filefilter/FileFilter/.*:
-    cores: 4
-    mem: 8
+    cores: 3
+    mem: 4
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_fileinfo/FileInfo/.*:
     cores: 4
-    mem: 8
+    mem: 3
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_filemerger/FileMerger/.*:
-    cores: 4
-    mem: 16
+    cores: 3
+    mem: 4
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_highresprecursormasscorrector/HighResPrecursorMassCorrector/.*:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_idconflictresolver/IDConflictResolver/.*:
-    cores: 4
-    mem: 8
+    cores: 3
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_idextractor/IDExtractor/.*:
-    cores: 4
-    mem: 8
+    cores: 2
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_idfileconverter/IDFileConverter/.*:
     cores: 4
-    mem: 8
+    mem: 6
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_idfilter/IDFilter/.*:
     cores: 4
-    mem: 8
+    mem: 4
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_idmapper/IDMapper/.*:
     cores: 4
-    mem: 8
+    mem: 7
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_idmassaccuracy/IDMassAccuracy/.*:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_idmerger/IDMerger/.*:
     cores: 1
-    mem: 30
+    mem: 6
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_idposteriorerrorprobability/IDPosteriorErrorProbability/.*:
     cores: 4
-    mem: 8
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_idrtcalibration/IDRTCalibration/.*:
     cores: 4
     mem: 8
@@ -832,8 +831,8 @@ tools:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_isobaricanalyzer/IsobaricAnalyzer/.*:
-    cores: 4
-    mem: 8
+    cores: 3
+    mem: 7
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_itraqanalyzer/openms_itraqanalyzer/.*:
     cores: 4
     mem: 8
@@ -875,7 +874,7 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_msgfplusadapter/MSGFPlusAdapter/.*:
     cores: 10
-    mem: 12
+    mem: 10
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_mssimulator/MSSimulator/.*:
@@ -885,11 +884,11 @@ tools:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_mztabexporter/MzTabExporter/.*:
-    cores: 4
+    cores: 1
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_noisefiltergaussian/NoiseFilterGaussian/.*:
-    cores: 4
-    mem: 8
+    cores: 1
+    mem: 3
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_noisefiltersgolay/NoiseFilterSGolay/.*:
     cores: 4
     mem: 8
@@ -906,8 +905,8 @@ tools:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_openswathdecoygenerator/OpenSwathDecoyGenerator/.*:
-    cores: 4
-    mem: 8
+    cores: 3
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_openswathdiaprescoring/OpenSwathDIAPreScoring/.*:
     cores: 4
     mem: 8
@@ -921,19 +920,19 @@ tools:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_openswathworkflow/OpenSwathWorkflow/.*:
-    mem: 156
+    mem: 16
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_peakpickerhires/PeakPickerHiRes/.*:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_peakpickerwavelet/PeakPickerWavelet/.*:
     cores: 4
-    mem: 8
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_pepnovoadapter/PepNovoAdapter/.*:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_peptideindexer/PeptideIndexer/.*:
     cores: 4
-    mem: 8
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_precursorionselector/PrecursorIonSelector/.*:
     cores: 4
     mem: 8
@@ -942,10 +941,10 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_proteininference/ProteinInference/.*:
     cores: 4
-    mem: 8
+    mem: 3
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_proteinquantifier/ProteinQuantifier/.*:
     cores: 4
-    mem: 8
+    mem: 3
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_proteinresolver/ProteinResolver/.*:
     cores: 4
     mem: 8
@@ -956,7 +955,7 @@ tools:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_qccalculator/QCCalculator/.*:
-    mem: 8
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_rnpxl/RNPxl/.*:
     cores: 4
     mem: 8
@@ -976,8 +975,8 @@ tools:
     cores: 4
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_sequencecoveragecalculator/SequenceCoverageCalculator/.*:
-    cores: 4
-    mem: 8
+    cores: 2
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_siriusadapter/SiriusAdapter/.*:
     mem: 16
     env:
@@ -1020,7 +1019,7 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_textexporter/TextExporter/.*:
     cores: 4
-    mem: 8
+    mem: 3
   toolshed.g2.bx.psu.edu/repos/galaxyp/openms_tmtanalyzer/TMTAnalyzer/.*:
     cores: 4
     mem: 8
@@ -1057,25 +1056,26 @@ tools:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/galaxyp/pyprophet_score/pyprophet_score/.*:
     cores: 1
-    mem: 400
+    mem: 31
   toolshed.g2.bx.psu.edu/repos/galaxyp/reactome_pathwaymatcher/reactome_pathwaymatcher/.*:
-    mem: 20
+    mem: 11
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_clip/je_clip/.*:
     # FIXME: needs mem
-    cores: 8
+    cores: 3
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_demultiplex/je_demultiplex/.*:
     cores: 8
     mem: 20
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_demultiplex_illu/je_demultiplex_illu/.*:
     # FIXME: needs mem
-    cores: 8
+    cores: 5
   toolshed.g2.bx.psu.edu/repos/gbcs-embl-heidelberg/je_markdupes/je_markdupes/.*:
     # FIXME: needs mem
-    cores: 8
+    cores: 2
+    mem: 23
   toolshed.g2.bx.psu.edu/repos/genouest/braker3/braker3/.*:
     cores: 16
     mem: 61.4
@@ -1095,7 +1095,7 @@ tools:
     cores: 4
     mem: 16
   toolshed.g2.bx.psu.edu/repos/goeckslab/tabular_learner/tabular_learner/.*:
-    cores: 8
+    cores: 6
     mem: 32
   toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/.*:
     cores: 8
@@ -1222,7 +1222,7 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/concoct/concoct/.*:
     cores: 10
-    mem: 48
+    mem: 15
   toolshed.g2.bx.psu.edu/repos/iuc/dada2_assigntaxonomyaddspecies/dada2_assignTaxonomyAddspecies/.*:
     cores: 3
     mem: 11.5
@@ -1236,7 +1236,7 @@ tools:
     cores: 2
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/data_manager_metaphlan_database_downloader/data_manager_metaphlan_download/.*:
-    cores: 12
+    cores: 10
     mem: 92
   toolshed.g2.bx.psu.edu/repos/iuc/datamash_transpose/datamash_transpose/.*:
     mem: 8
@@ -1303,7 +1303,7 @@ tools:
     mem: 40
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_compare/funannotate_compare/.*:
     cores: 8
-    mem: 40
+    mem: 13
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_predict/funannotate_predict/.*:
     cores: 12
     mem: 12
@@ -1392,25 +1392,25 @@ tools:
     mem: 90
   toolshed.g2.bx.psu.edu/repos/iuc/hybpiper/hybpiper/.*:
     cores: 8
-    mem: 24
+    mem: 21
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_absrel/hyphy_absrel/.*:
     cores: 20
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_bgm/hyphy_bgm/.*:
-    cores: 20
-    mem: 10
+    cores: 19
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_busted/hyphy_busted/.*:
     cores: 20
-    mem: 10
+    mem: 4
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_fade/hyphy_fade/.*:
-    cores: 20
-    mem: 10
+    cores: 12
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_fel/hyphy_fel/.*:
     cores: 20
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_fubar/hyphy_fubar/.*:
-    cores: 20
-    mem: 10
+    cores: 14
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_gard/hyphy_gard/.*:
     cores: 20
     mem: 10
@@ -1425,7 +1425,7 @@ tools:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_slac/hyphy_slac/.*:
     cores: 20
-    mem: 10
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_sm19/hyphy_sm19/.*:
     cores: 20
     mem: 10
@@ -1459,8 +1459,8 @@ tools:
     cores: 8
     mem: 20
   toolshed.g2.bx.psu.edu/repos/iuc/kc_align/kc-align/.*:
-    cores: 3
-    mem: 12
+    cores: 1
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/iuc/khmer_abundance_distribution_single/khmer_abundance_distribution_single/.*:
     cores: 8
     mem: 8
@@ -1532,7 +1532,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/lumpy_sv/lumpy_sv/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/maaslin2/maaslin2/1.16.0.*:
-    # noqa: T102
     cores: 1
   toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_bdgcmp/.*:
     mem: 12
@@ -1588,7 +1587,7 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/migmap/migmap/.*:
     cores: 10
-    mem: 16
+    mem: 14
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/iuc/minia/minia/.*:
@@ -1805,7 +1804,7 @@ tools:
       TERM: vt100
   toolshed.g2.bx.psu.edu/repos/iuc/mothur_get_dists/mothur_get_dists/.*:
     cores: 1
-    mem: 20
+    mem: 17
     env:
       TERM: vt100
   toolshed.g2.bx.psu.edu/repos/iuc/mothur_get_group/mothur_get_group/.*:
@@ -2085,7 +2084,7 @@ tools:
       TERM: vt100
   toolshed.g2.bx.psu.edu/repos/iuc/mothur_remove_dists/mothur_remove_dists/.*:
     cores: 1
-    mem: 20
+    mem: 17
     env:
       TERM: vt100
   toolshed.g2.bx.psu.edu/repos/iuc/mothur_remove_groups/mothur_remove_groups/.*:
@@ -2298,7 +2297,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/porechop/porechop/.*:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/iuc/poretools_events/poretools_events/.*:
-    mem: 11.4
+    mem: 1
   toolshed.g2.bx.psu.edu/repos/iuc/poretools_extract/poretools_extract/.*:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/poretools_hist/poretools_hist/.*:
@@ -2525,7 +2524,6 @@ tools:
     cores: 8
     mem: 42
   toolshed.g2.bx.psu.edu/repos/iuc/stacks2_ustacks/stacks2_ustacks/.*:
-    # FIXME: needs mem
     cores: 16
   toolshed.g2.bx.psu.edu/repos/iuc/stacks_clonefilter/stacks_clonefilter/.*:
     mem: 8
@@ -2596,7 +2594,7 @@ tools:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/iuc/vardict_java/vardict_java/.*:
     cores: 2
-    mem: 128
+    mem: 63
     env:
       VARDICT_CHUNKSIZE: 1000000
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
@@ -2625,7 +2623,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/jjohnson/rsem/rsem_calculate_expression/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/lecorguille/camera_annotate/abims_CAMERA_annotateDiffreport/.*:
-    mem: 32
+    mem: 17
   toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_fillpeaks/abims_xcms_fillPeaks/.*:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_group/abims_xcms_group/.*:
@@ -2680,7 +2678,7 @@ tools:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/.*:
     cores: 12
-    mem: 128
+    mem: 109
   toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/.*:
     cores: 8
     mem: 64
@@ -2720,14 +2718,13 @@ tools:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/.*:
     cores: 4
-    mem: 64
+    mem: 54
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/.*:
-    mem: 16
-
+    mem: 14
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_generate_feature_table/recetox_aplcms_generate_feature_table/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_recover_weaker_signals/recetox_aplcms_recover_weaker_signals/.*:
-    mem: 16
+    mem: 5
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_remove_noise/recetox_aplcms_remove_noise/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/recetox/recetox_msfinder/recetox_msfinder/.*:
@@ -2741,9 +2738,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/rnateam/graphclust_nspdk/NSPDK_candidateClust/.*:
     mem: 32
   toolshed.g2.bx.psu.edu/repos/rnateam/graphclust_nspdk/nspdk_sparse/.*:
-    mem: 16
+    mem: 6
   toolshed.g2.bx.psu.edu/repos/rnateam/graphclust_preprocessing/preproc/.*:
-    mem: 10
+    mem: 2
   toolshed.g2.bx.psu.edu/repos/rnateam/graphprot_predict_profile/graphprot_predict_profile/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/.*:
@@ -2759,7 +2756,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/rnateam/mirdeep2_mapper/rbc_mirdeep2_mapper/.*:
     mem: 28
   toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer/.*:
-    mem: 8
+    mem: 6
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
   toolshed.g2.bx.psu.edu/repos/rnateam/peakachu/peakachu/.*:
@@ -2767,8 +2764,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/rnateam/piranha/piranha/.*:
     mem: 15
   toolshed.g2.bx.psu.edu/repos/rnateam/rcas/rcas/.*:
-    cores: 4
-    mem: 16
+    cores: 2
+    mem: 6
   toolshed.g2.bx.psu.edu/repos/rnateam/ribotaper/ribotaper_ribosome_profiling/.*:
     cores: 12
     mem: 16
@@ -2776,19 +2773,19 @@ tools:
     # FIXME: needs mem
     cores: 10
   toolshed.g2.bx.psu.edu/repos/rnateam/segemehl/segemehl/.*:
-    mem: 80
+    mem: 22
   toolshed.g2.bx.psu.edu/repos/rnateam/sortmerna/bg_sortmerna/.*:
     cores: 8
     mem: 30.7
   toolshed.g2.bx.psu.edu/repos/rnateam/sshmm/sshmm/.*:
-    mem: 16
+    mem: 5
   toolshed.g2.bx.psu.edu/repos/saskia-hiltemann/krona_text/krona-text/.*:
     mem: 26.6
   toolshed.g2.bx.psu.edu/repos/simon-gladman/velvetoptimiser/velvetoptimiser/.*:
     cores: 4
     mem: 14
   toolshed.g2.bx.psu.edu/repos/tyty/structurefold/iterative_map_pipeline/.*:
-    mem: 60
+    mem: 4
   toolshed.g2.bx.psu.edu/repos/ufz/iphop_predict/iphop_predict/.*:
     cores: 6
     mem: 128
@@ -2908,9 +2905,9 @@ destinations:
     runner: local
   tpvdb_slurm:
     context:
-      slurm_walltime: ''
-      slurm_partition: ''
       slurm_account: ''
+      slurm_partition: ''
+      slurm_walltime: ''
     params:
       native_specification: |
         --nodes=1 --ntasks={cores} --mem={round(mem*1024)} {'--time='+ slurm_walltime if slurm_walltime else ''} {'--gres=gres:gpu:' + str(gpus) if gpus else ''} {'--partition=' + slurm_partition if slurm_partition else ''} {'--account=' + slurm_account if slurm_account else ''}
