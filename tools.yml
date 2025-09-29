@@ -360,7 +360,7 @@ tools:
     mem: 90
   toolshed.g2.bx.psu.edu/repos/chemteam/gmx_em/gmx_em/.*:
     cores: 16
-    mem: 8
+    mem: 20
   toolshed.g2.bx.psu.edu/repos/chemteam/gmx_fep/gmx_fep/.*:
     cores: 16
     mem: 8
