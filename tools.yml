@@ -2573,7 +2573,7 @@ tools:
     # FIXME: needs mem
     cores: 9
   toolshed.g2.bx.psu.edu/repos/iuc/ucsc_wigtobigwig/ucsc_wigtobigwig/.*:
-    mem: 20
+    mem: min(max(input_size * 20, 28), 58)
   toolshed.g2.bx.psu.edu/repos/iuc/umi_tools_dedup/umi_tools_dedup/.*:
     mem: 90
   toolshed.g2.bx.psu.edu/repos/iuc/umi_tools_extract/umi_tools_extract/.*:
@@ -2869,8 +2869,14 @@ tools:
   .*twobit_builder_data_manager.*:
     cores: 16
     mem: 36
+  CONVERTER_bam_to_bigwig_0:
+    mem: min(max(input_size * 20, 28), 58)
   CONVERTER_bedgraph_to_bigwig:
-    mem: 8
+    mem: min(max(input_size * 20, 28), 58)
+  CONVERTER_interval_to_bigwig_0:
+    mem: min(max(input_size * 20, 28), 58)
+  CONVERTER_wig_to_bigwig:
+    mem: min(max(input_size * 20, 28), 58)
   bfast_wrapper:
     cores: 10
     mem: 20
@@ -2890,7 +2896,7 @@ tools:
     cores: 10
     mem: 32
   wig_to_bigWig:
-    mem: 10
+    mem: min(max(input_size * 20, 28), 58)
 destinations:
   default:
     params:
