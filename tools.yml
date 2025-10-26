@@ -1158,6 +1158,15 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/bcftools_norm/bcftools_norm/.*:
     cores: 2
     mem: 8
+  toolshed.g2.bx.psu.edu/repos/iuc/beagle/beagle/.*:
+    cores: 1
+    rules:
+    - id: tpvdb_beagle_small_input_rule
+      if: input_size < 1
+      mem: 24
+    - id: tpvdb_beagle_large_input_rule
+      if: input_size >= 1
+      mem: 64
   toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/.*:
     mem: 40
   toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_mergebed/.*:
