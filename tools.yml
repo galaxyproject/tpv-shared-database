@@ -2683,7 +2683,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/nml/spades/spades/.*:
     cores: 20
     mem: min(max(int(input_size * 32), 14), 240)
-  toolshed.g2.bx.psu.edu/repos/pavlo-lutsik/rnds/rnbeads/.*:
+  toolshed.g2.bx.psu.edu/repos/pavlo-lutsik/rnbeads/rnbeads/.*:
     mem: 20
   toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/.*:
     cores: 12
