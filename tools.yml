@@ -569,6 +569,16 @@ tools:
       CACHE_4_TCOFFEE: $TMP
       DIR_4_TCOFFEE: $TMP
       TMP_4_TCOFFEE: $TMP
+  toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/.*:
+    mem: 2 + input_size * 7
+  toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy.*:
+    mem: 4 + input_size * 10
+  toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_multiplet_scrublet/scanpy_multiplet_scrublet/.*:
+    mem: 1 + input_size * 65
+  toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_scale_data/scanpy_scale_data/.*:
+    mem: 1 + input_size * 32
+  toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_pca/scanpy_run_pca/.*:
+    mem: 2 + input_size * 10
   toolshed.g2.bx.psu.edu/repos/ecology/srs_preprocess_s2/srs_preprocess_s2/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/ecology/xarray_select/xarray_select/.*:
