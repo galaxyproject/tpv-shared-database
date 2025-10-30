@@ -1389,8 +1389,21 @@ tools:
     cores: 16
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/.*:
-    cores: 8
-    mem: 20
+    cores: 32
+    mem: 120
+    rules:
+    - id: tpvdb_hisat2_small_input_rule
+      if: input_size < 0.5
+      cores: 2
+      mem: 5.6
+    - id: tpvdb_hisat2_medium_input_rule
+      if: 0.5 <= input_size < 15
+      cores: 8
+      mem: 28
+    - id: tpvdb_hisat2_large_input_rule
+      if: 15 <= input_size < 30
+      cores: 16
+      mem: 58
   toolshed.g2.bx.psu.edu/repos/iuc/hmmer_hmmsearch/hmmer_hmmsearch/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/humann/humann/.*:
