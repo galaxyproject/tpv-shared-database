@@ -615,24 +615,24 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/smudgeplot/smudgeplot/.*:
     cores: 8
     rules:
-      - if: input_size < 1
-        mem: 15
-      - if: 1 <= input_size < 5
-        mem: 75
-      - if: 5 <= input_size < 10
-        cores: 12
-        mem: 150
-      - if: 10 <= input_size < 15
-        cores: 12
-        mem: 225
-      - if: 15 <= input_size < 20
-        cores: 12
-        mem: 300
-      - if: 20 <= input_size < 25
-        mem: 375
-        cores: 16
-      - if: input_size >= 25
-        fail: Too much data, please check if the input is correct.
+    - if: input_size < 1
+      mem: 15
+    - if: 1 <= input_size < 5
+      mem: 75
+    - if: 5 <= input_size < 10
+      cores: 12
+      mem: 150
+    - if: 10 <= input_size < 15
+      cores: 12
+      mem: 225
+    - if: 15 <= input_size < 20
+      cores: 12
+      mem: 300
+    - if: 20 <= input_size < 25
+      mem: 375
+      cores: 16
+    - if: input_size >= 25
+      fail: Too much data, please check if the input is correct.
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_classification/cardinal_classification/.*:
     mem: 90
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_colocalization/cardinal_colocalization/.*:
@@ -1220,30 +1220,30 @@ tools:
     cores: 32
     mem: 244
     rules:
-      - id: bwa_mem2_small_input_rule
-        if: input_size < 0.25
-        cores: 2
-        mem: 7.6
-      - id: bwa_mem2_medium_input_rule
-        if: 0.25 <= input_size < 16
-        cores: 8
-        mem: 28
-      - id: bwa_mem2_large_input_rule
-        if: 16 <= input_size < 32
-        cores: 16
-        mem: 58
-      - id: bwa_mem2_xlarge_input_rule
-        if: 32 <= input_size < 64
-        cores: 24
-        mem: 120
-      - id: bwa_mem2_history_reference_rule
-        if: |
-          helpers.job_args_match(job, app, {"reference_source": {"reference_source_selector": "history"}})
-        # per https://github.com/bwa-mem2/bwa-mem2/issues/41 it's 28 * reference
-        mem: |
-          options = job.get_param_values(app)
-          size = options["reference_source"]["ref_file"].get_size()
-          min(max(float(size/1024**3) * 28, (input_size - float(size/1024**3)) * 2, 7.6), 120)
+    - id: bwa_mem2_small_input_rule
+      if: input_size < 0.25
+      cores: 2
+      mem: 7.6
+    - id: bwa_mem2_medium_input_rule
+      if: 0.25 <= input_size < 16
+      cores: 8
+      mem: 28
+    - id: bwa_mem2_large_input_rule
+      if: 16 <= input_size < 32
+      cores: 16
+      mem: 58
+    - id: bwa_mem2_xlarge_input_rule
+      if: 32 <= input_size < 64
+      cores: 24
+      mem: 120
+    - id: bwa_mem2_history_reference_rule
+      if: |
+        helpers.job_args_match(job, app, {"reference_source": {"reference_source_selector": "history"}})
+      # per https://github.com/bwa-mem2/bwa-mem2/issues/41 it's 28 * reference
+      mem: |
+        options = job.get_param_values(app)
+        size = options["reference_source"]["ref_file"].get_size()
+        min(max(float(size/1024**3) * 28, (input_size - float(size/1024**3)) * 2, 7.6), 120)
 
   toolshed.g2.bx.psu.edu/repos/iuc/bwameth/bwameth/.*:
     cores: 8
