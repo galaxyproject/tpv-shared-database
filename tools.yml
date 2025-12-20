@@ -68,6 +68,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/canu/canu/.*:
     cores: 20
     mem: 92
+  toolshed.g2.bx.psu.edu/repos/iuc/comebin/comebin/.*:
+    mem: 12
+    cores: 32
   toolshed.g2.bx.psu.edu/repos/bgruening/create_tool_recommendation_model/create_tool_recommendation_model/.*:
     cores: 16
     mem: 160
@@ -268,6 +271,9 @@ tools:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/natural_product_likeness/ctb_np-likeness-calculator/.*:
     mem: 12
+  toolshed.g2.bx.psu.edu/repos/bgruening/nextdenovo/nextdenovo/.*:
+    mem: 128
+    cores: 24
   toolshed.g2.bx.psu.edu/repos/bgruening/numeric_clustering/numeric_clustering/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/openduck_run_smd/openduck_run_smd/.*:
@@ -425,6 +431,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/.*:
     cores: 8
     mem: 30
+  toolshed.g2.bx.psu.edu/repos/galaxyp/custom_pro_db/custom_pro_db/.*:
+    mem: 16
   toolshed.g2.bx.psu.edu/repos/devteam/cuffcompare/cuffcompare/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/devteam/cuffdiff/cuffdiff/.*:
@@ -605,7 +613,26 @@ tools:
     cores: 16
     mem: 64
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/smudgeplot/smudgeplot/.*:
-    mem: 8
+    cores: 8
+    rules:
+      - if: input_size < 1
+        mem: 15
+      - if: 1 <= input_size < 5
+        mem: 75
+      - if: 5 <= input_size < 10
+        cores: 12
+        mem: 150
+      - if: 10 <= input_size < 15
+        cores: 12
+        mem: 225
+      - if: 15 <= input_size < 20
+        cores: 12
+        mem: 300
+      - if: 20 <= input_size < 25
+        mem: 375
+        cores: 16
+      - if: input_size >= 25
+        fail: Too much data, please check if the input is correct.
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_classification/cardinal_classification/.*:
     mem: 90
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_colocalization/cardinal_colocalization/.*:
@@ -1190,8 +1217,34 @@ tools:
     cores: 16
     mem: 80
   toolshed.g2.bx.psu.edu/repos/iuc/bwa_mem2/bwa_mem2/.*:
-    cores: 8
-    mem: 30
+    cores: 32
+    mem: 244
+    rules:
+      - id: bwa_mem2_small_input_rule
+        if: input_size < 0.25
+        cores: 2
+        mem: 7.6
+      - id: bwa_mem2_medium_input_rule
+        if: 0.25 <= input_size < 16
+        cores: 8
+        mem: 28
+      - id: bwa_mem2_large_input_rule
+        if: 16 <= input_size < 32
+        cores: 16
+        mem: 58
+      - id: bwa_mem2_xlarge_input_rule
+        if: 32 <= input_size < 64
+        cores: 24
+        mem: 120
+      - id: bwa_mem2_history_reference_rule
+        if: |
+          helpers.job_args_match(job, app, {"reference_source": {"reference_source_selector": "history"}})
+        # per https://github.com/bwa-mem2/bwa-mem2/issues/41 it's 28 * reference
+        mem: |
+          options = job.get_param_values(app)
+          size = options["reference_source"]["ref_file"].get_size()
+          min(max(float(size/1024**3) * 28, (input_size - float(size/1024**3)) * 2, 7.6), 120)
+
   toolshed.g2.bx.psu.edu/repos/iuc/bwameth/bwameth/.*:
     cores: 8
     mem: 24
@@ -1202,6 +1255,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/checkm2/checkm2/.*:
     cores: 16
     mem: 48
+  toolshed.g2.bx.psu.edu/repos/iuc/checkm_taxonomy_wf/checkm_taxonomy_wf/.*:
+    mem: 8
+    cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/checkm_lineage_wf/checkm_lineage_wf/.*:
     cores: 16
     mem: 48
@@ -1316,6 +1372,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_predict/funannotate_predict/.*:
     cores: 12
     mem: 12
+  toolshed.g2.bx.psu.edu/repos/galaxyp/fragpipe/fragpipe/.*:
+    cores: 12
+    mem: 256
   toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_base_recalibrator/.*:
     cores: 10
     mem: 24
@@ -1365,6 +1424,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_variant_validate/.*:
     cores: 10
     mem: 24
+  toolshed.g2.bx.psu.edu/repos/iuc/gatk4_mutect2/gatk4_mutect2/.*:
+    cores: 12
+    mem: 36
   toolshed.g2.bx.psu.edu/repos/iuc/gecko/gecko/.*:
     mem: 30.4
   toolshed.g2.bx.psu.edu/repos/iuc/gemini_inheritance/gemini_inheritance/.*:
@@ -1385,6 +1447,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/gtdbtk_classify_wf/gtdbtk_classify_wf/.*:
     cores: 32
     mem: 122.8
+  toolshed.g2.bx.psu.edu/repos/iuc/data_manager_gtdbtk_database_installer/gtdbtk_database_installer/.*:
+    mem: 128
   toolshed.g2.bx.psu.edu/repos/iuc/gubbins/gubbins/.*:
     cores: 16
     mem: 12
@@ -1471,6 +1535,9 @@ tools:
       - pulsar
   toolshed.g2.bx.psu.edu/repos/iuc/ivar_variants/ivar_variants/.*:
     mem: 30.4
+  toolshed.g2.bx.psu.edu/repos/fubar/jbrowse2/jbrowse2/.*:
+    mem: 6
+    cores: 1
   toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/.*:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/jcvi_gff_stats/jcvi_gff_stats/.*:
@@ -1562,8 +1629,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/.*:
     mem: 15
   toolshed.g2.bx.psu.edu/repos/iuc/maker/maker/.*:
-    cores: 12
-    mem: 12
+    cores: 16
+    mem: 64
   toolshed.g2.bx.psu.edu/repos/iuc/medaka_consensus/medaka_consensus/.*:
     cores: 4
     mem: 15.3
@@ -1626,6 +1693,9 @@ tools:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/.*:
     mem: 8
+  toolshed.g2.bx.psu.edu/repos/iuc/modify_loom/modify_loom/.*:
+    cores: 1
+    mem: 16
   toolshed.g2.bx.psu.edu/repos/iuc/mothur_align_check/mothur_align_check/.*:
     cores: 1
     mem: 20
@@ -2445,12 +2515,15 @@ tools:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/iuc/semibin/semibin/.*:
     cores: 16
-    mem: 16
+    mem: 32
   toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_seq/.*:
     cores: 4
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/seurat/seurat/.*:
     mem: 10
+  toolshed.g2.bx.psu.edu/repos/iuc/seurat_preprocessing/seurat_preprocessing/.*:
+    cores: 1
+    mem: 20
   toolshed.g2.bx.psu.edu/repos/iuc/shasta/shasta/.*:
     cores: 10
     mem: 12
@@ -2637,6 +2710,9 @@ tools:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/iuc/vsearch/vsearch_search/.*:
     mem: 80
+  toolshed.g2.bx.psu.edu/repos/iuc/windowmasker/windowmasker_mkcounts/.*:
+    mem: 64
+    cores: 1
   toolshed.g2.bx.psu.edu/repos/iuc/winnowmap/winnowmap/.*:
     cores: 8
     mem: 32
@@ -2777,6 +2853,9 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/rnateam/mirdeep2_mapper/rbc_mirdeep2_mapper/.*:
     mem: 28
+  toolshed.g2.bx.psu.edu/repos/iuc/optitype/optitype/.*:
+    cores: 12
+    mem: 256
   toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer/.*:
     mem: 6
     env:
@@ -2817,6 +2896,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/wolma/mimodd_main/mimodd_varcall/.*:
     cores: 6
     mem: 22.8
+  toolshed.g2.bx.psu.edu/repos/iuc/vapor/vapor/.*:
+    mem: 8
   .*bowtie2_index_builder_data_manager.*:
     # noqa: T102
     cores: 16
