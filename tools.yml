@@ -25,7 +25,7 @@ tools:
     mem: 40
   toolshed.g2.bx.psu.edu/repos/artbio/cap3/cap3/.*:
     mem: 12
-  toolshed.g2.bx.psu.edu/repos/artbio/gsc_scran_normalize/scran_normalize/.*:
+  toolshed.g2.bx.psu.edu/repos/artbio/gsc_scran_normalize/scran_normalize/.*:m
     cores: 1
     mem: 20
   toolshed.g2.bx.psu.edu/repos/artbio/repenrich/repenrich/.*:
@@ -216,51 +216,51 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/hifiasm/hifiasm/.*:
     cores: 10
     rules:
-      - id: tpvdb_hifiasm_expert_memory_rule
-        # The memory requirement of Hifiasm depends on the "Estimated haploid genome size" (hg_size).
-        # If hg_size is set, and it can be calculated automatically, then we can fit memory more efficiently.
-        # This is done for example in the VGP workflows.
-        if: |
-          parameters = {p.name: p.value for p in job.parameters}
-          parameters = tool.params_from_strings(parameters, app)
+    - id: tpvdb_hifiasm_expert_memory_rule
+      # The memory requirement of Hifiasm depends on the "Estimated haploid genome size" (hg_size).
+      # If hg_size is set, and it can be calculated automatically, then we can fit memory more efficiently.
+      # This is done for example in the VGP workflows.
+      if: |
+        parameters = {p.name: p.value for p in job.parameters}
+        parameters = tool.params_from_strings(parameters, app)
 
-          advanced_options = parameters.get("advanced_options", dict())
-          hg_size = advanced_options.get("hg_size", "")
+        advanced_options = parameters.get("advanced_options", dict())
+        hg_size = advanced_options.get("hg_size", "")
 
-          bool(hg_size)
-        mem: |
-          from math import ceil
+        bool(hg_size)
+      mem: |
+        from math import ceil
 
-          parameters = {p.name: p.value for p in job.parameters}
-          parameters = tool.params_from_strings(parameters, app)
+        parameters = {p.name: p.value for p in job.parameters}
+        parameters = tool.params_from_strings(parameters, app)
 
-          advanced_options = parameters.get("advanced_options", dict())
+        advanced_options = parameters.get("advanced_options", dict())
 
-          kcov_default = 36
-          kcov = advanced_options.get("kcov", kcov_default)
+        kcov_default = 36
+        kcov = advanced_options.get("kcov", kcov_default)
 
-          hg_size = advanced_options.get("hg_size", "")
+        hg_size = advanced_options.get("hg_size", "")
 
-          value = 0
-          if hg_size:
-              conversion_factors = {
-                  "k": 1000000,
-                  "M": 1000,
-                  "G": 1,
-              }
-              conversion_factors = {
-                  key.lower(): value for key, value in conversion_factors.items()
-              }
-              suffix = hg_size[-1:].lower()
-              value = hg_size[:len(hg_size) - 1]
-              value = value.replace(",", ".")
-              value = float(value)
-              # compute hg size in Gb
-              value = value / conversion_factors[suffix.lower()]
-              value = ceil(value * (kcov * 2) * 1.75)
+        value = 0
+        if hg_size:
+            conversion_factors = {
+                "k": 1000000,
+                "M": 1000,
+                "G": 1,
+            }
+            conversion_factors = {
+                key.lower(): value for key, value in conversion_factors.items()
+            }
+            suffix = hg_size[-1:].lower()
+            value = hg_size[:len(hg_size) - 1]
+            value = value.replace(",", ".")
+            value = float(value)
+            # compute hg size in Gb
+            value = value / conversion_factors[suffix.lower()]
+            value = ceil(value * (kcov * 2) * 1.75)
 
-          # return the amount of memory needed
-          value
+        # return the amount of memory needed
+        value
 
 
   toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmbuild/.*:
