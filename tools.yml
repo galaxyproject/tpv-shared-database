@@ -25,7 +25,7 @@ tools:
     mem: 40
   toolshed.g2.bx.psu.edu/repos/artbio/cap3/cap3/.*:
     mem: 12
-  toolshed.g2.bx.psu.edu/repos/artbio/gsc_scran_normalize/scran_normalize/.*:m
+  toolshed.g2.bx.psu.edu/repos/artbio/gsc_scran_normalize/scran_normalize/.*:
     cores: 1
     mem: 20
   toolshed.g2.bx.psu.edu/repos/artbio/repenrich/repenrich/.*:
