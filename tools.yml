@@ -68,9 +68,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/canu/canu/.*:
     cores: 20
     mem: 92
-  toolshed.g2.bx.psu.edu/repos/iuc/comebin/comebin/.*:
-    mem: 12
-    cores: 32
   toolshed.g2.bx.psu.edu/repos/bgruening/create_tool_recommendation_model/create_tool_recommendation_model/.*:
     cores: 16
     mem: 160
@@ -272,8 +269,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/natural_product_likeness/ctb_np-likeness-calculator/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/nextdenovo/nextdenovo/.*:
-    mem: 128
     cores: 24
+    mem: 128
   toolshed.g2.bx.psu.edu/repos/bgruening/numeric_clustering/numeric_clustering/.*:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/bgruening/openduck_run_smd/openduck_run_smd/.*:
@@ -431,8 +428,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/.*:
     cores: 8
     mem: 30
-  toolshed.g2.bx.psu.edu/repos/galaxyp/custom_pro_db/custom_pro_db/.*:
-    mem: 16
   toolshed.g2.bx.psu.edu/repos/devteam/cuffcompare/cuffcompare/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/devteam/cuffdiff/cuffdiff/.*:
@@ -589,6 +584,9 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/ethevenot/qualitymetrics/quality_metrics/.*:
     mem: 12
+  toolshed.g2.bx.psu.edu/repos/fubar/jbrowse2/jbrowse2/.*:
+    cores: 1
+    mem: 6
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/alphafold2/alphafold/.*:
     cores: 10
     mem: 32
@@ -621,7 +619,7 @@ tools:
     - id: tpvdb_smudgeplot_5_input_rule
       if: 1 <= input_size < 5
       mem: 75
-    - id: tpvdb_smudgeplot_10_input_rule  
+    - id: tpvdb_smudgeplot_10_input_rule
       if: 5 <= input_size < 10
       cores: 12
       mem: 150
@@ -635,8 +633,8 @@ tools:
       mem: 300
     - id: tpvdb_smudgeplot_25_input_rule
       if: 20 <= input_size < 25
-      mem: 375
       cores: 16
+      mem: 375
     - id: tpvdb_smudgeplot_25_input_rule
       if: input_size >= 25
       fail: Too much data, please check if the input is correct.
@@ -663,6 +661,8 @@ tools:
     mem: 90
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_spectra_plots/cardinal_spectra_plots/.*:
     mem: 32
+  toolshed.g2.bx.psu.edu/repos/galaxyp/custom_pro_db/custom_pro_db/.*:
+    mem: 16
   toolshed.g2.bx.psu.edu/repos/galaxyp/eggnog_mapper/eggnog_mapper/.*:
     cores: 8
     mem: 12
@@ -679,6 +679,9 @@ tools:
     mem: 90
     env:
       MONO_GC_PARAMS: max-heap-size={int(mem)}g
+  toolshed.g2.bx.psu.edu/repos/galaxyp/fragpipe/fragpipe/.*:
+    cores: 12
+    mem: 256
   toolshed.g2.bx.psu.edu/repos/galaxyp/maldi_quant_peak_detection/maldi_quant_peak_detection/.*:
     mem: 180
   toolshed.g2.bx.psu.edu/repos/galaxyp/maldi_quant_preprocessing/maldi_quant_preprocessing/.*:
@@ -1269,12 +1272,12 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/checkm2/checkm2/.*:
     cores: 16
     mem: 48
-  toolshed.g2.bx.psu.edu/repos/iuc/checkm_taxonomy_wf/checkm_taxonomy_wf/.*:
-    mem: 8
-    cores: 8
   toolshed.g2.bx.psu.edu/repos/iuc/checkm_lineage_wf/checkm_lineage_wf/.*:
     cores: 16
     mem: 48
+  toolshed.g2.bx.psu.edu/repos/iuc/checkm_taxonomy_wf/checkm_taxonomy_wf/.*:
+    cores: 8
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/cherri_eval/cherri_eval/.*:
     cores: 1
     mem: 20
@@ -1299,6 +1302,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/clair3/clair3/.*:
     cores: 1
     mem: 8
+  toolshed.g2.bx.psu.edu/repos/iuc/comebin/comebin/.*:
+    cores: 32
+    mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/concoct/concoct/.*:
     cores: 10
     mem: 15
@@ -1314,6 +1320,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/dada2_learnerrors/dada2_learnErrors/.*:
     cores: 2
     mem: 10
+  toolshed.g2.bx.psu.edu/repos/iuc/data_manager_gtdbtk_database_installer/gtdbtk_database_installer/.*:
+    mem: 128
   toolshed.g2.bx.psu.edu/repos/iuc/data_manager_metaphlan_database_downloader/data_manager_metaphlan_download/.*:
     cores: 10
     mem: 92
@@ -1386,9 +1394,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/funannotate_predict/funannotate_predict/.*:
     cores: 12
     mem: 12
-  toolshed.g2.bx.psu.edu/repos/galaxyp/fragpipe/fragpipe/.*:
-    cores: 12
-    mem: 256
   toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_base_recalibrator/.*:
     cores: 10
     mem: 24
@@ -1461,8 +1466,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/gtdbtk_classify_wf/gtdbtk_classify_wf/.*:
     cores: 32
     mem: 122.8
-  toolshed.g2.bx.psu.edu/repos/iuc/data_manager_gtdbtk_database_installer/gtdbtk_database_installer/.*:
-    mem: 128
   toolshed.g2.bx.psu.edu/repos/iuc/gubbins/gubbins/.*:
     cores: 16
     mem: 12
@@ -1549,9 +1552,6 @@ tools:
       - pulsar
   toolshed.g2.bx.psu.edu/repos/iuc/ivar_variants/ivar_variants/.*:
     mem: 30.4
-  toolshed.g2.bx.psu.edu/repos/fubar/jbrowse2/jbrowse2/.*:
-    mem: 6
-    cores: 1
   toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/.*:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/jcvi_gff_stats/jcvi_gff_stats/.*:
@@ -2368,6 +2368,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/ont_fast5_api_compress_fast5/ont_fast5_api_compress_fast5/.*:
     # FIXME: needs mem
     cores: 8
+  toolshed.g2.bx.psu.edu/repos/iuc/optitype/optitype/.*:
+    cores: 12
+    mem: 256
   toolshed.g2.bx.psu.edu/repos/iuc/orfipy/orfipy/.*:
     cores: 8
     mem: 8
@@ -2701,6 +2704,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/valet/valet/.*:
     cores: 8
     mem: 20
+  toolshed.g2.bx.psu.edu/repos/iuc/vapor/vapor/.*:
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/vardict_java/vardict_java/.*:
     cores: 2
     mem: 63
@@ -2725,8 +2730,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/vsearch/vsearch_search/.*:
     mem: 80
   toolshed.g2.bx.psu.edu/repos/iuc/windowmasker/windowmasker_mkcounts/.*:
-    mem: 64
     cores: 1
+    mem: 64
   toolshed.g2.bx.psu.edu/repos/iuc/winnowmap/winnowmap/.*:
     cores: 8
     mem: 32
@@ -2867,9 +2872,6 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/rnateam/mirdeep2_mapper/rbc_mirdeep2_mapper/.*:
     mem: 28
-  toolshed.g2.bx.psu.edu/repos/iuc/optitype/optitype/.*:
-    cores: 12
-    mem: 256
   toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer/.*:
     mem: 6
     env:
@@ -2910,8 +2912,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/wolma/mimodd_main/mimodd_varcall/.*:
     cores: 6
     mem: 22.8
-  toolshed.g2.bx.psu.edu/repos/iuc/vapor/vapor/.*:
-    mem: 8
   .*bowtie2_index_builder_data_manager.*:
     # noqa: T102
     cores: 16
