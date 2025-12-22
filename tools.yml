@@ -216,8 +216,10 @@ tools:
   toolshed.g2.bx.psu.edu/repos/bgruening/hifiasm/hifiasm/.*:
     cores: 10
     rules:
-      - id: tpvdb_hifiasm_memory
-        # The memory requirement of Hifiasm depends on a wrapper's input
+      - id: tpvdb_hifiasm_expert_memory_rule
+        # The memory requirement of Hifiasm depends on the "Estimated haploid genome size" (hg_size).
+        # If hg_size is set, and it can be calculated automatically, then we can fit memory more efficiently.
+        # This is done for example in the VGP workflows.
         if: |
           parameters = {p.name: p.value for p in job.parameters}
           parameters = tool.params_from_strings(parameters, app)
