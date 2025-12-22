@@ -615,23 +615,30 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/smudgeplot/smudgeplot/.*:
     cores: 8
     rules:
-    - if: input_size < 1
+    - id: tpvdb_smudgeplot_1_input_rule
+      if: input_size < 1
       mem: 15
-    - if: 1 <= input_size < 5
+    - id: tpvdb_smudgeplot_5_input_rule
+      if: 1 <= input_size < 5
       mem: 75
-    - if: 5 <= input_size < 10
+    - id: tpvdb_smudgeplot_10_input_rule  
+      if: 5 <= input_size < 10
       cores: 12
       mem: 150
-    - if: 10 <= input_size < 15
+    - id: tpvdb_smudgeplot_15_input_rule
+      if: 10 <= input_size < 15
       cores: 12
       mem: 225
-    - if: 15 <= input_size < 20
+    - id: tpvdb_smudgeplot_20_input_rule
+      if: 15 <= input_size < 20
       cores: 12
       mem: 300
-    - if: 20 <= input_size < 25
+    - id: tpvdb_smudgeplot_25_input_rule
+      if: 20 <= input_size < 25
       mem: 375
       cores: 16
-    - if: input_size >= 25
+    - id: tpvdb_smudgeplot_25_input_rule
+      if: input_size >= 25
       fail: Too much data, please check if the input is correct.
   toolshed.g2.bx.psu.edu/repos/galaxyp/cardinal_classification/cardinal_classification/.*:
     mem: 90
