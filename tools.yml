@@ -611,30 +611,11 @@ tools:
     cores: 16
     mem: 64
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/smudgeplot/smudgeplot/.*:
-    cores: 8
     rules:
-    - id: tpvdb_smudgeplot_1_input_rule
-      if: input_size < 1
-      mem: 15
-    - id: tpvdb_smudgeplot_5_input_rule
-      if: 1 <= input_size < 5
-      mem: 75
-    - id: tpvdb_smudgeplot_10_input_rule
-      if: 5 <= input_size < 10
-      cores: 12
-      mem: 150
-    - id: tpvdb_smudgeplot_15_input_rule
-      if: 10 <= input_size < 15
-      cores: 12
-      mem: 225
-    - id: tpvdb_smudgeplot_20_input_rule
-      if: 15 <= input_size < 20
-      cores: 12
-      mem: 300
-    - id: tpvdb_smudgeplot_25_input_rule
-      if: 20 <= input_size < 25
-      cores: 16
-      mem: 375
+    - id: tpvdb_smudgeplot_rule
+      if: input_size < 25
+      cores: min(16, max(8, 4 * round((8 + 0.4 * input_size) / 4)))
+      mem: input_size*15    
     - id: tpvdb_smudgeplot_25_input_rule
       if: input_size >= 25
       fail: Too much data, please check if the input is correct.
