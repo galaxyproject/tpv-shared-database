@@ -1377,7 +1377,7 @@ tools:
     mem: 11.4
     rules:
     - id: tpvdb_fasta_stats_large_rule
-    if: input_size >= 0.01
+      if: input_size >= 0.01
       cores: 3
   toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/.*:
     cores: 4
