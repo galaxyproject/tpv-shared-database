@@ -1116,7 +1116,8 @@ tools:
       require:
       - singularity
     rules:
-    - if: input_size >= 0.01
+    - id: tpvdb_helixer_large_gpu_rule
+    if: input_size >= 0.01
       gpus: 1
       params:
         singularity_run_extra_arguments: ' --nv '
@@ -1175,7 +1176,7 @@ tools:
     cores: 1
     mem: 16
     rules:
-    - id: anndata_concat
+    - id: tpvdb_anndata_manipulate_rule
       if: |
         param_dict = job.get_param_values(app)
         param_dict.get('manipulate', {}).get('function') == 'concatenate'
@@ -1375,7 +1376,8 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/fasta_stats/fasta-stats/.*:
     mem: 11.4
     rules:
-    - if: input_size >= 0.01
+    - id: tpvdb_fasta_stats_large_rule
+    if: input_size >= 0.01
       cores: 3
   toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/.*:
     cores: 4
@@ -2376,7 +2378,7 @@ tools:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/ncbi_fcs_gx/ncbi_fcs_gx/.*:
     rules:
-    - id: ncbi_fcs_gx
+    - id: tpvdb_ncbi_fcs_gx_screen_mode_rule
       if: |
         helpers.job_args_match(job, app, {"mode": {"mode_selector": "screen"}})
       cores: 64
@@ -2687,11 +2689,11 @@ tools:
     env:
       _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms1G
     rules:
-    - id:
+    - id: tpvdb_trinity_small_rule
       if: input_size < 0.1
       cores: 1
       mem: 4
-    - id:
+    - id: tpvdb_trinity_medium_rule
       if: 0.1 <= input_size < 1
       cores: 12
       mem: 92
@@ -2739,11 +2741,11 @@ tools:
       accept:
       - pulsar
     rules:
-    - id: unicycler_small_input_rule
+    - id: tpvdb_unicycler_small_input_rule
       if: input_size < 0.05
       cores: 1
       mem: 3.8
-    - id: unicycler_medium_input_rule
+    - id: tpvdb_unicycler_medium_input_rule
       if: 0.05 <= input_size < 2
       cores: 8
       mem: 28
