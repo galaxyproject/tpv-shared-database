@@ -611,11 +611,9 @@ tools:
     cores: 16
     mem: 64
   toolshed.g2.bx.psu.edu/repos/galaxy-australia/smudgeplot/smudgeplot/.*:
+    cores: min(16, max(8, 4 * round((8 + 0.4 * input_size) / 4)))
+    mem: input_size*15
     rules:
-    - id: tpvdb_smudgeplot_rule
-      if: input_size < 25
-      cores: min(16, max(8, 4 * round((8 + 0.4 * input_size) / 4)))
-      mem: input_size*15
     - id: tpvdb_smudgeplot_fail_rule
       if: input_size >= 25
       fail: Too much data, please check if the input is correct.
