@@ -1116,7 +1116,7 @@ tools:
       require:
       - singularity
     rules:
-      - id: tpvdb_helixer_large_gpu_rule
+    - id: tpvdb_helixer_large_gpu_rule
       if: input_size >= 0.01
       gpus: 1
       params:
