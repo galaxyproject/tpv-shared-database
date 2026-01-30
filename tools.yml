@@ -654,9 +654,6 @@ tools:
   toolshed.g2.bx.psu.edu/repos/galaxyp/eggnog_mapper/eggnog_mapper/.*:
     cores: 8
     mem: 24
-    env:
-      EGGNOG_DBMEM: ' --dbmem '
-      SINGULARITYENV_EGGNOG_DBMEM: ' --dbmem '
   toolshed.g2.bx.psu.edu/repos/galaxyp/eggnog_mapper/eggnog_mapper_search/.*:
     cores: 4
     mem: 20
