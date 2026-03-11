@@ -625,6 +625,10 @@ tools:
   toolshed.g2.bx.psu.edu/repos/ecology/wildlife_megadetector_huggingface/wildlife_megadetector_huggingface/.*:
     gpus: 1
     mem: 20
+  toolshed.g2.bx.psu.edu/repos/ecology/sam3_semantic_segmentation/sam3_semantic_segmentation/.*:
+    inherits: basic_docker_tool
+    gpus: 1
+    mem: 20
   toolshed.g2.bx.psu.edu/repos/ecology/xarray_select/xarray_select/.*:
     mem: 1
   toolshed.g2.bx.psu.edu/repos/ethevenot/biosigner/biosigner/.*:
