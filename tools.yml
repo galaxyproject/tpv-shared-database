@@ -620,12 +620,12 @@ tools:
       CACHE_4_TCOFFEE: $TMP
       DIR_4_TCOFFEE: $TMP
       TMP_4_TCOFFEE: $TMP
+  toolshed.g2.bx.psu.edu/repos/ecology/sam3_semantic_segmentation/sam3_semantic_segmentation/.*:
+    gpus: 1
+    mem: 20
   toolshed.g2.bx.psu.edu/repos/ecology/srs_preprocess_s2/srs_preprocess_s2/.*:
     mem: 16
   toolshed.g2.bx.psu.edu/repos/ecology/wildlife_megadetector_huggingface/wildlife_megadetector_huggingface/.*:
-    gpus: 1
-    mem: 20
-  toolshed.g2.bx.psu.edu/repos/ecology/sam3_semantic_segmentation/sam3_semantic_segmentation/.*:
     gpus: 1
     mem: 20
   toolshed.g2.bx.psu.edu/repos/ecology/xarray_select/xarray_select/.*:
