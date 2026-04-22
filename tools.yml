@@ -1266,7 +1266,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_mergebed/.*:
     mem: 15
   toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_sortbed/.*:
-    mem: 20
+    mem: 30
   toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_subtractbed/.*:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/bellerophon/bellerophon/.*:
