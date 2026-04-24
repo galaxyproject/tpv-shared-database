@@ -1,3 +1,4 @@
 total-perspective-vortex
 pyyaml
 galaxy-app
+gxformat2<=0.24.0
