@@ -1,4 +1,4 @@
-global:
+global: ## temporary comment to check linting
   default_inherits: default
 tools:
   default:

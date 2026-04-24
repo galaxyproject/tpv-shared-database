@@ -1,4 +1,3 @@
 total-perspective-vortex
 pyyaml
 galaxy-app
-pydantic<2.12
