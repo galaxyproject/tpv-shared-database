@@ -1633,6 +1633,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/kraken2/kraken2/.*:
     cores: 16
     mem: |
+      import math
       import os
       import functools
       from typing import Optional
@@ -1646,7 +1647,7 @@ tools:
               )
               if table_value is not None:
                   table_value = value_template.format(value=table_value)
-                  ref_size = int(os.path.getsize(table_value) / 1024**3)
+                  ref_size = math.ceil(os.path.getsize(table_value) / 1024**3)
                   log.debug(
                       "Data table '%s' lookup '%s=%s: %s=%s': %s GB",
                       table_name, lookup_column, lookup_value,
@@ -1673,7 +1674,7 @@ tools:
         value_column="path",
         value_template="{value}/hash.k2d",
       )
-      min(ref_size * 1.2 + 48, 980) if ref_size is not None else default_mem
+      min(ref_size * 1.2, 980) if ref_size is not None else default_mem
   toolshed.g2.bx.psu.edu/repos/iuc/krakentools_extract_kraken_reads/krakentools_extract_kraken_reads/.*:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/length_and_gc_content/.*:
