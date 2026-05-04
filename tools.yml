@@ -2886,11 +2886,11 @@ tools:
     - id: tpvdb_metaspades_small_input_rule
       if: 0.05 <= input_size < 1
       cores: 8
-      mem: 100
+      mem: 25.3 + 13.3 * input_size
     - id: tpvdb_metaspades_medium_input_rule
       if: 1 <= input_size < 60
       cores: 16
-      mem: 350
+      mem: 25.3 + 13.3 * input_size
     - id: tpvdb_metaspades_big_input_rule
       if: input_size >= 60
       fail: Too much data, please don't use Spades for this
