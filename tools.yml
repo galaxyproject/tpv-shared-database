@@ -1390,7 +1390,7 @@ tools:
       prefer:
       - singularity
   toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/.*:
-    mem: 8
+    mem: 16
   toolshed.g2.bx.psu.edu/repos/iuc/dexseq/dexseq/.*:
     cores: 8
     mem: 32
