@@ -2519,6 +2519,11 @@ tools:
     cores: 10
     mem: 12
     rules:
+    - id: metagenome
+      if: |
+        helpers.job_args_match(job, app, {"assembly": {"type": "Metagenome"}})
+      cores: 20
+      mem: 80
     - id: tpvdb_quast_memory
       # Quast has a vastly greater memory requirement when it generates alignments between scaffolds and a user-
       # provided reference. This is particularly true if the ref genome is large.
