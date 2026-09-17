@@ -2504,7 +2504,21 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/poretools_yield_plot/poretools_yield_plot/.*:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/.*:
-    mem: 120
+    # PretextMap allocates its contact map up front, so memory is set by the
+    # resolution mode rather than by input size. Measured on a 650-byte input:
+    # 2.7 GB by default, 6.9 GB with --highRes, and over 24 GB with
+    # --ultraRes, which was still OOM-killed at a 24 GiB limit.
+    mem: 8
+    rules:
+    - id: tpvdb_pretext_map_high_res_rule
+      if: |
+        helpers.job_args_match(job, app, {"highRes": True})
+      mem: 28
+    - id: tpvdb_pretext_map_ultra_res_rule
+      # After the highRes rule so that it wins when both boxes are ticked.
+      if: |
+        helpers.job_args_match(job, app, {"ultraRes": True})
+      mem: 120
   toolshed.g2.bx.psu.edu/repos/iuc/pureclip/pureclip/.*:
     cores: 2
     mem: 32
