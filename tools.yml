@@ -260,9 +260,9 @@ tools:
             value = ceil(value * (kcov * 2) * 1.75)
 
         # return the amount of memory needed
-        value
-
-
+        hifiasm_expert_memory_rule_min_mem = 20  # impose a minimum for users whose jobs might end up with very low value
+        mem_allocated = max(value, hifiasm_expert_memory_rule_min_mem)
+        mem_allocated
   toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmbuild/.*:
     cores: 10
     mem: 20
