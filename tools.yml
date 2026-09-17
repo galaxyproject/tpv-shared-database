@@ -2503,6 +2503,8 @@ tools:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/poretools_yield_plot/poretools_yield_plot/.*:
     mem: 11.4
+  toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/.*:
+    mem: 120
   toolshed.g2.bx.psu.edu/repos/iuc/pureclip/pureclip/.*:
     cores: 2
     mem: 32
