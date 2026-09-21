@@ -2537,7 +2537,7 @@ tools:
     rules:
     - id: tpvdb_quast_metagenome_rule
       if: |
-        helpers.job_args_match(job, app, {"assembly": {"type": “metagenome"}})
+        helpers.job_args_match(job, app, {"assembly": {"type": "metagenome"}})
       cores: 16
       mem: 60
     - id: tpvdb_quast_memory
