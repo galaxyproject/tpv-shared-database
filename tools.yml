@@ -2519,7 +2519,7 @@ tools:
     cores: 10
     mem: 12
     rules:
-    - id: metagenome
+    - id: tpvdb_quast_metagenome_rule
       if: |
         helpers.job_args_match(job, app, {"assembly": {"type": “metagenome"}})
       cores: 20
