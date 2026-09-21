@@ -2522,7 +2522,7 @@ tools:
     - id: tpvdb_quast_metagenome_rule
       if: |
         helpers.job_args_match(job, app, {"assembly": {"type": “metagenome"}})
-      cores: 20
+      cores: 16
       mem: 80
     - id: tpvdb_quast_memory
       # Quast has a vastly greater memory requirement when it generates alignments between scaffolds and a user-
