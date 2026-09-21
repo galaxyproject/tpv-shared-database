@@ -260,9 +260,9 @@ tools:
             value = ceil(value * (kcov * 2) * 1.75)
 
         # return the amount of memory needed
-        value
-
-
+        hifiasm_expert_memory_rule_min_mem = 20  # impose a minimum for users whose jobs might end up with very low value
+        mem_allocated = max(value, hifiasm_expert_memory_rule_min_mem)
+        mem_allocated
   toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmbuild/.*:
     cores: 10
     mem: 20
@@ -1360,7 +1360,7 @@ tools:
     mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/comebin/comebin/.*:
     cores: 32
-    mem: 12
+    mem: 24
   toolshed.g2.bx.psu.edu/repos/iuc/concoct/concoct/.*:
     cores: 10
     mem: 15
@@ -2503,6 +2503,22 @@ tools:
     mem: 11.4
   toolshed.g2.bx.psu.edu/repos/iuc/poretools_yield_plot/poretools_yield_plot/.*:
     mem: 11.4
+  toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/.*:
+    # PretextMap allocates its contact map up front, so memory is set by the
+    # resolution mode rather than by input size. Measured on a 650-byte input:
+    # 2.7 GB by default, 6.9 GB with --highRes, and over 24 GB with
+    # --ultraRes, which was still OOM-killed at a 24 GiB limit.
+    mem: 8
+    rules:
+    - id: tpvdb_pretext_map_high_res_rule
+      if: |
+        helpers.job_args_match(job, app, {"highRes": True})
+      mem: 28
+    - id: tpvdb_pretext_map_ultra_res_rule
+      # After the highRes rule so that it wins when both boxes are ticked.
+      if: |
+        helpers.job_args_match(job, app, {"ultraRes": True})
+      mem: 120
   toolshed.g2.bx.psu.edu/repos/iuc/pureclip/pureclip/.*:
     cores: 2
     mem: 32
