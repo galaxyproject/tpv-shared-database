@@ -291,6 +291,16 @@ tools:
     mem: 24
   toolshed.g2.bx.psu.edu/repos/bgruening/minced/minced/.*:
     mem: 2
+  toolshed.g2.bx.psu.edu/repos/bgruening/mirtrace_qc/mirtrace_qc/.*:
+    mem: 16
+    env:
+      MIRTRACE_HEAP_ALLOCATION: {int(mem)}G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms4G
+  toolshed.g2.bx.psu.edu/repos/bgruening/mirtrace_trace/mirtrace_trace/.*:
+    mem: 16
+    env:
+      MIRTRACE_HEAP_ALLOCATION: {int(mem)}G
+      _JAVA_OPTIONS: -Xmx{int(mem)}G -Xms4G
   toolshed.g2.bx.psu.edu/repos/bgruening/mitohifi/mitohifi/.*:
     cores: 8
     mem: 16
