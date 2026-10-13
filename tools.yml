@@ -2885,6 +2885,17 @@ tools:
   toolshed.g2.bx.psu.edu/repos/mbernt/maxbin2/maxbin2/.*:
     cores: 10
     mem: 48
+  toolshed.g2.bx.psu.edu/repos/nick/dunovo/align_families/.*:
+    cores: 2
+    mem: min(max(input_size * 4, 8), 64)
+  toolshed.g2.bx.psu.edu/repos/nick/dunovo/correct_barcodes/.*:
+    cores: 4
+    mem: min(max(input_size * 5, 8), 64)
+  toolshed.g2.bx.psu.edu/repos/nick/dunovo/dunovo/.*:
+    cores: 2
+    mem: 8
+  toolshed.g2.bx.psu.edu/repos/nick/dunovo/make_families/.*:
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_RPKM_saturation/.*:
     mem: 30.4
   toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/.*:
