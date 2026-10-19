@@ -1416,6 +1416,13 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/drep_dereplicate/drep_dereplicate/.*:
     cores: 16
     mem: 16
+    rules:
+    - id: tpvdb_drep_dereplicate_medium_input_rule
+      if: input_size > 10
+      mem: 20
+    - id: tpvdb_drep_dereplicate_large_input_rule
+      if: input_size > 15
+      mem: 35
   toolshed.g2.bx.psu.edu/repos/iuc/edger/edger/.*:
     mem: 19.0
   toolshed.g2.bx.psu.edu/repos/iuc/egsea/egsea/.*:
