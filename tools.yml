@@ -1293,41 +1293,41 @@ tools:
     cores: 16
     mem: 80
   toolshed.g2.bx.psu.edu/repos/iuc/bwa_mem2/bwa_mem2/.*:
-    mem: |
-        if input_size < 0.25:
-            input_mem = 7.6
-        elif input_size < 16:
-            input_mem = 28
-        elif input_size < 32:
-            input_mem = 58
-        elif input_size < 64:
-            input_mem = 120
-        else:
-            input_mem = 244
-        mem_allocated = input_mem
-        if helpers.job_args_match(job, app, {"reference_source": {"reference_source_selector": "history"}}):
-            options = job.get_param_values(app)
-            reference_size = options["reference_source"]["ref_file"].get_size() / 1024**3
-
-            # Indexing estimate: https://github.com/bwa-mem2/bwa-mem2/issues/41
-            reference_mem = min(
-                max(reference_size * 28, (input_size - reference_size) * 2, 7.6),
-                120,
-            )
-            mem_allocated = max(input_mem, reference_mem)
-        mem_allocated
     cores: |
-        if input_size < 0.25:
-            allocated_cores = 2
-        elif input_size < 16:
-            allocated_cores = 8
-        elif input_size < 32:
-            allocated_cores = 16
-        elif input_size < 64:
-            allocated_cores = 24
-        else:
-            allocated_cores = 32
-        allocated_cores
+      if input_size < 0.25:
+          allocated_cores = 2
+      elif input_size < 16:
+          allocated_cores = 8
+      elif input_size < 32:
+          allocated_cores = 16
+      elif input_size < 64:
+          allocated_cores = 24
+      else:
+          allocated_cores = 32
+      allocated_cores
+    mem: |
+      if input_size < 0.25:
+          input_mem = 7.6
+      elif input_size < 16:
+          input_mem = 28
+      elif input_size < 32:
+          input_mem = 58
+      elif input_size < 64:
+          input_mem = 120
+      else:
+          input_mem = 244
+      mem_allocated = input_mem
+      if helpers.job_args_match(job, app, {"reference_source": {"reference_source_selector": "history"}}):
+          options = job.get_param_values(app)
+          reference_size = options["reference_source"]["ref_file"].get_size() / 1024**3
+
+          # Indexing estimate: https://github.com/bwa-mem2/bwa-mem2/issues/41
+          reference_mem = min(
+              max(reference_size * 28, (input_size - reference_size) * 2, 7.6),
+              120,
+          )
+          mem_allocated = max(input_mem, reference_mem)
+      mem_allocated
   toolshed.g2.bx.psu.edu/repos/iuc/bwameth/bwameth/.*:
     cores: 8
     mem: 24
