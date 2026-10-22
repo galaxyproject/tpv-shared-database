@@ -1318,8 +1318,8 @@ tools:
       # per https://github.com/bwa-mem2/bwa-mem2/issues/41 it's 28 * reference
       mem: |
         options = job.get_param_values(app)
-        size = options["reference_source"]["ref_file"].get_size()
-        min(max(float(size/1024**3) * 28, (input_size - float(size/1024**3)) * 2, 7.6), 120)
+        reference_size = options["reference_source"]["ref_file"].get_size() / 1024**3
+        min(max(reference_size * 28, (input_size - reference_size) * 2, 7.6), 120)
 
   toolshed.g2.bx.psu.edu/repos/iuc/bwameth/bwameth/.*:
     cores: 8
